@@ -86,6 +86,7 @@ export function DomainPage() {
   const [domain, setDomain] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [checking, setChecking] = useState("");
   const [results, setResults] = useState<DomainResult[] | null>(null);
   const buyUrl = (d: string) => `https://www.hostinger.com?REFERRALCODE=${HOSTINGER_REFERRAL}`;
   const search = async (e: React.FormEvent) => {
@@ -93,14 +94,14 @@ export function DomainPage() {
     let clean = domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0] ?? "";
     if (/^[a-z0-9-]+$/.test(clean)) clean += ".com";
     if (!/^[a-z0-9-]{1,63}\.[a-z0-9.-]{2,20}$/.test(clean)) { setError("Please enter a valid domain name, e.g. yourbusiness.com"); return; }
-    setError(""); setLoading(true); setResults(null);
+    setError(""); setLoading(true); setResults(null); setChecking(clean);
     try {
       const r = await checkDomain({ data: { domain: clean } });
       if (r.error) setError(r.error); else setResults(r.results);
     } catch { setError("Could not check this domain right now. Please try again."); }
     finally { setLoading(false); }
   };
-  return <><PageHeading title="Domain Search" subtitle="Check if your domain is available — my Hostinger discount is applied automatically." /><section className="bg-paper py-20 text-ink"><form onSubmit={search} className={`${wrap} max-w-2xl`}><label className="block">Your preferred domain name<input className={field} value={domain} onChange={e => setDomain(e.target.value)} placeholder="yourbusiness.com" required /></label>{error && <p role="alert" className="mt-3 text-sm text-destructive">{error}</p>}<Button type="submit" className="mt-6" disabled={loading}>{loading ? "Checking..." : <>Check availability <ArrowRight /></>}</Button>{loading && <div role="status" aria-live="polite" className="search-loading text-ink/75"><span className="search-loading-track" aria-hidden="true" /><span>Checking {clean}…</span></div>}
+  return <><PageHeading title="Domain Search" subtitle="Check if your domain is available — my Hostinger discount is applied automatically." /><section className="bg-paper py-20 text-ink"><form onSubmit={search} className={`${wrap} max-w-2xl`}><label className="block">Your preferred domain name<input className={field} value={domain} onChange={e => setDomain(e.target.value)} placeholder="yourbusiness.com" required /></label>{error && <p role="alert" className="mt-3 text-sm text-destructive">{error}</p>}<Button type="submit" className="mt-6" disabled={loading}>{loading ? "Checking..." : <>Check availability <ArrowRight /></>}</Button>{loading && <div role="status" aria-live="polite" className="search-loading text-ink/75"><span className="search-loading-track" aria-hidden="true" /><span>Checking {checking}…</span></div>}
     {results && <ul className="mt-8 space-y-3">{results.length === 0 && <li>No results found. Try another name.</li>}{results.map(r => <li key={r.domain} className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-ink/15 p-4"><span className="font-semibold">{r.domain} — <span className={r.available ? "text-primary" : "text-ink/60"}>{r.available ? "Available" : "Taken"}</span></span>{r.available && <Button asChild size="sm"><a href={buyUrl(r.domain)} target="_blank" rel="noopener noreferrer">Get it with my discount <ArrowRight /></a></Button>}</li>)}</ul>}
     <p className="mt-6 text-sm text-ink/65">Available domains link to Hostinger with my referral discount (code {HOSTINGER_REFERRAL}) already applied.</p><Button asChild variant="outline" className="mt-7"><SiteLink href="/questionnaire">Include a domain in my project request</SiteLink></Button></form></section></>;
 }
