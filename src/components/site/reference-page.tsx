@@ -3,6 +3,7 @@ import parse, { attributesToProps, domToReact, Element, type DOMNode, type HTMLR
 import { Button } from "@/components/ui/button";
 import { SiteLink } from "./site-link";
 import portrait from "@/assets/kenneth-portrait.jpg.asset.json";
+import logo from "@/assets/udo-ezekiel-logo.png.asset.json";
 import layouts from "@/data/reference-layouts.json";
 import "./reference-layouts.css";
 import "./reference-page.css";
@@ -35,6 +36,8 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
       if (node.name === "li" && attrs['data-filter']) return <li className={filter === attrs['data-filter'] ? "wd-active" : ""}><Button variant="ghost" onClick={() => setFilter(attrs['data-filter'] || "*")}>{children()}</Button></li>;
       if (node.name === "article" && cls.includes("portfolio-entry") && filter !== "*" && !cls.split(" ").includes(filter.slice(1))) return <></>;
       if (node.name === "img" && attrs['data-portrait']) return <img {...attributesToProps(attrs)} src={portrait.url} alt="Udo Ezekiel" />;
+      if (node.name === "img" && attrs['src']?.includes("animated_light_logo")) return <span className="reference-brand-mark"><img src={logo.url} alt="Udo Ezekiel" /></span>;
+      if (node.name === "img" && !attrs['src']) return <></>;
       if (node.name === "a") {
         if (attrs['data-zoom-src']) return <Button variant="ghost" className={cls} onClick={() => setZoom(attrs['data-zoom-src'] || null)}>{children()}</Button>;
         const href = attrs['href'] || "#";

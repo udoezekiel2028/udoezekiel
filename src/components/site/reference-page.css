@@ -25,6 +25,8 @@
 .reference-page .elementor-widget-html .fc-form { width: 100%; }
 .reference-page .elementor-widget-html input, .reference-page .elementor-widget-html select, .reference-page .elementor-widget-html textarea { max-width: 100%; }
 .reference-page [data-portrait] { object-fit: cover; object-position: top; }
+.reference-page .reference-brand-mark { display: inline-flex; align-items: center; justify-content: center; background: var(--ink); padding: 12px 18px; }
+.reference-page .reference-brand-mark img { width: 220px; height: auto; }
 @media(max-width: 767px) {
   .reference-page .wd-page-title h1 { font-size: 34px; }
   .reference-page .e-con-inner { max-width: 100%; }
