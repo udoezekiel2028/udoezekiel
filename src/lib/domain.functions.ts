@@ -8,7 +8,7 @@ export const checkDomain = createServerFn({ method: "POST" })
     z.object({ domain: z.string().regex(/^[a-z0-9-]{1,63}\.[a-z0-9.-]{2,20}$/) }).parse(data),
   )
   .handler(async ({ data }): Promise<{ results: DomainResult[]; error?: string }> => {
-    const token = process.env.HOSTINGER_API_TOKEN;
+    const token = process.env['HOSTINGER_API_TOKEN'];
     if (!token) return { results: [], error: "Domain search is not configured." };
     const [name, ...rest] = data.domain.split(".");
     const tld = rest.join(".");
