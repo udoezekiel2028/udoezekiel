@@ -27,13 +27,13 @@ const LOGO = logoAsset.url;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kenneth Ben | Freelance Website Designer in Lagos, Nigeria" },
+      { title: "Udo Ezekiel | Freelance Website Designer in Lagos, Nigeria" },
       {
         name: "description",
         content:
-          "Get more customers with a website designed to grow your business. Mobile responsive, SEO optimized websites by Kenneth Ben in Lagos.",
+          "Get more customers with a website designed to grow your business. Mobile responsive, SEO optimized websites by Udo Ezekiel in Lagos.",
       },
-      { property: "og:title", content: "Kenneth Ben | Website Designer in Lagos" },
+      { property: "og:title", content: "Udo Ezekiel | Website Designer in Lagos" },
       {
         property: "og:description",
         content: "Websites that look great on every device and are built to be found on Google.",
@@ -252,7 +252,7 @@ function Intro() {
       <div className="relative h-[420px] overflow-hidden lg:h-auto">
         <div className="grid grid-cols-3 gap-6 p-6 sm:grid-cols-4">
           {COLLAGE.slice(0, 12).map((src) => (
-            <img key={src} src={src} alt="Kenneth Ben - Freelance website designer in Lagos Nigeria" loading="lazy" width={300} height={420} className="aspect-[3/4] w-full border border-ink/10 object-cover object-top shadow-md" />
+            <img key={src} src={src} alt="Udo Ezekiel - Freelance website designer in Lagos Nigeria" loading="lazy" width={300} height={420} className="aspect-[3/4] w-full border border-ink/10 object-cover object-top shadow-md" />
           ))}
         </div>
       </div>
@@ -310,7 +310,7 @@ function Portfolio() {
             return (
               <article key={p.slug} className="group">
                 <div className="relative overflow-hidden">
-                  <img src={src} alt={`${p.name} website by Kenneth Ben`} loading="lazy" width={768} height={960} className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={src} alt={`${p.name} website by Udo Ezekiel`} loading="lazy" width={768} height={960} className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 flex items-center justify-center gap-3 bg-ink/60 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
                     <button onClick={() => setZoom(src)} aria-label={`View ${p.name} large`} className="grid h-11 w-11 place-items-center rounded-full bg-paper text-ink hover:bg-brand hover:text-brand-foreground"><Maximize2 className="h-4 w-4" /></button>
                   </div>
@@ -396,7 +396,7 @@ function Blog() {
                 <div className="flex flex-1 flex-col p-5">
                   <span className="text-xs font-bold uppercase tracking-wide text-brand">{p.cat}</span>
                   <h3 className="mt-2 font-display text-base font-extrabold leading-snug"><a href={href} className="hover:text-brand">{p.t}</a></h3>
-                  <p className="mt-2 text-xs text-ink/55">{p.date} · Posted by Kenneth Ben</p>
+                  <p className="mt-2 text-xs text-ink/55">{p.date} · Posted by Udo Ezekiel</p>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/70">{p.ex}</p>
                   <a href={href} className="mt-4 text-sm font-bold text-brand hover:underline">Continue reading</a>
                 </div>
@@ -483,7 +483,7 @@ function Footer() {
       </div>
       <div className="border-t border-paper/10">
         <div className="mx-auto flex max-w-[1222px] flex-col gap-3 px-4 py-6 text-xs text-paper/60 md:flex-row md:justify-between">
-          <p>© {new Date().getFullYear()} Kenneth Ben. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Udo Ezekiel. All rights reserved.</p>
           <ul className="flex flex-wrap gap-5">
             <li><a href={`${SITE}/terms-of-service/`} className="hover:text-brand">Terms Of Service</a></li>
             <li><a href={`${SITE}/privacy-policy/`} className="hover:text-brand">Privacy Policy</a></li>
