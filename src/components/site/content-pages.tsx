@@ -87,7 +87,7 @@ export function DomainPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<DomainResult[] | null>(null);
-  const buyUrl = (d: string) => `https://www.hostinger.com/domain-name-search?domain=${encodeURIComponent(d)}&REFERRALCODE=${HOSTINGER_REFERRAL}`;
+  const buyUrl = (d: string) => `https://www.hostinger.com?REFERRALCODE=${HOSTINGER_REFERRAL}`;
   const search = async (e: React.FormEvent) => {
     e.preventDefault();
     let clean = domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0] ?? "";

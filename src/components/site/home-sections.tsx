@@ -238,7 +238,7 @@ function Hero() {
                   {r.available ? `✓ "${r.domain}" is available:` : `✕ "${r.domain}" is already taken.`}
                 </p>
                 {r.available && (
-                  <a href={`https://www.hostinger.com/domain-name-search?domain=${encodeURIComponent(r.domain)}&REFERRALCODE=${HOSTINGER_REFERRAL}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block font-medium text-blue-600 underline hover:text-blue-800">Get 20% Off Domain &amp; Hosting Here</a>
+                  <a href={`https://www.hostinger.com?REFERRALCODE=${HOSTINGER_REFERRAL}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block font-medium text-blue-600 underline hover:text-blue-800">Get 20% Off Domain &amp; Hosting Here</a>
                 )}
               </div>
             ))}
