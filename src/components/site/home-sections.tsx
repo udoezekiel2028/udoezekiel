@@ -1,6 +1,7 @@
 import blogAffiliate from "@/assets/blog-affiliate.jpg";
 import blogGmb from "@/assets/blog-google-business.jpg";
 import { SiteLink } from "./site-link";
+import { checkDomain, type DomainResult } from "@/lib/domain.functions";
 import { WHATSAPP_URL, SOCIAL_PROFILES } from "./contact-details";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
