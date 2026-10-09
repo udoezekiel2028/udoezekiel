@@ -24,6 +24,7 @@ import eaGlobalAsset from "@/assets/ea-global-stores-portfolio.jpg.asset.json";
 import pianogoddessAsset from "@/assets/pianogoddess-portfolio.jpg.asset.json";
 import forxersAsset from "@/assets/forxers-academy-portfolio.jpg.asset.json";
 import easyjapaAsset from "@/assets/easyjapa-portfolio.jpg.asset.json";
+import theScoopAsset from "@/assets/the-scoop-nigeria-portfolio.jpg.asset.json";
 
 const SITE = "https://kennethben.com";
 const U = `${SITE}/wp-content/uploads`;
@@ -73,7 +74,7 @@ const PORTFOLIO: { name: string; cats: string; slug: string; img: string; src?: 
   { name: "EA Global Stores", cats: "eCommerce, Landing Pages", slug: "ea-global-stores", img: "EA-Global-Stores-thumb", src: eaGlobalAsset.url },
   { name: "ForXers Academy", cats: "Landing Pages, Online Courses", slug: "forxers-academy", img: "ForXers-thumb", src: forxersAsset.url },
   { name: "EasyJapa", cats: "Corporate Sites", slug: "easyjapa", img: "EasyJapa-thumb", src: easyjapaAsset.url },
-  { name: "The Scoop Nigeria", cats: "News Sites", slug: "the-scoop-nigeria", img: "The-Scoop-Nigeria-Thumbnail" },
+  { name: "The Scoop Nigeria", cats: "News Sites", slug: "the-scoop-nigeria", img: "The-Scoop-Nigeria-Thumbnail", src: theScoopAsset.url },
   { name: "Shakaaraah LLC", cats: "Corporate Sites", slug: "shakaaraah-llc", img: "Shakaraah-thumb" },
 ];
 
