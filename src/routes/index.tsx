@@ -15,9 +15,14 @@ import {
   MessageCircle,
 } from "lucide-react";
 
+import portraitAsset from "@/assets/kenneth-portrait.jpg.asset.json";
+import logoAsset from "@/assets/udo-ezekiel-logo.png.asset.json";
+
 const SITE = "https://kennethben.com";
 const U = `${SITE}/wp-content/uploads`;
 const HERO_IMG = `${U}/2025/08/ken-services-page.jpg`;
+const HERO_PORTRAIT = portraitAsset.url;
+const LOGO = logoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -133,8 +138,8 @@ function Header() {
   return (
     <header className="bg-ink text-paper">
       <div className="mx-auto flex h-[88px] max-w-[1222px] items-center justify-between gap-4 border-b border-paper/10 px-4">
-        <a href="/" aria-label="Kenneth Ben home" className="shrink-0">
-          <img src={`${U}/2025/01/KennethBen-animated-logo.gif`} alt="Kenneth Ben – helping businesses succeed online" width={180} height={50} className="h-[44px] w-auto" />
+        <a href="/" aria-label="Udo Ezekiel home" className="shrink-0">
+          <img src={LOGO} alt="Udo Ezekiel – helping businesses succeed online" width={1345} height={380} className="h-12 w-auto" />
         </a>
         <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) =>
@@ -204,7 +209,7 @@ function Header() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
-      <img src={HERO_IMG} alt="" aria-hidden className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[60%] object-cover object-left opacity-90 grayscale md:block" />
+      <img src={HERO_PORTRAIT} alt="Udo Ezekiel, website designer" className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[60%] object-cover object-top opacity-90 md:block" />
       <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,var(--ink)_40%,transparent)] md:block" />
       <div className="relative mx-auto max-w-[1222px] px-4 pb-20 pt-20 md:pt-32">
         <h1 className="font-display text-[34px] font-black italic leading-[1.2] sm:text-5xl md:text-[58px]">
@@ -452,7 +457,7 @@ function Footer() {
     <footer className="border-t border-paper/10 bg-ink text-paper">
       <div className="mx-auto grid max-w-[1222px] gap-10 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <img src={`${U}/2025/01/KennethBen-animated-logo.gif`} alt="Kenneth Ben" loading="lazy" className="h-11 w-auto" />
+          <img src={LOGO} alt="Udo Ezekiel" loading="lazy" width={1345} height={380} className="h-10 w-auto" />
           <p className="mt-4 text-sm text-paper/60">Freelance website designer in Lagos, Nigeria — helping businesses succeed online.</p>
           <div className="mt-5 flex gap-4">
             {social.map(({ Icon, href, label }) => (<a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="hover:text-brand"><Icon className="h-4 w-4" /></a>))}
