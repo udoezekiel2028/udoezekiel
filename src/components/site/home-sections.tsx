@@ -256,9 +256,9 @@ function Hero() {
             <SiteLink key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="hover:text-brand"><Icon className="h-4 w-4" /></SiteLink>
           ))}
         </div>
-        <ul className="mt-16 flex flex-wrap gap-y-2 text-[15px] font-semibold">
+        <ul className="mt-14 grid grid-cols-2 gap-x-5 gap-y-4 text-[15px] font-semibold sm:mt-16 sm:flex sm:flex-wrap sm:gap-y-2">
           {SERVICES_MENU.map((s, i) => (
-            <li key={s.label} className={i ? "border-l border-paper/30 pl-3 ml-3" : ""}>
+            <li key={s.label} className={`min-w-0 border-l-2 border-brand pl-3 ${i ? "sm:border-l sm:border-paper/30 sm:pl-3 sm:ml-3" : "sm:border-l-0 sm:pl-0"}`}>
               <SiteLink href={s.href} className="hover:text-brand">{s.label}</SiteLink>
             </li>
           ))}
