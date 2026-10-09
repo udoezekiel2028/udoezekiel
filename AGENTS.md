@@ -10,5 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Shared site navigation and footer live in browser-safe site components mounted by the root route, so every local page has consistent branding.
-- Reference page content is stored as structured local data and rendered through shared page templates; each content route owns its metadata.
+- Non-homepage reference designs use sanitized local layout data and strictly scoped styles; each content route owns its metadata, preserving original page structures without changing the approved homepage.
 - Page recreation is presentation-only: do not send forms or account credentials to the reference owner or imply unconnected services work.

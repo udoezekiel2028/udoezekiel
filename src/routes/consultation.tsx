@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { InquiryPage, pageHead } from "@/components/site/content-pages";
+import { pageHead } from "@/components/site/content-pages";
+import { ReferencePage } from "@/components/site/reference-page";
 export const Route = createFileRoute("/consultation")({ head: () => pageHead("Free Discovery Call", "Free Discovery Call \u2014 website design and digital business services by Udo Ezekiel."), component: Page });
-function Page() { return <InquiryPage  />; }
+function Page() { return <ReferencePage pageKey="consultation" />; }

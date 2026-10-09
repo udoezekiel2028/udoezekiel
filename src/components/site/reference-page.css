@@ -1,0 +1,36 @@
+.reference-page { background: var(--background); color: var(--ink); overflow: clip; }
+.reference-page .reference-root { --wd-container-w: 1222px; --wd-link-color: var(--ink); --wd-link-color-hover: var(--brand); --wd-primary-color: var(--brand); --wd-main-bgcolor: var(--background); --wd-text-font: "Nunito Sans", sans-serif; --wd-title-font: "Raleway", sans-serif; --wd-entities-title-font: "Raleway", sans-serif; font-family: var(--wd-text-font); line-height: 1.6; }
+.reference-page .reference-root > div > main { display: flex; width: 100%; max-width: 1222px; margin: 0 auto; padding: 0 15px; }
+.reference-page .wd-content-area { width: 100%; min-width: 0; }
+.reference-page .elementor-element.elementor-invisible { visibility: visible; }
+.reference-page .e-con.e-parent { content-visibility: visible !important; }
+.reference-page .elementor-widget-container { height: auto; }
+.reference-page .elementor-heading-title { font-family: var(--wd-title-font); }
+.reference-page .elementor-widget-image img { display: inline-block; }
+.reference-page .elementor-image-carousel-wrapper .swiper-wrapper { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); transform: none !important; }
+.reference-page .elementor-image-carousel-wrapper .swiper-slide { width: auto !important; }
+.reference-page .swiper-slide-duplicate { display: none; }
+.reference-page .reference-accordion-trigger { width: 100%; height: auto; justify-content: flex-start; white-space: normal; text-align: left; border-radius: 0; }
+.reference-page .elementor-tab-content[hidden] { display: none !important; }
+.reference-page .elementor-tab-content.elementor-active { display: block; }
+.reference-page .reference-status, .reference-page .reference-unavailable { padding: 20px; margin: 20px 0; border-left: 3px solid var(--brand); color: var(--ink); background: var(--paper); }
+.reference-page .reference-unavailable { min-height: 250px; display: flex; align-items: center; justify-content: center; }
+.reference-page .wd-page-title { background: var(--ink); padding: 45px 15px; margin-bottom: 40px; color: var(--paper); text-align: center; }
+.reference-page .wd-page-title h1 { font-size: 48px; font-weight: 700; color: var(--paper); }
+.reference-page .wd-nav-portfolio button { font-family: var(--wd-title-font); padding: 8px 12px; border-radius: 0; }
+.reference-page .wd-project img { width: 100%; }
+.reference-page .wd-registration-page { max-width: 470px; margin: 30px auto 80px; }
+.reference-page .wd-posts { align-items: start; }
+.reference-page .formcraft-css .form-page { display: block; }
+.reference-page .elementor-widget-html .fc-form { width: 100%; }
+.reference-page .elementor-widget-html input, .reference-page .elementor-widget-html select, .reference-page .elementor-widget-html textarea { max-width: 100%; }
+.reference-page [data-portrait] { object-fit: cover; object-position: top; }
+.reference-page .reference-brand-mark { display: inline-flex; align-items: center; justify-content: center; background: var(--ink); padding: 12px 18px; }
+.reference-page .reference-brand-mark img { width: 220px; height: auto; }
+@media(max-width: 767px) {
+  .reference-page .wd-page-title h1 { font-size: 34px; }
+  .reference-page .e-con-inner { max-width: 100%; }
+  .reference-page .elementor-image-carousel-wrapper .swiper-wrapper { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .reference-page .reference-root > div > main { padding: 0 15px; }
+  .reference-page .wd-content-layout { flex-direction: column; }
+}
