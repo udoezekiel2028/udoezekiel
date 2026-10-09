@@ -20,6 +20,7 @@ import {
 
 import portraitAsset from "@/assets/kenneth-portrait.jpg.asset.json";
 import logoAsset from "@/assets/udo-ezekiel-logo.png.asset.json";
+import eaGlobalAsset from "@/assets/ea-global-stores-portfolio.jpg.asset.json";
 
 const SITE = "https://kennethben.com";
 const U = `${SITE}/wp-content/uploads`;
@@ -64,9 +65,9 @@ const BRANDS = [
   "Sotectonic-Blog", "The-Scoop-Nigeria", "Uto-Spices", "ViewPoint-Immigration-Services",
 ];
 
-const PORTFOLIO = [
+const PORTFOLIO: { name: string; cats: string; slug: string; img: string; src?: string }[] = [
   { name: "Pianogoddess", cats: "eCommerce, Online Courses", slug: "pianogoddess-academy", img: "Pianogoddess-Academy-thumb" },
-  { name: "EA Global Stores", cats: "eCommerce, Landing Pages", slug: "ea-global-stores", img: "EA-Global-Stores-thumb" },
+  { name: "EA Global Stores", cats: "eCommerce, Landing Pages", slug: "ea-global-stores", img: "EA-Global-Stores-thumb", src: eaGlobalAsset.url },
   { name: "ForXers Academy", cats: "Landing Pages, Online Courses", slug: "forxers-academy", img: "ForXers-thumb" },
   { name: "EasyJapa", cats: "Corporate Sites", slug: "easyjapa", img: "EasyJapa-thumb" },
   { name: "The Scoop Nigeria", cats: "News Sites", slug: "the-scoop-nigeria", img: "The-Scoop-Nigeria-Thumbnail" },
@@ -285,7 +286,7 @@ export function Portfolio() {
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PORTFOLIO.map((p) => {
-            const src = `${U}/2025/07/${p.img}-768x960.jpg`;
+            const src = p.src ?? `${U}/2025/07/${p.img}-768x960.jpg`;
             return (
               <article key={p.slug} className="group">
                 <div className="relative overflow-hidden">
