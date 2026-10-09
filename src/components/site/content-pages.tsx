@@ -79,4 +79,17 @@ export function AccountPage({ reset = false }: { reset?: boolean }) {
 export function InformationPage({ title }: { title: string }) { return <><PageHeading title={title} /><section className="bg-paper py-20 text-ink"><div className={`${wrap} max-w-3xl`}><p className="leading-8 text-ink/70">{title === "Refer A Friend" ? "Know someone who needs a website? Let's talk about their project." : "This page is awaiting the final business policy."}</p><Button asChild className="mt-7"><SiteLink href="/contact">Contact Udo Ezekiel</SiteLink></Button></div></section></>; }
 export function AboutPage() { return <><PageHeading title="Meet Udo Ezekiel" subtitle="Helping businesses succeed online." /><section className="bg-paper py-16 text-ink"><div className={`${wrap} grid items-center gap-12 md:grid-cols-2`}><img src={portrait.url} alt="Udo Ezekiel" className="max-h-[620px] w-full object-cover object-top" /><div><h2 className="font-display text-3xl font-black">Solutions with greater efficiency of work.</h2><p className="mt-6 leading-8 text-ink/70">We build noteworthy websites, set up digital marketing strategies, and help business owners maximize and scale their businesses.</p><Button asChild className="mt-8"><SiteLink href="/consultation">Let's talk</SiteLink></Button></div></div></section><CallToAction /></>; }
 export function FaqPage() { return <><PageHeading title="Frequently Asked Questions" /><ContactFaq /></>; }
-export function DomainPage() { return <><PageHeading title="Domain Search" /><section className="bg-paper py-20 text-ink"><div className={`${wrap} max-w-2xl`}><label className="block">Your preferred domain name<input className={field} placeholder="yourbusiness.com" /></label><p className="mt-6 text-ink/65">Live domain availability checks are not available yet.</p><Button asChild className="mt-7"><SiteLink href="/questionnaire">Include a domain in my project request</SiteLink></Button></div></section></>; }
+const HOSTINGER_REFERRAL = "NMHUDOEZECWS";
+export function DomainPage() {
+  const [domain, setDomain] = useState("");
+  const [error, setError] = useState("");
+  const search = (e: React.FormEvent) => {
+    e.preventDefault();
+    const clean = domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0] ?? "";
+    if (!/^[a-z0-9-]+(\.[a-z0-9-]+)*$/.test(clean)) { setError("Please enter a valid domain name, e.g. yourbusiness.com"); return; }
+    setError("");
+    const url = `https://www.hostinger.com/domain-name-search?domain=${encodeURIComponent(clean)}&REFERRALCODE=${HOSTINGER_REFERRAL}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+  return <><PageHeading title="Domain Search" subtitle="Check if your domain is available on Hostinger — my discount is applied automatically." /><section className="bg-paper py-20 text-ink"><form onSubmit={search} className={`${wrap} max-w-2xl`}><label className="block">Your preferred domain name<input className={field} value={domain} onChange={e => setDomain(e.target.value)} placeholder="yourbusiness.com" required /></label>{error && <p role="alert" className="mt-3 text-sm text-destructive">{error}</p>}<Button type="submit" className="mt-6">Search on Hostinger <ArrowRight /></Button><p className="mt-6 text-sm text-ink/65">Results open on Hostinger with my referral discount (code {HOSTINGER_REFERRAL}) already applied.</p><Button asChild variant="outline" className="mt-7"><SiteLink href="/questionnaire">Include a domain in my project request</SiteLink></Button></form></section></>;
+}
