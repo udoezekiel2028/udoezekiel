@@ -4,7 +4,7 @@ import { SiteLink } from "./site-link";
 import { checkDomain, type DomainResult } from "@/lib/domain.functions";
 import { WHATSAPP_URL, SOCIAL_PROFILES } from "./contact-details";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import {
   ChevronDown,
@@ -201,7 +201,7 @@ function Hero() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<DomainResult[] | null>(null);
-  const search = async (e: React.FormEvent) => {
+  const search = async (e: FormEvent) => {
     e.preventDefault();
     let clean = domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0] ?? "";
     if (/^[a-z0-9-]+$/.test(clean)) clean += ".com";
