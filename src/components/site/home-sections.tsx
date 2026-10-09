@@ -70,7 +70,7 @@ const BRANDS = [
 const PORTFOLIO: { name: string; cats: string; slug: string; img: string; src?: string }[] = [
   { name: "Pianogoddess", cats: "eCommerce, Online Courses", slug: "pianogoddess-academy", img: "Pianogoddess-Academy-thumb", src: pianogoddessAsset.url },
   { name: "EA Global Stores", cats: "eCommerce, Landing Pages", slug: "ea-global-stores", img: "EA-Global-Stores-thumb", src: eaGlobalAsset.url },
-  { name: "ForXers Academy", cats: "Landing Pages, Online Courses", slug: "forxers-academy", img: "ForXers-thumb" },
+  { name: "ForXers Academy", cats: "Landing Pages, Online Courses", slug: "forxers-academy", img: "ForXers-thumb", src: forxersAsset.url },
   { name: "EasyJapa", cats: "Corporate Sites", slug: "easyjapa", img: "EasyJapa-thumb" },
   { name: "The Scoop Nigeria", cats: "News Sites", slug: "the-scoop-nigeria", img: "The-Scoop-Nigeria-Thumbnail" },
   { name: "Shakaaraah LLC", cats: "Corporate Sites", slug: "shakaaraah-llc", img: "Shakaraah-thumb" },
