@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import parse, { attributesToProps, domToReact, Element, type DOMNode, type HTMLReactParserOptions } from "html-react-parser";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
@@ -10,6 +10,17 @@ import "./reference-layouts.css";
 import "./reference-page.css";
 
 const pages: Record<string, { html: string }> = layouts;
+const CALENDLY_URL = "https://calendly.com/zikeyrehtse/website-consultation?hide_gdpr_banner=1&primary_color=ed4b1b";
+
+function textOf(node: Element): string {
+  let out = "";
+  for (const child of node.children) {
+    if (child instanceof Element) out += textOf(child);
+    else if ("data" in child) out += String((child as { data?: unknown }).data ?? "");
+  }
+  return out;
+}
+
 
 function ReferenceAccordion({ node, options }: { node: Element; options: HTMLReactParserOptions }) {
   const [open, setOpen] = useState(false);
@@ -57,6 +68,16 @@ function ReferenceForm({ attrs, pageKey, children }: { attrs: Record<string, str
 export function ReferencePage({ pageKey }: { pageKey: string }) {
   const [filter, setFilter] = useState("*");
   const [zoom, setZoom] = useState<string | null>(null);
+  const [booking, setBooking] = useState(false);
+  useEffect(() => {
+    if (!booking) return;
+    const onKey = (event: KeyboardEvent) => { if (event.key === "Escape") setBooking(false); };
+    document.addEventListener("keydown", onKey);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = previousOverflow; };
+  }, [booking]);
+
   const page = pages[pageKey];
   if (!page) return null;
   const options: HTMLReactParserOptions = {
@@ -74,7 +95,9 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
       if (node.name === "img" && attrs['src']?.includes("animated_light_logo")) return <span className="reference-brand-mark"><img src={logo.url} alt="Udo Ezekiel" /></span>;
       if (node.name === "img" && !attrs['src']) return <></>;
       if (node.name === "a") {
+        if (textOf(node).replace(/\s+/g, " ").trim().toUpperCase() === "BOOK A FREE CALL") return <Button className={cls} onClick={() => setBooking(true)}>{children()}</Button>;
         if (attrs['data-zoom-src']) return <Button variant="ghost" className={cls} onClick={() => setZoom(attrs['data-zoom-src'] || null)}>{children()}</Button>;
+
         const href = attrs['href'] || "#";
         if (href === "#") return <span className={cls}>{children()}</span>;
         return <SiteLink href={href} className={cls} target={attrs['target']} rel={attrs['rel']}>{children()}</SiteLink>;
@@ -85,5 +108,5 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
       return undefined;
     },
   };
-  return <div className="reference-page"><div className="reference-root elementor-kit-11">{parse(page.html, options)}</div>{zoom && <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-5" role="dialog" aria-modal="true" aria-label="Project image"><Button variant="outline" className="absolute right-5 top-5" onClick={() => setZoom(null)}>Close</Button><img src={zoom} alt="Website project" className="max-h-[90vh] max-w-full object-contain" /></div>}</div>;
+  return <div className="reference-page"><div className="reference-root elementor-kit-11">{parse(page.html, options)}</div>{zoom && <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-5" role="dialog" aria-modal="true" aria-label="Project image"><Button variant="outline" className="absolute right-5 top-5" onClick={() => setZoom(null)}>Close</Button><img src={zoom} alt="Website project" className="max-h-[90vh] max-w-full object-contain" /></div>}{booking && <div className="fixed inset-0 z-50 flex flex-col bg-ink/95 p-4 md:p-8" role="dialog" aria-modal="true" aria-label="Book a free discovery call"><div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 pb-3"><p className="font-display text-lg font-black text-paper">Book a free discovery call</p><Button variant="outline" size="sm" onClick={() => setBooking(false)}>Close</Button></div><iframe title="Calendly booking calendar" src={CALENDLY_URL} className="mx-auto w-full max-w-5xl flex-1 rounded-lg border-0 bg-paper" loading="lazy" /></div>}</div>;
 }
