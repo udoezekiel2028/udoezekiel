@@ -30,6 +30,7 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PromoteYourBusinessOnlineRouteImport } from './routes/promote-your-business-online'
 import { Route as QuestionnaireRouteImport } from './routes/questionnaire'
 import { Route as ReferAFriendRouteImport } from './routes/refer-a-friend'
+import { Route as RequestsRouteImport } from './routes/requests'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as WebDesignGettingStartedRouteImport } from './routes/web-design-getting-started'
@@ -160,6 +161,11 @@ const QuestionnaireRoute = QuestionnaireRouteImport.update({
 const ReferAFriendRoute = ReferAFriendRouteImport.update({
   id: '/refer-a-friend',
   path: '/refer-a-friend',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestsRoute = RequestsRouteImport.update({
+  id: '/requests',
+  path: '/requests',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -302,6 +308,7 @@ export interface FileRoutesByFullPath {
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
+  '/requests': typeof RequestsRoute
   '/services': typeof ServicesRouteWithChildren
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
@@ -345,6 +352,7 @@ export interface FileRoutesByTo {
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
+  '/requests': typeof RequestsRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
   '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
@@ -390,6 +398,7 @@ export interface FileRoutesById {
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
+  '/requests': typeof RequestsRoute
   '/services': typeof ServicesRouteWithChildren
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
@@ -437,6 +446,7 @@ export interface FileRouteTypes {
     | '/promote-your-business-online'
     | '/questionnaire'
     | '/refer-a-friend'
+    | '/requests'
     | '/services'
     | '/terms-of-service'
     | '/web-design-getting-started'
@@ -480,6 +490,7 @@ export interface FileRouteTypes {
     | '/promote-your-business-online'
     | '/questionnaire'
     | '/refer-a-friend'
+    | '/requests'
     | '/terms-of-service'
     | '/web-design-getting-started'
     | '/why-you-should-plan-your-online-business-strategy'
@@ -524,6 +535,7 @@ export interface FileRouteTypes {
     | '/promote-your-business-online'
     | '/questionnaire'
     | '/refer-a-friend'
+    | '/requests'
     | '/services'
     | '/terms-of-service'
     | '/web-design-getting-started'
@@ -570,6 +582,7 @@ export interface RootRouteChildren {
   PromoteYourBusinessOnlineRoute: typeof PromoteYourBusinessOnlineRoute
   QuestionnaireRoute: typeof QuestionnaireRoute
   ReferAFriendRoute: typeof ReferAFriendRoute
+  RequestsRoute: typeof RequestsRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   WebDesignGettingStartedRoute: typeof WebDesignGettingStartedRoute
@@ -724,6 +737,13 @@ declare module '@tanstack/react-router' {
       path: '/refer-a-friend'
       fullPath: '/refer-a-friend'
       preLoaderRoute: typeof ReferAFriendRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requests': {
+      id: '/requests'
+      path: '/requests'
+      fullPath: '/requests'
+      preLoaderRoute: typeof RequestsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -973,6 +993,7 @@ const rootRouteChildren: RootRouteChildren = {
   PromoteYourBusinessOnlineRoute: PromoteYourBusinessOnlineRoute,
   QuestionnaireRoute: QuestionnaireRoute,
   ReferAFriendRoute: ReferAFriendRoute,
+  RequestsRoute: RequestsRoute,
   ServicesRoute: ServicesRouteWithChildren,
   TermsOfServiceRoute: TermsOfServiceRoute,
   WebDesignGettingStartedRoute: WebDesignGettingStartedRoute,
