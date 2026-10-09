@@ -14,7 +14,7 @@ export function pageHead(title: string, description: string) {
   return { meta: [{ title: `${title} | Udo Ezekiel` }, { name: "description", content: description }, { property: "og:title", content: `${title} | Udo Ezekiel` }, { property: "og:description", content: description }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] };
 }
 
-export function PageHeading({ title, subtitle }: { title: string; subtitle?: string }) {
+export function PageHeading({ title, subtitle }: { title: string; subtitle?: string | undefined }) {
   return <section className="bg-ink py-16 text-paper md:py-24"><div className={wrap}><p className="mb-5 text-sm text-paper/60"><SiteLink href="/" className="hover:text-brand">Home</SiteLink> / {title}</p><h1 className="max-w-4xl font-display text-4xl font-black italic leading-tight md:text-5xl">{title}</h1>{subtitle && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-paper/70">{subtitle}</p>}</div></section>;
 }
 
@@ -77,7 +77,7 @@ export function AccountPage({ reset = false }: { reset?: boolean }) {
 
 export function ShopPage() {
   const [query, setQuery] = useState(""); const [selected, setSelected] = useState<string | null>(null);
-  const p = pages.shop;
+  const p = pages['shop'];
   const products = ["5000+ Canva Social Templates", "Social Media Resources Template (Google Sheets Edition)", "Faceless Digital Marketing Blueprint", "500+ Glowing Animated Reels"];
   return <><PageHeading title="Digital Products" subtitle="Resources for content creation, social media planning, and digital marketing." /><section className="bg-paper py-16 text-ink"><div className={wrap}><label className="mb-10 flex max-w-md items-center gap-3 border-b border-ink/25"><Search className="h-5 w-5" /><input aria-label="Search products" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search products" className="w-full bg-transparent py-4 outline-none" /></label><div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">{products.map((name, i) => ({name, i})).filter(({name}) => name.toLowerCase().includes(query.toLowerCase())).map(({name, i}) => <article key={name}>{p?.images[i] && <img src={p.images[i]} alt={name} className="aspect-square w-full object-cover" />}<h2 className="mt-5 font-display text-xl font-black">{name}</h2><p className="mt-3 font-bold text-brand">{i ? "₦3,000.00" : "₦3,500.00"}</p><Button variant="outline" className="mt-5" onClick={() => setSelected(name)}>View product</Button></article>)}</div>{selected && <div role="dialog" aria-modal="true" aria-label={selected} className="fixed inset-0 z-50 grid place-items-center bg-ink/80 p-5"><div className="w-full max-w-lg rounded bg-paper p-8"><h2 className="font-display text-2xl font-black">{selected}</h2><p className="my-6 text-ink/65">Purchases are not available yet.</p><Button onClick={() => setSelected(null)}>Close</Button></div></div>}</div></section></>;
 }
