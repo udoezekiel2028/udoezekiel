@@ -118,3 +118,9 @@
   .reference-page .reference-root > div > main { padding: 0 15px; }
   .reference-page .wd-content-layout { flex-direction: column; }
 }
+/* Consultation page: keep the animated pointer at its natural small size and make the call button full-width orange */
+.reference-page .elementor-element-b2f8b9c img { width: 125px !important; max-width: 45%; height: auto !important; }
+.reference-page .elementor-element-0caa69d,
+.reference-page .elementor-element-0caa69d .elementor-widget-container { width: 100%; }
+.reference-page .elementor-element-0caa69d button { width: 100%; background-color: var(--brand-logo) !important; border-color: var(--brand-logo) !important; color: var(--paper) !important; }
+.reference-page .elementor-element-0caa69d button:hover { background-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; border-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; }
