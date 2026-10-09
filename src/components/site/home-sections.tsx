@@ -22,6 +22,7 @@ import portraitAsset from "@/assets/kenneth-portrait.jpg.asset.json";
 import logoAsset from "@/assets/udo-ezekiel-logo.png.asset.json";
 import eaGlobalAsset from "@/assets/ea-global-stores-portfolio.jpg.asset.json";
 import pianogoddessAsset from "@/assets/pianogoddess-portfolio.jpg.asset.json";
+import forxersAsset from "@/assets/forxers-academy-portfolio.jpg.asset.json";
 
 const SITE = "https://kennethben.com";
 const U = `${SITE}/wp-content/uploads`;
