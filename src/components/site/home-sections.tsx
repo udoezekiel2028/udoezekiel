@@ -1,3 +1,5 @@
+import blogAffiliate from "@/assets/blog-affiliate.jpg";
+import blogGmb from "@/assets/blog-google-business.jpg";
 import { SiteLink } from "./site-link";
 import { WHATSAPP_URL, SOCIAL_PROFILES } from "./contact-details";
 import { Button } from "@/components/ui/button";
@@ -95,9 +97,9 @@ const STEPS = [
 
 const POSTS = [
   { cat: "Domain and Hosting", t: "Hostinger Coupon Code 2026: Get 20% Off Hosting & Domain | How to Buy Hostinger", date: "September 14, 2026", ex: "If you are planning to build a website for your business, personal brand, online store, blog, portfolio, professional service, or digit...", slug: "hostinger-coupon-code", img: `${U}/2023/03/Badge_brand_dark_640×240.webp` },
-  { cat: "eCommerce, How To", t: "How to Fix WooCommerce Status Not Showing", date: "December 28, 2024", ex: "WooCommerce status not showing on dashboard when you are done with the required setup and checklist can be really annoying. And if you ...", slug: "how-to-fix-woocommerce-status-not-showing-on-dashboard", img: `${U}/2025/01/ECommHive1.jpg` },
-  { cat: "Affiliate Marketing", t: "Expertnaire Review: Affiliate Marketing in Nigeria", date: "December 28, 2024", ex: "What Is Expertnaire? How To Start Affiliate Marketing in Nigeria? Those 2 questions above are frequently asked by curious and scared in...", slug: "expertnaire-review-affiliate-marketing-in-nigeria", img: `${U}/2022/04/Screenshot-2022-04-01-at-15.00.54.png` },
-  { cat: "Digital Marketing", t: "Google My Business in Nigeria – How to Register", date: "December 28, 2024", ex: "In this post, we are going to be discussing about Google My Business Nigeria. If you are running a small or medium business in Africa ...", slug: "google-my-business-nigeria", img: `${U}/2022/01/Verify-business.png` },
+  { cat: "eCommerce, How To", t: "How to Fix WooCommerce Status Not Showing", date: "September 28, 2026", ex: "WooCommerce status not showing on dashboard when you are done with the required setup and checklist can be really annoying. And if you ...", slug: "how-to-fix-woocommerce-status-not-showing-on-dashboard", img: `${U}/2025/01/ECommHive1.jpg` },
+  { cat: "Affiliate Marketing", t: "Expertnaire Review: Affiliate Marketing in Nigeria", date: "September 28, 2026", ex: "What Is Expertnaire? How To Start Affiliate Marketing in Nigeria? Those 2 questions above are frequently asked by curious and scared in...", slug: "expertnaire-review-affiliate-marketing-in-nigeria", img: blogAffiliate },
+  { cat: "Digital Marketing", t: "Google My Business in Nigeria – How to Register", date: "September 28, 2026", ex: "In this post, we are going to be discussing about Google My Business Nigeria. If you are running a small or medium business in Africa ...", slug: "google-my-business-nigeria", img: blogGmb },
 ];
 
 const FAQ = [
