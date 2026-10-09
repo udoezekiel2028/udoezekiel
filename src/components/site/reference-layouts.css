@@ -658,3 +658,5 @@ margin-right: auto;
 .reference-page [data-ref-style="rs-179"]{}
 .reference-page [data-ref-style="rs-180"]{--wd-col-lg:2;--wd-col-md:2;--wd-col-sm:1;--wd-gap-lg:20px;--wd-gap-sm:10px;}
 .reference-page [data-ref-style="rs-181"]{display:none;}
+/* Project override: every portfolio card keeps the reference's declared 4:5 picture shape. */
+.reference-page .wd-project .entry-thumbnail img{aspect-ratio:4/5;object-fit:cover;height:auto;}

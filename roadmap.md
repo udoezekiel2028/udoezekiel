@@ -11,4 +11,5 @@
 - [x] Update all WhatsApp and phone contact details to +2347067886756 and social profiles to udoezekiel.
 - [x] Verify removed pages and updated contact links.
 
+- [x] Swap the "Shakaaraah LLC" portfolio picture for the uploaded mockup, on the homepage card and everywhere else the old preview showed.
 - [ ] Waiting on final policy text: reference Terms, Privacy, and Referral pages are unavailable.
