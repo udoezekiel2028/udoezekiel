@@ -7,8 +7,8 @@
 - [x] Verify page navigation, direct links, and layouts.
 - [x] Match available remaining pages to their individual reference design structures; leave the approved homepage unchanged.
 - [x] Compare and verify the updated page families against the reference; all local pages load and desktop/mobile checks pass.
-- [ ] Remove the digital product store, individual product pages, and their links.
-- [ ] Update all WhatsApp and phone contact details to +2347067886756 and social profiles to udoezekiel.
-- [ ] Verify removed pages and updated contact links.
+- [x] Remove the digital product store, individual product pages, and their links.
+- [x] Update all WhatsApp and phone contact details to +2347067886756 and social profiles to udoezekiel.
+- [x] Verify removed pages and updated contact links.
 
 - [ ] Waiting on final policy text: reference Terms, Privacy, and Referral pages are unavailable.
