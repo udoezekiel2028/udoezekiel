@@ -10,33 +10,626 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AffiliateMarketingMostCostEffectiveWayToAdvertiseRouteImport } from './routes/affiliate-marketing-most-cost-effective-way-to-advertise'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ConsultationRouteImport } from './routes/consultation'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DomainSearchRouteImport } from './routes/domain-search'
+import { Route as ExpertnaireReviewAffiliateMarketingInNigeriaRouteImport } from './routes/expertnaire-review-affiliate-marketing-in-nigeria'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FlutterwaveStoreReviewRouteImport } from './routes/flutterwave-store-review'
+import { Route as GoogleMyBusinessNigeriaRouteImport } from './routes/google-my-business-nigeria'
+import { Route as HostingerCouponCodeRouteImport } from './routes/hostinger-coupon-code'
+import { Route as HowToFixWoocommerceStatusNotShowingOnDashboardRouteImport } from './routes/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+import { Route as MyAccountRouteImport } from './routes/my-account'
+import { Route as PiggyvestReview2022RouteImport } from './routes/piggyvest-review-2022'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PromoteYourBusinessOnlineRouteImport } from './routes/promote-your-business-online'
+import { Route as QuestionnaireRouteImport } from './routes/questionnaire'
+import { Route as ReferAFriendRouteImport } from './routes/refer-a-friend'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
+import { Route as WebDesignGettingStartedRouteImport } from './routes/web-design-getting-started'
+import { Route as WhyYouShouldPlanYourOnlineBusinessStrategyRouteImport } from './routes/why-you-should-plan-your-online-business-strategy'
+import { Route as MyAccountIndexRouteImport } from './routes/my-account.index'
+import { Route as MyAccountLostPasswordRouteImport } from './routes/my-account.lost-password'
+import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
+import { Route as PortfolioEaGlobalStoresRouteImport } from './routes/portfolio.ea-global-stores'
+import { Route as PortfolioEasyjapaRouteImport } from './routes/portfolio.easyjapa'
+import { Route as PortfolioForxersAcademyRouteImport } from './routes/portfolio.forxers-academy'
+import { Route as PortfolioPianogoddessAcademyRouteImport } from './routes/portfolio.pianogoddess-academy'
+import { Route as PortfolioShakaaraahLlcRouteImport } from './routes/portfolio.shakaaraah-llc'
+import { Route as PortfolioTheScoopNigeriaRouteImport } from './routes/portfolio.the-scoop-nigeria'
+import { Route as Product500GlowingAnimatedReelsRouteImport } from './routes/product.500-glowing-animated-reels'
+import { Route as ProductCanvaSocialMediaTemplatesRouteImport } from './routes/product.canva-social-media-templates'
+import { Route as ProductFacelessDigitalMarketingRouteImport } from './routes/product.faceless-digital-marketing'
+import { Route as ProductSocialMediaResourcesRouteImport } from './routes/product.social-media-resources'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesDigitalMarketingRouteImport } from './routes/services.digital-marketing'
+import { Route as ServicesEcommerceWebsiteDesignerRouteImport } from './routes/services.ecommerce-website-designer'
+import { Route as ServicesLandingPageDesignerInLagosNigeriaRouteImport } from './routes/services.landing-page-designer-in-lagos-nigeria'
+import { Route as ServicesLmsRouteImport } from './routes/services.lms'
+import { Route as ServicesPricingRouteImport } from './routes/services.pricing'
+import { Route as ServicesSeoRouteImport } from './routes/services.seo'
+import { Route as ServicesWebsiteDesignRouteImport } from './routes/services.website-design'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute =
+  AffiliateMarketingMostCostEffectiveWayToAdvertiseRouteImport.update({
+    id: '/affiliate-marketing-most-cost-effective-way-to-advertise',
+    path: '/affiliate-marketing-most-cost-effective-way-to-advertise',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultationRoute = ConsultationRouteImport.update({
+  id: '/consultation',
+  path: '/consultation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DomainSearchRoute = DomainSearchRouteImport.update({
+  id: '/domain-search',
+  path: '/domain-search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExpertnaireReviewAffiliateMarketingInNigeriaRoute =
+  ExpertnaireReviewAffiliateMarketingInNigeriaRouteImport.update({
+    id: '/expertnaire-review-affiliate-marketing-in-nigeria',
+    path: '/expertnaire-review-affiliate-marketing-in-nigeria',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlutterwaveStoreReviewRoute = FlutterwaveStoreReviewRouteImport.update({
+  id: '/flutterwave-store-review',
+  path: '/flutterwave-store-review',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GoogleMyBusinessNigeriaRoute = GoogleMyBusinessNigeriaRouteImport.update({
+  id: '/google-my-business-nigeria',
+  path: '/google-my-business-nigeria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HostingerCouponCodeRoute = HostingerCouponCodeRouteImport.update({
+  id: '/hostinger-coupon-code',
+  path: '/hostinger-coupon-code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowToFixWoocommerceStatusNotShowingOnDashboardRoute =
+  HowToFixWoocommerceStatusNotShowingOnDashboardRouteImport.update({
+    id: '/how-to-fix-woocommerce-status-not-showing-on-dashboard',
+    path: '/how-to-fix-woocommerce-status-not-showing-on-dashboard',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MyAccountRoute = MyAccountRouteImport.update({
+  id: '/my-account',
+  path: '/my-account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PiggyvestReview2022Route = PiggyvestReview2022RouteImport.update({
+  id: '/piggyvest-review-2022',
+  path: '/piggyvest-review-2022',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromoteYourBusinessOnlineRoute =
+  PromoteYourBusinessOnlineRouteImport.update({
+    id: '/promote-your-business-online',
+    path: '/promote-your-business-online',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const QuestionnaireRoute = QuestionnaireRouteImport.update({
+  id: '/questionnaire',
+  path: '/questionnaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferAFriendRoute = ReferAFriendRouteImport.update({
+  id: '/refer-a-friend',
+  path: '/refer-a-friend',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
+  id: '/terms-of-service',
+  path: '/terms-of-service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebDesignGettingStartedRoute = WebDesignGettingStartedRouteImport.update({
+  id: '/web-design-getting-started',
+  path: '/web-design-getting-started',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyYouShouldPlanYourOnlineBusinessStrategyRoute =
+  WhyYouShouldPlanYourOnlineBusinessStrategyRouteImport.update({
+    id: '/why-you-should-plan-your-online-business-strategy',
+    path: '/why-you-should-plan-your-online-business-strategy',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MyAccountIndexRoute = MyAccountIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => MyAccountRoute,
+} as any)
+const MyAccountLostPasswordRoute = MyAccountLostPasswordRouteImport.update({
+  id: '/lost-password',
+  path: '/lost-password',
+  getParentRoute: () => MyAccountRoute,
+} as any)
+const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PortfolioRoute,
+} as any)
+const PortfolioEaGlobalStoresRoute = PortfolioEaGlobalStoresRouteImport.update({
+  id: '/ea-global-stores',
+  path: '/ea-global-stores',
+  getParentRoute: () => PortfolioRoute,
+} as any)
+const PortfolioEasyjapaRoute = PortfolioEasyjapaRouteImport.update({
+  id: '/easyjapa',
+  path: '/easyjapa',
+  getParentRoute: () => PortfolioRoute,
+} as any)
+const PortfolioForxersAcademyRoute = PortfolioForxersAcademyRouteImport.update({
+  id: '/forxers-academy',
+  path: '/forxers-academy',
+  getParentRoute: () => PortfolioRoute,
+} as any)
+const PortfolioPianogoddessAcademyRoute =
+  PortfolioPianogoddessAcademyRouteImport.update({
+    id: '/pianogoddess-academy',
+    path: '/pianogoddess-academy',
+    getParentRoute: () => PortfolioRoute,
+  } as any)
+const PortfolioShakaaraahLlcRoute = PortfolioShakaaraahLlcRouteImport.update({
+  id: '/shakaaraah-llc',
+  path: '/shakaaraah-llc',
+  getParentRoute: () => PortfolioRoute,
+} as any)
+const PortfolioTheScoopNigeriaRoute =
+  PortfolioTheScoopNigeriaRouteImport.update({
+    id: '/the-scoop-nigeria',
+    path: '/the-scoop-nigeria',
+    getParentRoute: () => PortfolioRoute,
+  } as any)
+const Product500GlowingAnimatedReelsRoute =
+  Product500GlowingAnimatedReelsRouteImport.update({
+    id: '/product/500-glowing-animated-reels',
+    path: '/product/500-glowing-animated-reels',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductCanvaSocialMediaTemplatesRoute =
+  ProductCanvaSocialMediaTemplatesRouteImport.update({
+    id: '/product/canva-social-media-templates',
+    path: '/product/canva-social-media-templates',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductFacelessDigitalMarketingRoute =
+  ProductFacelessDigitalMarketingRouteImport.update({
+    id: '/product/faceless-digital-marketing',
+    path: '/product/faceless-digital-marketing',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductSocialMediaResourcesRoute =
+  ProductSocialMediaResourcesRouteImport.update({
+    id: '/product/social-media-resources',
+    path: '/product/social-media-resources',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesDigitalMarketingRoute =
+  ServicesDigitalMarketingRouteImport.update({
+    id: '/digital-marketing',
+    path: '/digital-marketing',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesEcommerceWebsiteDesignerRoute =
+  ServicesEcommerceWebsiteDesignerRouteImport.update({
+    id: '/ecommerce-website-designer',
+    path: '/ecommerce-website-designer',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesLandingPageDesignerInLagosNigeriaRoute =
+  ServicesLandingPageDesignerInLagosNigeriaRouteImport.update({
+    id: '/landing-page-designer-in-lagos-nigeria',
+    path: '/landing-page-designer-in-lagos-nigeria',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesLmsRoute = ServicesLmsRouteImport.update({
+  id: '/lms',
+  path: '/lms',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesPricingRoute = ServicesPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesSeoRoute = ServicesSeoRouteImport.update({
+  id: '/seo',
+  path: '/seo',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesWebsiteDesignRoute = ServicesWebsiteDesignRouteImport.update({
+  id: '/website-design',
+  path: '/website-design',
+  getParentRoute: () => ServicesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/affiliate-marketing-most-cost-effective-way-to-advertise': typeof AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute
+  '/blog': typeof BlogRoute
+  '/consultation': typeof ConsultationRoute
+  '/contact': typeof ContactRoute
+  '/dashboard': typeof DashboardRoute
+  '/domain-search': typeof DomainSearchRoute
+  '/expertnaire-review-affiliate-marketing-in-nigeria': typeof ExpertnaireReviewAffiliateMarketingInNigeriaRoute
+  '/faq': typeof FaqRoute
+  '/flutterwave-store-review': typeof FlutterwaveStoreReviewRoute
+  '/google-my-business-nigeria': typeof GoogleMyBusinessNigeriaRoute
+  '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
+  '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
+  '/my-account': typeof MyAccountRouteWithChildren
+  '/piggyvest-review-2022': typeof PiggyvestReview2022Route
+  '/portfolio': typeof PortfolioRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
+  '/questionnaire': typeof QuestionnaireRoute
+  '/refer-a-friend': typeof ReferAFriendRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/shop': typeof ShopRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/web-design-getting-started': typeof WebDesignGettingStartedRoute
+  '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
+  '/my-account/lost-password': typeof MyAccountLostPasswordRoute
+  '/portfolio/ea-global-stores': typeof PortfolioEaGlobalStoresRoute
+  '/portfolio/easyjapa': typeof PortfolioEasyjapaRoute
+  '/portfolio/forxers-academy': typeof PortfolioForxersAcademyRoute
+  '/portfolio/pianogoddess-academy': typeof PortfolioPianogoddessAcademyRoute
+  '/portfolio/shakaaraah-llc': typeof PortfolioShakaaraahLlcRoute
+  '/portfolio/the-scoop-nigeria': typeof PortfolioTheScoopNigeriaRoute
+  '/product/500-glowing-animated-reels': typeof Product500GlowingAnimatedReelsRoute
+  '/product/canva-social-media-templates': typeof ProductCanvaSocialMediaTemplatesRoute
+  '/product/faceless-digital-marketing': typeof ProductFacelessDigitalMarketingRoute
+  '/product/social-media-resources': typeof ProductSocialMediaResourcesRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
+  '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
+  '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
+  '/services/lms': typeof ServicesLmsRoute
+  '/services/pricing': typeof ServicesPricingRoute
+  '/services/seo': typeof ServicesSeoRoute
+  '/services/website-design': typeof ServicesWebsiteDesignRoute
+  '/my-account/': typeof MyAccountIndexRoute
+  '/portfolio/': typeof PortfolioIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/affiliate-marketing-most-cost-effective-way-to-advertise': typeof AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute
+  '/blog': typeof BlogRoute
+  '/consultation': typeof ConsultationRoute
+  '/contact': typeof ContactRoute
+  '/dashboard': typeof DashboardRoute
+  '/domain-search': typeof DomainSearchRoute
+  '/expertnaire-review-affiliate-marketing-in-nigeria': typeof ExpertnaireReviewAffiliateMarketingInNigeriaRoute
+  '/faq': typeof FaqRoute
+  '/flutterwave-store-review': typeof FlutterwaveStoreReviewRoute
+  '/google-my-business-nigeria': typeof GoogleMyBusinessNigeriaRoute
+  '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
+  '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
+  '/piggyvest-review-2022': typeof PiggyvestReview2022Route
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
+  '/questionnaire': typeof QuestionnaireRoute
+  '/refer-a-friend': typeof ReferAFriendRoute
+  '/shop': typeof ShopRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/web-design-getting-started': typeof WebDesignGettingStartedRoute
+  '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
+  '/my-account/lost-password': typeof MyAccountLostPasswordRoute
+  '/portfolio/ea-global-stores': typeof PortfolioEaGlobalStoresRoute
+  '/portfolio/easyjapa': typeof PortfolioEasyjapaRoute
+  '/portfolio/forxers-academy': typeof PortfolioForxersAcademyRoute
+  '/portfolio/pianogoddess-academy': typeof PortfolioPianogoddessAcademyRoute
+  '/portfolio/shakaaraah-llc': typeof PortfolioShakaaraahLlcRoute
+  '/portfolio/the-scoop-nigeria': typeof PortfolioTheScoopNigeriaRoute
+  '/product/500-glowing-animated-reels': typeof Product500GlowingAnimatedReelsRoute
+  '/product/canva-social-media-templates': typeof ProductCanvaSocialMediaTemplatesRoute
+  '/product/faceless-digital-marketing': typeof ProductFacelessDigitalMarketingRoute
+  '/product/social-media-resources': typeof ProductSocialMediaResourcesRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
+  '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
+  '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
+  '/services/lms': typeof ServicesLmsRoute
+  '/services/pricing': typeof ServicesPricingRoute
+  '/services/seo': typeof ServicesSeoRoute
+  '/services/website-design': typeof ServicesWebsiteDesignRoute
+  '/my-account': typeof MyAccountIndexRoute
+  '/portfolio': typeof PortfolioIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/affiliate-marketing-most-cost-effective-way-to-advertise': typeof AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute
+  '/blog': typeof BlogRoute
+  '/consultation': typeof ConsultationRoute
+  '/contact': typeof ContactRoute
+  '/dashboard': typeof DashboardRoute
+  '/domain-search': typeof DomainSearchRoute
+  '/expertnaire-review-affiliate-marketing-in-nigeria': typeof ExpertnaireReviewAffiliateMarketingInNigeriaRoute
+  '/faq': typeof FaqRoute
+  '/flutterwave-store-review': typeof FlutterwaveStoreReviewRoute
+  '/google-my-business-nigeria': typeof GoogleMyBusinessNigeriaRoute
+  '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
+  '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
+  '/my-account': typeof MyAccountRouteWithChildren
+  '/piggyvest-review-2022': typeof PiggyvestReview2022Route
+  '/portfolio': typeof PortfolioRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
+  '/questionnaire': typeof QuestionnaireRoute
+  '/refer-a-friend': typeof ReferAFriendRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/shop': typeof ShopRoute
+  '/terms-of-service': typeof TermsOfServiceRoute
+  '/web-design-getting-started': typeof WebDesignGettingStartedRoute
+  '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
+  '/my-account/lost-password': typeof MyAccountLostPasswordRoute
+  '/portfolio/ea-global-stores': typeof PortfolioEaGlobalStoresRoute
+  '/portfolio/easyjapa': typeof PortfolioEasyjapaRoute
+  '/portfolio/forxers-academy': typeof PortfolioForxersAcademyRoute
+  '/portfolio/pianogoddess-academy': typeof PortfolioPianogoddessAcademyRoute
+  '/portfolio/shakaaraah-llc': typeof PortfolioShakaaraahLlcRoute
+  '/portfolio/the-scoop-nigeria': typeof PortfolioTheScoopNigeriaRoute
+  '/product/500-glowing-animated-reels': typeof Product500GlowingAnimatedReelsRoute
+  '/product/canva-social-media-templates': typeof ProductCanvaSocialMediaTemplatesRoute
+  '/product/faceless-digital-marketing': typeof ProductFacelessDigitalMarketingRoute
+  '/product/social-media-resources': typeof ProductSocialMediaResourcesRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
+  '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
+  '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
+  '/services/lms': typeof ServicesLmsRoute
+  '/services/pricing': typeof ServicesPricingRoute
+  '/services/seo': typeof ServicesSeoRoute
+  '/services/website-design': typeof ServicesWebsiteDesignRoute
+  '/my-account/': typeof MyAccountIndexRoute
+  '/portfolio/': typeof PortfolioIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/affiliate-marketing-most-cost-effective-way-to-advertise'
+    | '/blog'
+    | '/consultation'
+    | '/contact'
+    | '/dashboard'
+    | '/domain-search'
+    | '/expertnaire-review-affiliate-marketing-in-nigeria'
+    | '/faq'
+    | '/flutterwave-store-review'
+    | '/google-my-business-nigeria'
+    | '/hostinger-coupon-code'
+    | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+    | '/my-account'
+    | '/piggyvest-review-2022'
+    | '/portfolio'
+    | '/privacy-policy'
+    | '/promote-your-business-online'
+    | '/questionnaire'
+    | '/refer-a-friend'
+    | '/services'
+    | '/shop'
+    | '/terms-of-service'
+    | '/web-design-getting-started'
+    | '/why-you-should-plan-your-online-business-strategy'
+    | '/my-account/lost-password'
+    | '/portfolio/ea-global-stores'
+    | '/portfolio/easyjapa'
+    | '/portfolio/forxers-academy'
+    | '/portfolio/pianogoddess-academy'
+    | '/portfolio/shakaaraah-llc'
+    | '/portfolio/the-scoop-nigeria'
+    | '/product/500-glowing-animated-reels'
+    | '/product/canva-social-media-templates'
+    | '/product/faceless-digital-marketing'
+    | '/product/social-media-resources'
+    | '/services/digital-marketing'
+    | '/services/ecommerce-website-designer'
+    | '/services/landing-page-designer-in-lagos-nigeria'
+    | '/services/lms'
+    | '/services/pricing'
+    | '/services/seo'
+    | '/services/website-design'
+    | '/my-account/'
+    | '/portfolio/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/affiliate-marketing-most-cost-effective-way-to-advertise'
+    | '/blog'
+    | '/consultation'
+    | '/contact'
+    | '/dashboard'
+    | '/domain-search'
+    | '/expertnaire-review-affiliate-marketing-in-nigeria'
+    | '/faq'
+    | '/flutterwave-store-review'
+    | '/google-my-business-nigeria'
+    | '/hostinger-coupon-code'
+    | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+    | '/piggyvest-review-2022'
+    | '/privacy-policy'
+    | '/promote-your-business-online'
+    | '/questionnaire'
+    | '/refer-a-friend'
+    | '/shop'
+    | '/terms-of-service'
+    | '/web-design-getting-started'
+    | '/why-you-should-plan-your-online-business-strategy'
+    | '/my-account/lost-password'
+    | '/portfolio/ea-global-stores'
+    | '/portfolio/easyjapa'
+    | '/portfolio/forxers-academy'
+    | '/portfolio/pianogoddess-academy'
+    | '/portfolio/shakaaraah-llc'
+    | '/portfolio/the-scoop-nigeria'
+    | '/product/500-glowing-animated-reels'
+    | '/product/canva-social-media-templates'
+    | '/product/faceless-digital-marketing'
+    | '/product/social-media-resources'
+    | '/services/digital-marketing'
+    | '/services/ecommerce-website-designer'
+    | '/services/landing-page-designer-in-lagos-nigeria'
+    | '/services/lms'
+    | '/services/pricing'
+    | '/services/seo'
+    | '/services/website-design'
+    | '/my-account'
+    | '/portfolio'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/affiliate-marketing-most-cost-effective-way-to-advertise'
+    | '/blog'
+    | '/consultation'
+    | '/contact'
+    | '/dashboard'
+    | '/domain-search'
+    | '/expertnaire-review-affiliate-marketing-in-nigeria'
+    | '/faq'
+    | '/flutterwave-store-review'
+    | '/google-my-business-nigeria'
+    | '/hostinger-coupon-code'
+    | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+    | '/my-account'
+    | '/piggyvest-review-2022'
+    | '/portfolio'
+    | '/privacy-policy'
+    | '/promote-your-business-online'
+    | '/questionnaire'
+    | '/refer-a-friend'
+    | '/services'
+    | '/shop'
+    | '/terms-of-service'
+    | '/web-design-getting-started'
+    | '/why-you-should-plan-your-online-business-strategy'
+    | '/my-account/lost-password'
+    | '/portfolio/ea-global-stores'
+    | '/portfolio/easyjapa'
+    | '/portfolio/forxers-academy'
+    | '/portfolio/pianogoddess-academy'
+    | '/portfolio/shakaaraah-llc'
+    | '/portfolio/the-scoop-nigeria'
+    | '/product/500-glowing-animated-reels'
+    | '/product/canva-social-media-templates'
+    | '/product/faceless-digital-marketing'
+    | '/product/social-media-resources'
+    | '/services/digital-marketing'
+    | '/services/ecommerce-website-designer'
+    | '/services/landing-page-designer-in-lagos-nigeria'
+    | '/services/lms'
+    | '/services/pricing'
+    | '/services/seo'
+    | '/services/website-design'
+    | '/my-account/'
+    | '/portfolio/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute: typeof AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute
+  BlogRoute: typeof BlogRoute
+  ConsultationRoute: typeof ConsultationRoute
+  ContactRoute: typeof ContactRoute
+  DashboardRoute: typeof DashboardRoute
+  DomainSearchRoute: typeof DomainSearchRoute
+  ExpertnaireReviewAffiliateMarketingInNigeriaRoute: typeof ExpertnaireReviewAffiliateMarketingInNigeriaRoute
+  FaqRoute: typeof FaqRoute
+  FlutterwaveStoreReviewRoute: typeof FlutterwaveStoreReviewRoute
+  GoogleMyBusinessNigeriaRoute: typeof GoogleMyBusinessNigeriaRoute
+  HostingerCouponCodeRoute: typeof HostingerCouponCodeRoute
+  HowToFixWoocommerceStatusNotShowingOnDashboardRoute: typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
+  MyAccountRoute: typeof MyAccountRouteWithChildren
+  PiggyvestReview2022Route: typeof PiggyvestReview2022Route
+  PortfolioRoute: typeof PortfolioRouteWithChildren
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  PromoteYourBusinessOnlineRoute: typeof PromoteYourBusinessOnlineRoute
+  QuestionnaireRoute: typeof QuestionnaireRoute
+  ReferAFriendRoute: typeof ReferAFriendRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
+  ShopRoute: typeof ShopRoute
+  TermsOfServiceRoute: typeof TermsOfServiceRoute
+  WebDesignGettingStartedRoute: typeof WebDesignGettingStartedRoute
+  WhyYouShouldPlanYourOnlineBusinessStrategyRoute: typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
+  Product500GlowingAnimatedReelsRoute: typeof Product500GlowingAnimatedReelsRoute
+  ProductCanvaSocialMediaTemplatesRoute: typeof ProductCanvaSocialMediaTemplatesRoute
+  ProductFacelessDigitalMarketingRoute: typeof ProductFacelessDigitalMarketingRoute
+  ProductSocialMediaResourcesRoute: typeof ProductSocialMediaResourcesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +641,431 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/affiliate-marketing-most-cost-effective-way-to-advertise': {
+      id: '/affiliate-marketing-most-cost-effective-way-to-advertise'
+      path: '/affiliate-marketing-most-cost-effective-way-to-advertise'
+      fullPath: '/affiliate-marketing-most-cost-effective-way-to-advertise'
+      preLoaderRoute: typeof AffiliateMarketingMostCostEffectiveWayToAdvertiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultation': {
+      id: '/consultation'
+      path: '/consultation'
+      fullPath: '/consultation'
+      preLoaderRoute: typeof ConsultationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/domain-search': {
+      id: '/domain-search'
+      path: '/domain-search'
+      fullPath: '/domain-search'
+      preLoaderRoute: typeof DomainSearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/expertnaire-review-affiliate-marketing-in-nigeria': {
+      id: '/expertnaire-review-affiliate-marketing-in-nigeria'
+      path: '/expertnaire-review-affiliate-marketing-in-nigeria'
+      fullPath: '/expertnaire-review-affiliate-marketing-in-nigeria'
+      preLoaderRoute: typeof ExpertnaireReviewAffiliateMarketingInNigeriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flutterwave-store-review': {
+      id: '/flutterwave-store-review'
+      path: '/flutterwave-store-review'
+      fullPath: '/flutterwave-store-review'
+      preLoaderRoute: typeof FlutterwaveStoreReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/google-my-business-nigeria': {
+      id: '/google-my-business-nigeria'
+      path: '/google-my-business-nigeria'
+      fullPath: '/google-my-business-nigeria'
+      preLoaderRoute: typeof GoogleMyBusinessNigeriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hostinger-coupon-code': {
+      id: '/hostinger-coupon-code'
+      path: '/hostinger-coupon-code'
+      fullPath: '/hostinger-coupon-code'
+      preLoaderRoute: typeof HostingerCouponCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-fix-woocommerce-status-not-showing-on-dashboard': {
+      id: '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+      path: '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+      fullPath: '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+      preLoaderRoute: typeof HowToFixWoocommerceStatusNotShowingOnDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-account': {
+      id: '/my-account'
+      path: '/my-account'
+      fullPath: '/my-account'
+      preLoaderRoute: typeof MyAccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/piggyvest-review-2022': {
+      id: '/piggyvest-review-2022'
+      path: '/piggyvest-review-2022'
+      fullPath: '/piggyvest-review-2022'
+      preLoaderRoute: typeof PiggyvestReview2022RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/promote-your-business-online': {
+      id: '/promote-your-business-online'
+      path: '/promote-your-business-online'
+      fullPath: '/promote-your-business-online'
+      preLoaderRoute: typeof PromoteYourBusinessOnlineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questionnaire': {
+      id: '/questionnaire'
+      path: '/questionnaire'
+      fullPath: '/questionnaire'
+      preLoaderRoute: typeof QuestionnaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refer-a-friend': {
+      id: '/refer-a-friend'
+      path: '/refer-a-friend'
+      fullPath: '/refer-a-friend'
+      preLoaderRoute: typeof ReferAFriendRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-of-service': {
+      id: '/terms-of-service'
+      path: '/terms-of-service'
+      fullPath: '/terms-of-service'
+      preLoaderRoute: typeof TermsOfServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/web-design-getting-started': {
+      id: '/web-design-getting-started'
+      path: '/web-design-getting-started'
+      fullPath: '/web-design-getting-started'
+      preLoaderRoute: typeof WebDesignGettingStartedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-you-should-plan-your-online-business-strategy': {
+      id: '/why-you-should-plan-your-online-business-strategy'
+      path: '/why-you-should-plan-your-online-business-strategy'
+      fullPath: '/why-you-should-plan-your-online-business-strategy'
+      preLoaderRoute: typeof WhyYouShouldPlanYourOnlineBusinessStrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-account/': {
+      id: '/my-account/'
+      path: '/'
+      fullPath: '/my-account/'
+      preLoaderRoute: typeof MyAccountIndexRouteImport
+      parentRoute: typeof MyAccountRoute
+    }
+    '/my-account/lost-password': {
+      id: '/my-account/lost-password'
+      path: '/lost-password'
+      fullPath: '/my-account/lost-password'
+      preLoaderRoute: typeof MyAccountLostPasswordRouteImport
+      parentRoute: typeof MyAccountRoute
+    }
+    '/portfolio/': {
+      id: '/portfolio/'
+      path: '/'
+      fullPath: '/portfolio/'
+      preLoaderRoute: typeof PortfolioIndexRouteImport
+      parentRoute: typeof PortfolioRoute
+    }
+    '/portfolio/ea-global-stores': {
+      id: '/portfolio/ea-global-stores'
+      path: '/ea-global-stores'
+      fullPath: '/portfolio/ea-global-stores'
+      preLoaderRoute: typeof PortfolioEaGlobalStoresRouteImport
+      parentRoute: typeof PortfolioRoute
+    }
+    '/portfolio/easyjapa': {
+      id: '/portfolio/easyjapa'
+      path: '/easyjapa'
+      fullPath: '/portfolio/easyjapa'
+      preLoaderRoute: typeof PortfolioEasyjapaRouteImport
+      parentRoute: typeof PortfolioRoute
+    }
+    '/portfolio/forxers-academy': {
+      id: '/portfolio/forxers-academy'
+      path: '/forxers-academy'
+      fullPath: '/portfolio/forxers-academy'
+      preLoaderRoute: typeof PortfolioForxersAcademyRouteImport
+      parentRoute: typeof PortfolioRoute
+    }
+    '/portfolio/pianogoddess-academy': {
+      id: '/portfolio/pianogoddess-academy'
+      path: '/pianogoddess-academy'
+      fullPath: '/portfolio/pianogoddess-academy'
+      preLoaderRoute: typeof PortfolioPianogoddessAcademyRouteImport
+      parentRoute: typeof PortfolioRoute
+    }
+    '/portfolio/shakaaraah-llc': {
+      id: '/portfolio/shakaaraah-llc'
+      path: '/shakaaraah-llc'
+      fullPath: '/portfolio/shakaaraah-llc'
+      preLoaderRoute: typeof PortfolioShakaaraahLlcRouteImport
+      parentRoute: typeof PortfolioRoute
+    }
+    '/portfolio/the-scoop-nigeria': {
+      id: '/portfolio/the-scoop-nigeria'
+      path: '/the-scoop-nigeria'
+      fullPath: '/portfolio/the-scoop-nigeria'
+      preLoaderRoute: typeof PortfolioTheScoopNigeriaRouteImport
+      parentRoute: typeof PortfolioRoute
+    }
+    '/product/500-glowing-animated-reels': {
+      id: '/product/500-glowing-animated-reels'
+      path: '/product/500-glowing-animated-reels'
+      fullPath: '/product/500-glowing-animated-reels'
+      preLoaderRoute: typeof Product500GlowingAnimatedReelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product/canva-social-media-templates': {
+      id: '/product/canva-social-media-templates'
+      path: '/product/canva-social-media-templates'
+      fullPath: '/product/canva-social-media-templates'
+      preLoaderRoute: typeof ProductCanvaSocialMediaTemplatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product/faceless-digital-marketing': {
+      id: '/product/faceless-digital-marketing'
+      path: '/product/faceless-digital-marketing'
+      fullPath: '/product/faceless-digital-marketing'
+      preLoaderRoute: typeof ProductFacelessDigitalMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product/social-media-resources': {
+      id: '/product/social-media-resources'
+      path: '/product/social-media-resources'
+      fullPath: '/product/social-media-resources'
+      preLoaderRoute: typeof ProductSocialMediaResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/digital-marketing': {
+      id: '/services/digital-marketing'
+      path: '/digital-marketing'
+      fullPath: '/services/digital-marketing'
+      preLoaderRoute: typeof ServicesDigitalMarketingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/ecommerce-website-designer': {
+      id: '/services/ecommerce-website-designer'
+      path: '/ecommerce-website-designer'
+      fullPath: '/services/ecommerce-website-designer'
+      preLoaderRoute: typeof ServicesEcommerceWebsiteDesignerRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/landing-page-designer-in-lagos-nigeria': {
+      id: '/services/landing-page-designer-in-lagos-nigeria'
+      path: '/landing-page-designer-in-lagos-nigeria'
+      fullPath: '/services/landing-page-designer-in-lagos-nigeria'
+      preLoaderRoute: typeof ServicesLandingPageDesignerInLagosNigeriaRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/lms': {
+      id: '/services/lms'
+      path: '/lms'
+      fullPath: '/services/lms'
+      preLoaderRoute: typeof ServicesLmsRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/pricing': {
+      id: '/services/pricing'
+      path: '/pricing'
+      fullPath: '/services/pricing'
+      preLoaderRoute: typeof ServicesPricingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/seo': {
+      id: '/services/seo'
+      path: '/seo'
+      fullPath: '/services/seo'
+      preLoaderRoute: typeof ServicesSeoRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/website-design': {
+      id: '/services/website-design'
+      path: '/website-design'
+      fullPath: '/services/website-design'
+      preLoaderRoute: typeof ServicesWebsiteDesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
   }
 }
 
+interface MyAccountRouteChildren {
+  MyAccountLostPasswordRoute: typeof MyAccountLostPasswordRoute
+  MyAccountIndexRoute: typeof MyAccountIndexRoute
+}
+
+const MyAccountRouteChildren: MyAccountRouteChildren = {
+  MyAccountLostPasswordRoute: MyAccountLostPasswordRoute,
+  MyAccountIndexRoute: MyAccountIndexRoute,
+}
+
+const MyAccountRouteWithChildren = MyAccountRoute._addFileChildren(
+  MyAccountRouteChildren,
+)
+
+interface PortfolioRouteChildren {
+  PortfolioEaGlobalStoresRoute: typeof PortfolioEaGlobalStoresRoute
+  PortfolioEasyjapaRoute: typeof PortfolioEasyjapaRoute
+  PortfolioForxersAcademyRoute: typeof PortfolioForxersAcademyRoute
+  PortfolioPianogoddessAcademyRoute: typeof PortfolioPianogoddessAcademyRoute
+  PortfolioShakaaraahLlcRoute: typeof PortfolioShakaaraahLlcRoute
+  PortfolioTheScoopNigeriaRoute: typeof PortfolioTheScoopNigeriaRoute
+  PortfolioIndexRoute: typeof PortfolioIndexRoute
+}
+
+const PortfolioRouteChildren: PortfolioRouteChildren = {
+  PortfolioEaGlobalStoresRoute: PortfolioEaGlobalStoresRoute,
+  PortfolioEasyjapaRoute: PortfolioEasyjapaRoute,
+  PortfolioForxersAcademyRoute: PortfolioForxersAcademyRoute,
+  PortfolioPianogoddessAcademyRoute: PortfolioPianogoddessAcademyRoute,
+  PortfolioShakaaraahLlcRoute: PortfolioShakaaraahLlcRoute,
+  PortfolioTheScoopNigeriaRoute: PortfolioTheScoopNigeriaRoute,
+  PortfolioIndexRoute: PortfolioIndexRoute,
+}
+
+const PortfolioRouteWithChildren = PortfolioRoute._addFileChildren(
+  PortfolioRouteChildren,
+)
+
+interface ServicesRouteChildren {
+  ServicesDigitalMarketingRoute: typeof ServicesDigitalMarketingRoute
+  ServicesEcommerceWebsiteDesignerRoute: typeof ServicesEcommerceWebsiteDesignerRoute
+  ServicesLandingPageDesignerInLagosNigeriaRoute: typeof ServicesLandingPageDesignerInLagosNigeriaRoute
+  ServicesLmsRoute: typeof ServicesLmsRoute
+  ServicesPricingRoute: typeof ServicesPricingRoute
+  ServicesSeoRoute: typeof ServicesSeoRoute
+  ServicesWebsiteDesignRoute: typeof ServicesWebsiteDesignRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesDigitalMarketingRoute: ServicesDigitalMarketingRoute,
+  ServicesEcommerceWebsiteDesignerRoute: ServicesEcommerceWebsiteDesignerRoute,
+  ServicesLandingPageDesignerInLagosNigeriaRoute:
+    ServicesLandingPageDesignerInLagosNigeriaRoute,
+  ServicesLmsRoute: ServicesLmsRoute,
+  ServicesPricingRoute: ServicesPricingRoute,
+  ServicesSeoRoute: ServicesSeoRoute,
+  ServicesWebsiteDesignRoute: ServicesWebsiteDesignRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute:
+    AffiliateMarketingMostCostEffectiveWayToAdvertiseRoute,
+  BlogRoute: BlogRoute,
+  ConsultationRoute: ConsultationRoute,
+  ContactRoute: ContactRoute,
+  DashboardRoute: DashboardRoute,
+  DomainSearchRoute: DomainSearchRoute,
+  ExpertnaireReviewAffiliateMarketingInNigeriaRoute:
+    ExpertnaireReviewAffiliateMarketingInNigeriaRoute,
+  FaqRoute: FaqRoute,
+  FlutterwaveStoreReviewRoute: FlutterwaveStoreReviewRoute,
+  GoogleMyBusinessNigeriaRoute: GoogleMyBusinessNigeriaRoute,
+  HostingerCouponCodeRoute: HostingerCouponCodeRoute,
+  HowToFixWoocommerceStatusNotShowingOnDashboardRoute:
+    HowToFixWoocommerceStatusNotShowingOnDashboardRoute,
+  MyAccountRoute: MyAccountRouteWithChildren,
+  PiggyvestReview2022Route: PiggyvestReview2022Route,
+  PortfolioRoute: PortfolioRouteWithChildren,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  PromoteYourBusinessOnlineRoute: PromoteYourBusinessOnlineRoute,
+  QuestionnaireRoute: QuestionnaireRoute,
+  ReferAFriendRoute: ReferAFriendRoute,
+  ServicesRoute: ServicesRouteWithChildren,
+  ShopRoute: ShopRoute,
+  TermsOfServiceRoute: TermsOfServiceRoute,
+  WebDesignGettingStartedRoute: WebDesignGettingStartedRoute,
+  WhyYouShouldPlanYourOnlineBusinessStrategyRoute:
+    WhyYouShouldPlanYourOnlineBusinessStrategyRoute,
+  Product500GlowingAnimatedReelsRoute: Product500GlowingAnimatedReelsRoute,
+  ProductCanvaSocialMediaTemplatesRoute: ProductCanvaSocialMediaTemplatesRoute,
+  ProductFacelessDigitalMarketingRoute: ProductFacelessDigitalMarketingRoute,
+  ProductSocialMediaResourcesRoute: ProductSocialMediaResourcesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
