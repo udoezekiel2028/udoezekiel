@@ -23,7 +23,21 @@ function ReferenceAccordion({ node, options }: { node: Element; options: HTMLRea
 function ReferenceForm({ attrs, pageKey, children }: { attrs: Record<string, string>; pageKey: string; children: React.ReactNode }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const { "data-inactive": _inactive, method: _method, action: _action, ...rest } = attrs;
-  if (pageKey.includes("my-account")) return <form {...attributesToProps(rest)} onSubmit={event => event.preventDefault()}>{children}<p className="reference-status" role="status">Account access is not available yet.</p></form>;
+  if (pageKey.includes("my-account")) {
+    const login = async (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const email = String(data.get("username") ?? "").trim();
+      const password = String(data.get("password") ?? "");
+      if (!email || !password) { setStatus("error"); return; }
+      setStatus("sending");
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) { setStatus("error"); return; }
+      setStatus("sent");
+      window.location.assign("/requests");
+    };
+    return <form {...attributesToProps(rest)} onSubmit={login}><fieldset disabled={status === "sending"} className="contents">{children}</fieldset>{status !== "idle" && <p className="reference-status" role="status">{status === "sending" ? "Signing in…" : status === "sent" ? "Signed in — redirecting…" : "Incorrect email or password. Please try again."}</p>}</form>;
+  }
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const fields: Record<string, string | string[]> = {};
