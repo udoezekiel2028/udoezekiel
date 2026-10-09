@@ -31,7 +31,6 @@ import { Route as PromoteYourBusinessOnlineRouteImport } from './routes/promote-
 import { Route as QuestionnaireRouteImport } from './routes/questionnaire'
 import { Route as ReferAFriendRouteImport } from './routes/refer-a-friend'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ShopRouteImport } from './routes/shop'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as WebDesignGettingStartedRouteImport } from './routes/web-design-getting-started'
 import { Route as WhyYouShouldPlanYourOnlineBusinessStrategyRouteImport } from './routes/why-you-should-plan-your-online-business-strategy'
@@ -44,10 +43,6 @@ import { Route as PortfolioForxersAcademyRouteImport } from './routes/portfolio.
 import { Route as PortfolioPianogoddessAcademyRouteImport } from './routes/portfolio.pianogoddess-academy'
 import { Route as PortfolioShakaaraahLlcRouteImport } from './routes/portfolio.shakaaraah-llc'
 import { Route as PortfolioTheScoopNigeriaRouteImport } from './routes/portfolio.the-scoop-nigeria'
-import { Route as Product500GlowingAnimatedReelsRouteImport } from './routes/product.500-glowing-animated-reels'
-import { Route as ProductCanvaSocialMediaTemplatesRouteImport } from './routes/product.canva-social-media-templates'
-import { Route as ProductFacelessDigitalMarketingRouteImport } from './routes/product.faceless-digital-marketing'
-import { Route as ProductSocialMediaResourcesRouteImport } from './routes/product.social-media-resources'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesDigitalMarketingRouteImport } from './routes/services.digital-marketing'
 import { Route as ServicesEcommerceWebsiteDesignerRouteImport } from './routes/services.ecommerce-website-designer'
@@ -171,11 +166,6 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ShopRoute = ShopRouteImport.update({
-  id: '/shop',
-  path: '/shop',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
   id: '/terms-of-service',
   path: '/terms-of-service',
@@ -238,30 +228,6 @@ const PortfolioTheScoopNigeriaRoute =
     id: '/the-scoop-nigeria',
     path: '/the-scoop-nigeria',
     getParentRoute: () => PortfolioRoute,
-  } as any)
-const Product500GlowingAnimatedReelsRoute =
-  Product500GlowingAnimatedReelsRouteImport.update({
-    id: '/product/500-glowing-animated-reels',
-    path: '/product/500-glowing-animated-reels',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProductCanvaSocialMediaTemplatesRoute =
-  ProductCanvaSocialMediaTemplatesRouteImport.update({
-    id: '/product/canva-social-media-templates',
-    path: '/product/canva-social-media-templates',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProductFacelessDigitalMarketingRoute =
-  ProductFacelessDigitalMarketingRouteImport.update({
-    id: '/product/faceless-digital-marketing',
-    path: '/product/faceless-digital-marketing',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProductSocialMediaResourcesRoute =
-  ProductSocialMediaResourcesRouteImport.update({
-    id: '/product/social-media-resources',
-    path: '/product/social-media-resources',
-    getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/',
@@ -330,7 +296,6 @@ export interface FileRoutesByFullPath {
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
   '/services': typeof ServicesRouteWithChildren
-  '/shop': typeof ShopRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
   '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
@@ -341,10 +306,6 @@ export interface FileRoutesByFullPath {
   '/portfolio/pianogoddess-academy': typeof PortfolioPianogoddessAcademyRoute
   '/portfolio/shakaaraah-llc': typeof PortfolioShakaaraahLlcRoute
   '/portfolio/the-scoop-nigeria': typeof PortfolioTheScoopNigeriaRoute
-  '/product/500-glowing-animated-reels': typeof Product500GlowingAnimatedReelsRoute
-  '/product/canva-social-media-templates': typeof ProductCanvaSocialMediaTemplatesRoute
-  '/product/faceless-digital-marketing': typeof ProductFacelessDigitalMarketingRoute
-  '/product/social-media-resources': typeof ProductSocialMediaResourcesRoute
   '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
   '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
   '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
@@ -376,7 +337,6 @@ export interface FileRoutesByTo {
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
-  '/shop': typeof ShopRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
   '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
@@ -387,10 +347,6 @@ export interface FileRoutesByTo {
   '/portfolio/pianogoddess-academy': typeof PortfolioPianogoddessAcademyRoute
   '/portfolio/shakaaraah-llc': typeof PortfolioShakaaraahLlcRoute
   '/portfolio/the-scoop-nigeria': typeof PortfolioTheScoopNigeriaRoute
-  '/product/500-glowing-animated-reels': typeof Product500GlowingAnimatedReelsRoute
-  '/product/canva-social-media-templates': typeof ProductCanvaSocialMediaTemplatesRoute
-  '/product/faceless-digital-marketing': typeof ProductFacelessDigitalMarketingRoute
-  '/product/social-media-resources': typeof ProductSocialMediaResourcesRoute
   '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
   '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
   '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
@@ -426,7 +382,6 @@ export interface FileRoutesById {
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
   '/services': typeof ServicesRouteWithChildren
-  '/shop': typeof ShopRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
   '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
@@ -437,10 +392,6 @@ export interface FileRoutesById {
   '/portfolio/pianogoddess-academy': typeof PortfolioPianogoddessAcademyRoute
   '/portfolio/shakaaraah-llc': typeof PortfolioShakaaraahLlcRoute
   '/portfolio/the-scoop-nigeria': typeof PortfolioTheScoopNigeriaRoute
-  '/product/500-glowing-animated-reels': typeof Product500GlowingAnimatedReelsRoute
-  '/product/canva-social-media-templates': typeof ProductCanvaSocialMediaTemplatesRoute
-  '/product/faceless-digital-marketing': typeof ProductFacelessDigitalMarketingRoute
-  '/product/social-media-resources': typeof ProductSocialMediaResourcesRoute
   '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
   '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
   '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
@@ -477,7 +428,6 @@ export interface FileRouteTypes {
     | '/questionnaire'
     | '/refer-a-friend'
     | '/services'
-    | '/shop'
     | '/terms-of-service'
     | '/web-design-getting-started'
     | '/why-you-should-plan-your-online-business-strategy'
@@ -488,10 +438,6 @@ export interface FileRouteTypes {
     | '/portfolio/pianogoddess-academy'
     | '/portfolio/shakaaraah-llc'
     | '/portfolio/the-scoop-nigeria'
-    | '/product/500-glowing-animated-reels'
-    | '/product/canva-social-media-templates'
-    | '/product/faceless-digital-marketing'
-    | '/product/social-media-resources'
     | '/services/digital-marketing'
     | '/services/ecommerce-website-designer'
     | '/services/landing-page-designer-in-lagos-nigeria'
@@ -523,7 +469,6 @@ export interface FileRouteTypes {
     | '/promote-your-business-online'
     | '/questionnaire'
     | '/refer-a-friend'
-    | '/shop'
     | '/terms-of-service'
     | '/web-design-getting-started'
     | '/why-you-should-plan-your-online-business-strategy'
@@ -534,10 +479,6 @@ export interface FileRouteTypes {
     | '/portfolio/pianogoddess-academy'
     | '/portfolio/shakaaraah-llc'
     | '/portfolio/the-scoop-nigeria'
-    | '/product/500-glowing-animated-reels'
-    | '/product/canva-social-media-templates'
-    | '/product/faceless-digital-marketing'
-    | '/product/social-media-resources'
     | '/services/digital-marketing'
     | '/services/ecommerce-website-designer'
     | '/services/landing-page-designer-in-lagos-nigeria'
@@ -572,7 +513,6 @@ export interface FileRouteTypes {
     | '/questionnaire'
     | '/refer-a-friend'
     | '/services'
-    | '/shop'
     | '/terms-of-service'
     | '/web-design-getting-started'
     | '/why-you-should-plan-your-online-business-strategy'
@@ -583,10 +523,6 @@ export interface FileRouteTypes {
     | '/portfolio/pianogoddess-academy'
     | '/portfolio/shakaaraah-llc'
     | '/portfolio/the-scoop-nigeria'
-    | '/product/500-glowing-animated-reels'
-    | '/product/canva-social-media-templates'
-    | '/product/faceless-digital-marketing'
-    | '/product/social-media-resources'
     | '/services/digital-marketing'
     | '/services/ecommerce-website-designer'
     | '/services/landing-page-designer-in-lagos-nigeria'
@@ -622,14 +558,9 @@ export interface RootRouteChildren {
   QuestionnaireRoute: typeof QuestionnaireRoute
   ReferAFriendRoute: typeof ReferAFriendRoute
   ServicesRoute: typeof ServicesRouteWithChildren
-  ShopRoute: typeof ShopRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   WebDesignGettingStartedRoute: typeof WebDesignGettingStartedRoute
   WhyYouShouldPlanYourOnlineBusinessStrategyRoute: typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
-  Product500GlowingAnimatedReelsRoute: typeof Product500GlowingAnimatedReelsRoute
-  ProductCanvaSocialMediaTemplatesRoute: typeof ProductCanvaSocialMediaTemplatesRoute
-  ProductFacelessDigitalMarketingRoute: typeof ProductFacelessDigitalMarketingRoute
-  ProductSocialMediaResourcesRoute: typeof ProductSocialMediaResourcesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -788,13 +719,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/shop': {
-      id: '/shop'
-      path: '/shop'
-      fullPath: '/shop'
-      preLoaderRoute: typeof ShopRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/terms-of-service': {
       id: '/terms-of-service'
       path: '/terms-of-service'
@@ -878,34 +802,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/portfolio/the-scoop-nigeria'
       preLoaderRoute: typeof PortfolioTheScoopNigeriaRouteImport
       parentRoute: typeof PortfolioRoute
-    }
-    '/product/500-glowing-animated-reels': {
-      id: '/product/500-glowing-animated-reels'
-      path: '/product/500-glowing-animated-reels'
-      fullPath: '/product/500-glowing-animated-reels'
-      preLoaderRoute: typeof Product500GlowingAnimatedReelsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/product/canva-social-media-templates': {
-      id: '/product/canva-social-media-templates'
-      path: '/product/canva-social-media-templates'
-      fullPath: '/product/canva-social-media-templates'
-      preLoaderRoute: typeof ProductCanvaSocialMediaTemplatesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/product/faceless-digital-marketing': {
-      id: '/product/faceless-digital-marketing'
-      path: '/product/faceless-digital-marketing'
-      fullPath: '/product/faceless-digital-marketing'
-      preLoaderRoute: typeof ProductFacelessDigitalMarketingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/product/social-media-resources': {
-      id: '/product/social-media-resources'
-      path: '/product/social-media-resources'
-      fullPath: '/product/social-media-resources'
-      preLoaderRoute: typeof ProductSocialMediaResourcesRouteImport
-      parentRoute: typeof rootRouteImport
     }
     '/services/': {
       id: '/services/'
@@ -1057,15 +953,10 @@ const rootRouteChildren: RootRouteChildren = {
   QuestionnaireRoute: QuestionnaireRoute,
   ReferAFriendRoute: ReferAFriendRoute,
   ServicesRoute: ServicesRouteWithChildren,
-  ShopRoute: ShopRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
   WebDesignGettingStartedRoute: WebDesignGettingStartedRoute,
   WhyYouShouldPlanYourOnlineBusinessStrategyRoute:
     WhyYouShouldPlanYourOnlineBusinessStrategyRoute,
-  Product500GlowingAnimatedReelsRoute: Product500GlowingAnimatedReelsRoute,
-  ProductCanvaSocialMediaTemplatesRoute: ProductCanvaSocialMediaTemplatesRoute,
-  ProductFacelessDigitalMarketingRoute: ProductFacelessDigitalMarketingRoute,
-  ProductSocialMediaResourcesRoute: ProductSocialMediaResourcesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

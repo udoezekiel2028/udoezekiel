@@ -1,4 +1,5 @@
 import { SiteLink } from "./site-link";
+import { WHATSAPP_URL, SOCIAL_PROFILES } from "./contact-details";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
@@ -39,7 +40,6 @@ const NAV = [
   { label: "Home", href: "/" },
   { label: "My Services", href: `/services/`, menu: true },
   { label: "Pricing", href: `/services/pricing/` },
-  { label: "Products", href: `/shop/` },
   { label: "My Portfolio", href: `/portfolio/` },
   { label: "Blog", href: `/blog/` },
   { label: "Contact", href: `/contact/` },
@@ -103,7 +103,7 @@ const FAQ = [
   { q: "Do you write content and design logo too?", a: "Yea sure, for a modest additional price. I can write your website content for all pages and design your logo if you don’t have any yet. However, you have to provide as much information as possible, including your old logo or logo idea, product prices in the case of eCommerce, as well as your company profile and background." },
 ];
 
-const WHATSAPP = "/contact";
+const WHATSAPP = WHATSAPP_URL;
 
 const btn = "inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
 const btnBrand = `${btn} bg-brand text-brand-foreground hover:bg-brand/85`;
@@ -429,10 +429,10 @@ export function ContactFaq() {
 
 export function Footer() {
   const social = [
-    { Icon: Facebook, href: "/contact", label: "Facebook" },
-    { Icon: X, href: "/contact", label: "X" },
-    { Icon: Instagram, href: "/contact", label: "Instagram" },
-    { Icon: Linkedin, href: "/contact", label: "LinkedIn" },
+    { Icon: Facebook, href: SOCIAL_PROFILES.facebook, label: "Facebook" },
+    { Icon: X, href: SOCIAL_PROFILES.x, label: "X" },
+    { Icon: Instagram, href: SOCIAL_PROFILES.instagram, label: "Instagram" },
+    { Icon: Linkedin, href: SOCIAL_PROFILES.linkedin, label: "LinkedIn" },
   ];
   return (
     <footer className="border-t border-paper/10 bg-ink text-paper">

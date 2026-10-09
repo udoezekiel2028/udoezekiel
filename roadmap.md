@@ -7,7 +7,8 @@
 - [x] Verify page navigation, direct links, and layouts.
 - [x] Match available remaining pages to their individual reference design structures; leave the approved homepage unchanged.
 - [x] Compare and verify the updated page families against the reference; all local pages load and desktop/mobile checks pass.
-- [ ] Waiting on the user: new social handles and contact details to replace the reference owner's external profiles/contact destinations.
+- [x] Remove the digital product store, individual product pages, and their links.
+- [x] Update all WhatsApp and phone contact details to +2347067886756 and social profiles to udoezekiel.
+- [x] Verify removed pages and updated contact links.
 
 - [ ] Waiting on final policy text: reference Terms, Privacy, and Referral pages are unavailable.
-- [ ] Waiting on product descriptions: reference individual product pages return errors; local product pages use the available store listings.

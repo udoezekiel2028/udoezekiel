@@ -42,8 +42,7 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
         if (attrs['data-zoom-src']) return <Button variant="ghost" className={cls} onClick={() => setZoom(attrs['data-zoom-src'] || null)}>{children()}</Button>;
         const href = attrs['href'] || "#";
         if (href === "#") return <span className={cls}>{children()}</span>;
-        if (href.includes("add-to-cart") || cls.includes("add_to_cart_button")) return <Button disabled className={cls}>Add to cart</Button>;
-        return <SiteLink href={href} className={cls}>{children()}</SiteLink>;
+        return <SiteLink href={href} className={cls} target={attrs['target']} rel={attrs['rel']}>{children()}</SiteLink>;
       }
       if (node.name === "form") return <form {...attributesToProps(attrs)} onSubmit={event => event.preventDefault()}>{children()}<p className="reference-status" role="status">{pageKey.includes("my-account") ? "Account access is not available yet." : "Project requests are not accepting submissions yet."}</p></form>;
       if (node.name === "button" || (node.name === "input" && attrs['type'] === "submit")) return <Button disabled className={cls}>{node.name === "input" ? attrs['value'] : children()}</Button>;
