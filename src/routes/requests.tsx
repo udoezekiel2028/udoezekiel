@@ -99,7 +99,7 @@ function RequestsPage() {
             <dl className="grid gap-2 text-sm">
               {Object.entries((r.fields ?? {}) as Record<string, unknown>).map(([k, v]) => (
                 <div key={k} className="grid gap-1 sm:grid-cols-[180px_1fr]">
-                  <dt className="font-semibold">{k.replace(/\[\]$/, "")}</dt>
+                  <dt className="font-semibold">{fieldLabel(k)}</dt>
                   <dd className="whitespace-pre-wrap break-words">{Array.isArray(v) ? v.join(", ") : String(v)}</dd>
                 </div>
               ))}
