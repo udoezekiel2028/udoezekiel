@@ -1,6 +1,7 @@
 import { SiteLink } from "./site-link";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouterState } from "@tanstack/react-router";
 import {
   ChevronDown,
   ChevronUp,
@@ -113,6 +114,8 @@ const h2 = "font-display text-3xl font-black md:text-[42px] md:leading-[1.15]";
 export function Header() {
   const [open, setOpen] = useState(false);
   const [svc, setSvc] = useState(false);
+  const pathname = useRouterState({ select: state => state.location.pathname });
+  useEffect(() => { setOpen(false); setSvc(false); }, [pathname]);
   return (
     <header className="bg-ink text-paper">
       <div className="mx-auto flex h-[88px] max-w-[1222px] items-center justify-between gap-4 border-b border-paper/10 px-4">
@@ -455,8 +458,8 @@ export function Footer() {
         </div>
         <div>
           <h3 className="font-display font-extrabold">Let's Talk</h3>
-          <p className="mt-4 text-sm text-paper/70">Have a project in mind? Send a message on WhatsApp.</p>
-          <SiteLink href={WHATSAPP} target="_blank" rel="noreferrer" className={`${btnBrand} mt-5 gap-2`}><MessageCircle className="h-4 w-4" /> Chat on WhatsApp</SiteLink>
+          <p className="mt-4 text-sm text-paper/70">Have a project in mind? Let's talk about your business.</p>
+          <SiteLink href={WHATSAPP} className={`${btnBrand} mt-5 gap-2`}><MessageCircle className="h-4 w-4" /> Get In Touch</SiteLink>
         </div>
       </div>
       <div className="border-t border-paper/10">
