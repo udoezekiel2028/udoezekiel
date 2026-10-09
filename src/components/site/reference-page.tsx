@@ -1,6 +1,7 @@
 import { useState } from "react";
 import parse, { attributesToProps, domToReact, Element, type DOMNode, type HTMLReactParserOptions } from "html-react-parser";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 import { SiteLink } from "./site-link";
 import portrait from "@/assets/kenneth-portrait.jpg.asset.json";
 import logo from "@/assets/udo-ezekiel-logo.png.asset.json";
@@ -17,6 +18,26 @@ function ReferenceAccordion({ node, options }: { node: Element; options: HTMLRea
   const content = elements[1];
   if (!title || !content) return <></>;
   return <div className="elementor-accordion-item"><Button variant="ghost" className={`elementor-tab-title reference-accordion-trigger ${open ? "elementor-active" : ""}`} aria-expanded={open} onClick={() => setOpen(!open)}>{domToReact(title.children as DOMNode[], options)}</Button><div {...attributesToProps(content.attribs)} className={`elementor-tab-content ${open ? "elementor-active" : ""}`} hidden={!open}>{domToReact(content.children as DOMNode[], options)}</div></div>;
+}
+
+function ReferenceForm({ attrs, pageKey, children }: { attrs: Record<string, string>; pageKey: string; children: React.ReactNode }) {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const { "data-inactive": _inactive, method: _method, action: _action, ...rest } = attrs;
+  if (pageKey.includes("my-account")) return <form {...attributesToProps(rest)} onSubmit={event => event.preventDefault()}>{children}<p className="reference-status" role="status">Account access is not available yet.</p></form>;
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const fields: Record<string, string | string[]> = {};
+    new FormData(event.currentTarget).forEach((value, key) => {
+      if (typeof value !== "string" || !value.trim()) return;
+      const prev = fields[key];
+      fields[key] = prev === undefined ? value : Array.isArray(prev) ? [...prev, value] : [prev, value];
+    });
+    setStatus("sending");
+    const { error } = await supabase.from("form_submissions").insert({ page: pageKey, fields });
+    setStatus(error ? "error" : "sent");
+    if (!error) event.currentTarget?.reset?.();
+  }
+  return <form {...attributesToProps(rest)} onSubmit={submit}><fieldset disabled={status === "sending"} className="contents">{children}</fieldset>{status !== "idle" && <p className="reference-status" role="status">{status === "sending" ? "Sending…" : status === "sent" ? "Thank you! Your request has been received — I'll get back to you shortly." : "Something went wrong. Please try again."}</p>}</form>;
 }
 
 export function ReferencePage({ pageKey }: { pageKey: string }) {
@@ -44,8 +65,8 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
         if (href === "#") return <span className={cls}>{children()}</span>;
         return <SiteLink href={href} className={cls} target={attrs['target']} rel={attrs['rel']}>{children()}</SiteLink>;
       }
-      if (node.name === "form") return <form {...attributesToProps(attrs)} onSubmit={event => event.preventDefault()}>{children()}<p className="reference-status" role="status">{pageKey.includes("my-account") ? "Account access is not available yet." : "Project requests are not accepting submissions yet."}</p></form>;
-      if (node.name === "button" || (node.name === "input" && attrs['type'] === "submit")) return <Button disabled className={cls}>{node.name === "input" ? attrs['value'] : children()}</Button>;
+      if (node.name === "form") return <ReferenceForm attrs={attrs} pageKey={pageKey}>{children()}</ReferenceForm>;
+      if (node.name === "button" || (node.name === "input" && attrs['type'] === "submit")) return <Button type={attrs['type'] === "submit" ? "submit" : "button"} className={cls}>{node.name === "input" ? attrs['value'] : children()}</Button>;
       if (cls.includes("elementor-counter-number") && attrs['data-to-value']) return <span {...attributesToProps(attrs)}>{attrs['data-to-value']}</span>;
       return undefined;
     },
