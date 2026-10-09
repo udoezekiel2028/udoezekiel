@@ -21,6 +21,7 @@ import {
 import portraitAsset from "@/assets/kenneth-portrait.jpg.asset.json";
 import logoAsset from "@/assets/udo-ezekiel-logo.png.asset.json";
 import eaGlobalAsset from "@/assets/ea-global-stores-portfolio.jpg.asset.json";
+import pianogoddessAsset from "@/assets/pianogoddess-portfolio.jpg.asset.json";
 
 const SITE = "https://kennethben.com";
 const U = `${SITE}/wp-content/uploads`;
@@ -66,7 +67,7 @@ const BRANDS = [
 ];
 
 const PORTFOLIO: { name: string; cats: string; slug: string; img: string; src?: string }[] = [
-  { name: "Pianogoddess", cats: "eCommerce, Online Courses", slug: "pianogoddess-academy", img: "Pianogoddess-Academy-thumb" },
+  { name: "Pianogoddess", cats: "eCommerce, Online Courses", slug: "pianogoddess-academy", img: "Pianogoddess-Academy-thumb", src: pianogoddessAsset.url },
   { name: "EA Global Stores", cats: "eCommerce, Landing Pages", slug: "ea-global-stores", img: "EA-Global-Stores-thumb", src: eaGlobalAsset.url },
   { name: "ForXers Academy", cats: "Landing Pages, Online Courses", slug: "forxers-academy", img: "ForXers-thumb" },
   { name: "EasyJapa", cats: "Corporate Sites", slug: "easyjapa", img: "EasyJapa-thumb" },
