@@ -127,5 +127,6 @@
 /* Second call button further down the page: same full-width orange styling */
 .reference-page .elementor-element-666dbd5,
 .reference-page .elementor-element-666dbd5 .elementor-widget-container { width: 100%; }
+.reference-page .elementor-element-666dbd5 > .elementor-widget-container { border: 0 !important; padding: 0 !important; }
 .reference-page .elementor-element-666dbd5 button { width: 100%; background-color: var(--brand-logo) !important; border-color: var(--brand-logo) !important; color: var(--paper) !important; }
 .reference-page .elementor-element-666dbd5 button:hover { background-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; border-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; }
