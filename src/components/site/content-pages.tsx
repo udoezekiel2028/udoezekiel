@@ -1,3 +1,4 @@
+import { checkDomain, type DomainResult } from "@/lib/domain.functions";
 import { useState } from "react";
 import type React from "react";
 import { ArrowRight, Check, ChevronDown, Clock, Phone } from "lucide-react";
