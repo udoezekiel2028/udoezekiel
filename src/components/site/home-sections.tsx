@@ -200,13 +200,14 @@ function Hero() {
   const [domain, setDomain] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [checking, setChecking] = useState("");
   const [results, setResults] = useState<DomainResult[] | null>(null);
   const search = async (e: FormEvent) => {
     e.preventDefault();
     let clean = domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0] ?? "";
     if (/^[a-z0-9-]+$/.test(clean)) clean += ".com";
     if (!/^[a-z0-9-]{1,63}\.[a-z0-9.-]{2,20}$/.test(clean)) { setError("Please enter a valid domain name, e.g. yourbusiness.com"); return; }
-    setError(""); setLoading(true); setResults(null);
+    setError(""); setLoading(true); setResults(null); setChecking(clean);
     try {
       const r = await checkDomain({ data: { domain: clean } });
       if (r.error) setError(r.error); else setResults(r.results);
@@ -228,6 +229,12 @@ function Hero() {
           <input id="domain" name="domain" value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="Get a new domain name :)" className="min-w-0 flex-1 bg-transparent px-3 text-ink outline-none placeholder:text-ink/50" />
           <Button type="submit" variant="ghost" disabled={loading} className={`${btnBrand} gap-2 px-5 uppercase`}><Search className="h-4 w-4 sm:hidden" /><span className="hidden sm:inline">{loading ? "Checking..." : "Search"}</span></Button>
         </form>
+        {loading && (
+          <div role="status" aria-live="polite" className="search-loading text-paper/85">
+            <span className="search-loading-track" aria-hidden="true" />
+            <span>Checking {checking}…</span>
+          </div>
+        )}
         {error && <p role="alert" className="mt-3 max-w-[435px] text-sm font-semibold text-brand">{error}</p>}
         {results && (
           <div className="mt-4 max-w-[435px] space-y-3">
