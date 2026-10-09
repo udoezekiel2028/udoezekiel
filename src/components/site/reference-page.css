@@ -10,7 +10,11 @@
 .reference-page .elementor-image-carousel-wrapper .swiper-wrapper { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); transform: none !important; }
 .reference-page .elementor-image-carousel-wrapper .swiper-slide { width: auto !important; }
 .reference-page .swiper-slide-duplicate { display: none; }
-.reference-page .reference-accordion-trigger { width: 100%; height: auto; justify-content: flex-start; white-space: normal; text-align: left; border-radius: 0; }
+.reference-page .reference-accordion-trigger { width: 100%; height: auto; justify-content: flex-start; white-space: normal; text-align: left; border-radius: 0; color: var(--paper); }
+.reference-page .reference-accordion-trigger .elementor-accordion-title { color: var(--paper); }
+.reference-page .elementor-price-table__feature-inner { display: flex; align-items: center; gap: 10px; text-align: left; }
+.reference-page .elementor-price-table__feature-inner svg { flex-shrink: 0; }
+.reference-page .elementor-price-table__feature-inner span { text-align: left; }
 .reference-page .elementor-tab-content[hidden] { display: none !important; }
 .reference-page .elementor-tab-content.elementor-active { display: block; }
 .reference-page .reference-status, .reference-page .reference-unavailable { padding: 20px; margin: 20px 0; border-left: 3px solid var(--brand); color: var(--ink); background: var(--paper); }
