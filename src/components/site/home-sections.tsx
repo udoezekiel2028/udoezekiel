@@ -194,7 +194,25 @@ export function Header() {
   );
 }
 
+const HOSTINGER_REFERRAL = "NMHUDOEZECWS";
+
 function Hero() {
+  const [domain, setDomain] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [results, setResults] = useState<DomainResult[] | null>(null);
+  const search = async (e: React.FormEvent) => {
+    e.preventDefault();
+    let clean = domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0] ?? "";
+    if (/^[a-z0-9-]+$/.test(clean)) clean += ".com";
+    if (!/^[a-z0-9-]{1,63}\.[a-z0-9.-]{2,20}$/.test(clean)) { setError("Please enter a valid domain name, e.g. yourbusiness.com"); return; }
+    setError(""); setLoading(true); setResults(null);
+    try {
+      const r = await checkDomain({ data: { domain: clean } });
+      if (r.error) setError(r.error); else setResults(r.results);
+    } catch { setError("Could not check this domain right now. Please try again."); }
+    finally { setLoading(false); }
+  };
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
       <img src={HERO_PORTRAIT} alt="Udo Ezekiel, website designer" className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[60%] object-cover object-top opacity-90 md:block" />
