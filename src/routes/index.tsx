@@ -139,7 +139,7 @@ function Header() {
     <header className="bg-ink text-paper">
       <div className="mx-auto flex h-[88px] max-w-[1222px] items-center justify-between gap-4 border-b border-paper/10 px-4">
         <a href="/" aria-label="Udo Ezekiel home" className="shrink-0">
-          <img src={LOGO} alt="Udo Ezekiel – helping businesses succeed online" width={1345} height={380} className="h-[42px] w-auto" />
+          <img src={LOGO} alt="Udo Ezekiel – helping businesses succeed online" width={1345} height={380} className="h-12 w-auto" />
         </a>
         <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) =>

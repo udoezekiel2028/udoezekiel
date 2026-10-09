@@ -1,5 +1,5 @@
 # Roadmap
 
-- [ ] Replace homepage hero person photo with the uploaded portrait (DSC_8757) — in progress
-- [ ] Replace the site logo everywhere (header, footer, favicon) with the uploaded UDO EZEKIEL logo
-- [ ] Verify hero + logo visually in the preview and check for build errors
+- [x] Homepage hero section: replace the person image with the uploaded portrait
+- [x] Replace the site logo everywhere (header, footer, favicon) with the UDO EZEKIEL logo
+- [ ] Open question: page copy still says "Kenneth Ben" (title, meta, section text, links to kennethben.com). Confirm whether the whole site should be renamed to Udo Ezekiel.
