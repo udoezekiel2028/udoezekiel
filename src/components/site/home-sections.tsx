@@ -230,17 +230,19 @@ function Hero() {
         </form>
         {error && <p role="alert" className="mt-3 max-w-[435px] text-sm font-semibold text-brand">{error}</p>}
         {results && (
-          <ul className="mt-4 max-w-[435px] space-y-2">
-            {results.length === 0 && <li className="text-sm text-paper/80">No results found. Try another name.</li>}
+          <div className="mt-4 max-w-[435px] space-y-3">
+            {results.length === 0 && <p className="text-sm text-paper/80">No results found. Try another name.</p>}
             {results.map((r) => (
-              <li key={r.domain} className="flex flex-wrap items-center justify-between gap-2 rounded-sm bg-paper/10 px-3 py-2 text-sm">
-                <span className="font-semibold">{r.domain} — <span className={r.available ? "text-brand" : "text-paper/60"}>{r.available ? "Available" : "Taken"}</span></span>
+              <div key={r.domain} className={`rounded-sm border-l-4 px-5 py-4 text-sm ${r.available ? "border-green-600 bg-green-100 text-green-900" : "border-red-600 bg-red-100 text-red-900"}`}>
+                <p className="font-semibold">
+                  {r.available ? `✓ "${r.domain}" is available:` : `✕ "${r.domain}" is already taken.`}
+                </p>
                 {r.available && (
-                  <a href={`https://www.hostinger.com/domain-name-search?domain=${encodeURIComponent(r.domain)}&REFERRALCODE=${HOSTINGER_REFERRAL}`} target="_blank" rel="noopener noreferrer" className="font-bold text-brand hover:underline">Get it with my discount</a>
+                  <a href={`https://www.hostinger.com/domain-name-search?domain=${encodeURIComponent(r.domain)}&REFERRALCODE=${HOSTINGER_REFERRAL}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block font-medium text-blue-600 underline hover:text-blue-800">Get 20% Off Domain &amp; Hosting Here</a>
                 )}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         )}
         <div className="mt-6 flex gap-5">
           {SOCIAL_SHARE.map(({ Icon, label, href }) => (
