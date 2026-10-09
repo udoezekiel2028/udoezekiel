@@ -32,8 +32,6 @@ const SERVICES_MENU = [
   ["ECommerce Websites", "/services/ecommerce-website-designer/"],
   ["ELearning Websites", "/services/lms/"],
   ["Landing Page Designs", "/services/landing-page-designer-in-lagos-nigeria/"],
-  ["SEO Services", "/services/seo/"],
-  ["Digital Strategies", "/services/digital-marketing/"],
 ].map(([l, p]) => ({ label: l, href: p }));
 
 const NAV = [
