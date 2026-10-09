@@ -30,6 +30,8 @@
 .reference-page button.submit-button { background-color: var(--brand-logo) !important; border-color: var(--brand-logo) !important; color: var(--paper) !important; }
 .reference-page button.submit-button:hover { background-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; border-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; }
 .reference-page button.submit-button .text { color: var(--paper) !important; }
+.reference-page .elementor-25789 .elementor-element.elementor-element-b42d90a > .elementor-widget-container { margin-top: 0 !important; text-align: center; }
+.reference-page .elementor-25789 .elementor-element.elementor-element-b42d90a img { width: auto !important; max-width: 100%; max-height: 600px; height: auto; }
 @media(max-width: 767px) {
   .reference-page .wd-page-title h1 { font-size: 34px; }
   .reference-page .e-con-inner { max-width: 100%; }
