@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AboutPage, pageHead } from "@/components/site/content-pages";
+import { pageHead } from "@/components/site/content-pages";
+import { ReferencePage } from "@/components/site/reference-page";
 export const Route = createFileRoute("/about")({ head: () => pageHead("About Udo Ezekiel", "About Udo Ezekiel \u2014 website design and digital business services by Udo Ezekiel."), component: Page });
-function Page() { return <AboutPage  />; }
+function Page() { return <ReferencePage pageKey="about" />; }

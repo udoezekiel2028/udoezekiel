@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArticlePage, pageHead } from "@/components/site/content-pages";
+import { pageHead } from "@/components/site/content-pages";
+import { ReferencePage } from "@/components/site/reference-page";
 export const Route = createFileRoute("/web-design-getting-started")({ head: () => pageHead("How to Start Your Website Design Journey", "Free Domain Privacy"), component: Page });
-function Page() { return <ArticlePage pageKey="web-design-getting-started" />; }
+function Page() { return <ReferencePage pageKey="web-design-getting-started" />; }
