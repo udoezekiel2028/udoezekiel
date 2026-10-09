@@ -15,6 +15,13 @@
       "when": 1791519275020,
       "tag": "0001_admin_roles",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791520120964,
+      "tag": "0002_tighten_form_submissions_insert",
+      "breakpoints": true
     }
   ]
 }
