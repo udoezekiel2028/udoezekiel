@@ -15,9 +15,12 @@ import {
   MessageCircle,
 } from "lucide-react";
 
+import portraitAsset from "@/assets/kenneth-portrait.jpg.asset.json";
+
 const SITE = "https://kennethben.com";
 const U = `${SITE}/wp-content/uploads`;
 const HERO_IMG = `${U}/2025/08/ken-services-page.jpg`;
+const HERO_PORTRAIT = portraitAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
