@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type React from "react";
 import { ArrowRight, Check, ChevronDown, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteLink } from "./site-link";
