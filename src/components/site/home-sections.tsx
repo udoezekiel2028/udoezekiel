@@ -1,9 +1,10 @@
 import blogAffiliate from "@/assets/blog-affiliate.jpg";
 import blogGmb from "@/assets/blog-google-business.jpg";
 import { SiteLink } from "./site-link";
+import { checkDomain, type DomainResult } from "@/lib/domain.functions";
 import { WHATSAPP_URL, SOCIAL_PROFILES } from "./contact-details";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import {
   ChevronDown,
@@ -193,7 +194,25 @@ export function Header() {
   );
 }
 
+const HOSTINGER_REFERRAL = "NMHUDOEZECWS";
+
 function Hero() {
+  const [domain, setDomain] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [results, setResults] = useState<DomainResult[] | null>(null);
+  const search = async (e: FormEvent) => {
+    e.preventDefault();
+    let clean = domain.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0] ?? "";
+    if (/^[a-z0-9-]+$/.test(clean)) clean += ".com";
+    if (!/^[a-z0-9-]{1,63}\.[a-z0-9.-]{2,20}$/.test(clean)) { setError("Please enter a valid domain name, e.g. yourbusiness.com"); return; }
+    setError(""); setLoading(true); setResults(null);
+    try {
+      const r = await checkDomain({ data: { domain: clean } });
+      if (r.error) setError(r.error); else setResults(r.results);
+    } catch { setError("Could not check this domain right now. Please try again."); }
+    finally { setLoading(false); }
+  };
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
       <img src={HERO_PORTRAIT} alt="Udo Ezekiel, website designer" className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[60%] object-cover object-top opacity-90 md:block" />
@@ -204,11 +223,25 @@ function Hero() {
           With A <span className="text-brand">Website Designed</span><br />
           <span className="text-brand">To Grow</span> Your Business
         </h1>
-        <form action={`/domain-search/`} method="get" className="mt-10 flex max-w-[435px] rounded-sm bg-paper p-1.5">
+        <form onSubmit={search} className="mt-10 flex max-w-[435px] rounded-sm bg-paper p-1.5">
           <label htmlFor="domain" className="sr-only">Domain name</label>
-          <input id="domain" name="domain" placeholder="Get a new domain name :)" className="min-w-0 flex-1 bg-transparent px-3 text-ink outline-none placeholder:text-ink/50" />
-          <Button variant="ghost" className={`${btnBrand} gap-2 px-5 uppercase`}><Search className="h-4 w-4 sm:hidden" /><span className="hidden sm:inline">Search</span></Button>
+          <input id="domain" name="domain" value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="Get a new domain name :)" className="min-w-0 flex-1 bg-transparent px-3 text-ink outline-none placeholder:text-ink/50" />
+          <Button type="submit" variant="ghost" disabled={loading} className={`${btnBrand} gap-2 px-5 uppercase`}><Search className="h-4 w-4 sm:hidden" /><span className="hidden sm:inline">{loading ? "Checking..." : "Search"}</span></Button>
         </form>
+        {error && <p role="alert" className="mt-3 max-w-[435px] text-sm font-semibold text-brand">{error}</p>}
+        {results && (
+          <ul className="mt-4 max-w-[435px] space-y-2">
+            {results.length === 0 && <li className="text-sm text-paper/80">No results found. Try another name.</li>}
+            {results.map((r) => (
+              <li key={r.domain} className="flex flex-wrap items-center justify-between gap-2 rounded-sm bg-paper/10 px-3 py-2 text-sm">
+                <span className="font-semibold">{r.domain} — <span className={r.available ? "text-brand" : "text-paper/60"}>{r.available ? "Available" : "Taken"}</span></span>
+                {r.available && (
+                  <a href={`https://www.hostinger.com/domain-name-search?domain=${encodeURIComponent(r.domain)}&REFERRALCODE=${HOSTINGER_REFERRAL}`} target="_blank" rel="noopener noreferrer" className="font-bold text-brand hover:underline">Get it with my discount</a>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="mt-6 flex gap-5">
           {SOCIAL_SHARE.map(({ Icon, label, href }) => (
             <SiteLink key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="hover:text-brand"><Icon className="h-4 w-4" /></SiteLink>
