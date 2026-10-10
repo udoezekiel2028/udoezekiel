@@ -294,10 +294,12 @@ function Trusted() {
     <section className="bg-navy py-20 text-paper">
       <div className="mx-auto max-w-[1222px] px-4">
         <h2 className="text-center font-display text-3xl font-black md:text-4xl">Trusted by Forward-<br />Thinking Brands</h2>
-        <div className="mt-12 grid grid-cols-3 items-center gap-x-8 gap-y-10 sm:grid-cols-4 md:grid-cols-6">
-          {BRANDS.map((b) => (
-            <img key={b} src={`${U}/2025/07/${b}.png`} alt={b.replace(/-1$/, "").replace(/-/g, " ")} loading="lazy" className="mx-auto max-h-10 w-auto opacity-80 brightness-0 invert transition-opacity hover:opacity-100" />
-          ))}
+        <div className="mt-12 overflow-hidden" role="region" aria-label="Brand logos carousel">
+          <div className="brand-marquee flex items-center gap-x-14">
+            {[...BRANDS, ...BRANDS].map((b, i) => (
+              <img key={`${b}-${i}`} src={`${U}/2025/07/${b}.png`} alt={i < BRANDS.length ? b.replace(/-1$/, "").replace(/-/g, " ") : ""} loading="lazy" aria-hidden={i >= BRANDS.length} className="h-9 w-auto shrink-0 opacity-80 brightness-0 invert transition-opacity hover:opacity-100" />
+            ))}
+          </div>
         </div>
       </div>
     </section>

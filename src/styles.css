@@ -172,3 +172,9 @@
 .search-loading-track::after{content:"";position:absolute;top:0;left:0;width:10px;height:10px;border-radius:9999px;background:var(--brand-logo);box-shadow:0 0 8px 1px color-mix(in srgb,var(--brand-logo) 55%,transparent);animation:search-dot-slide 1.05s ease-in-out infinite alternate}
 @keyframes search-dot-slide{0%{transform:translateX(0)}100%{transform:translateX(110px)}}
 @media (prefers-reduced-motion:reduce){.search-loading-track::after{animation:none;left:55px}}
+
+/* Brand logos: single-line auto-scrolling carousel */
+.brand-marquee{width:max-content;animation:brand-marquee-scroll 45s linear infinite}
+.brand-marquee:hover{animation-play-state:paused}
+@keyframes brand-marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.brand-marquee{animation:none}}
