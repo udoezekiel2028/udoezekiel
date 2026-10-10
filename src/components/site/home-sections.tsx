@@ -293,7 +293,7 @@ function Trusted() {
   return (
     <section className="bg-navy py-20 text-paper">
       <div className="mx-auto max-w-[1222px] px-4">
-        <h2 className="text-center font-display text-3xl font-black md:text-4xl">Trusted by Forward-<br />Thinking Brands</h2>
+        <h2 className="text-center font-display text-3xl font-black text-brand md:text-4xl">Trusted by Forward-<br />Thinking Brands</h2>
         <div className="mt-12 overflow-hidden" role="region" aria-label="Brand logos carousel">
           <div className="brand-marquee flex items-center gap-x-14">
             {[...BRANDS, ...BRANDS].map((b, i) => (
@@ -340,14 +340,16 @@ export function Portfolio() {
             const src = p.src ?? `${U}/2025/07/${p.img}-768x960.jpg`;
             return (
               <article key={p.slug} className="group">
-                <div className="relative overflow-hidden">
-                  <img src={src} alt={`${p.name} website by Udo Ezekiel`} loading="lazy" width={768} height={960} className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 flex items-center justify-center gap-3 bg-ink/60 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
-                    <Button variant="ghost" onClick={() => setZoom(src)} aria-label={`View ${p.name} large`} className="grid h-11 w-11 place-items-center rounded-full bg-paper text-ink hover:bg-brand hover:text-brand-foreground"><Maximize2 className="h-4 w-4" /></Button>
+                <SiteLink href={`/portfolio/${p.slug}/`} aria-label={`View ${p.name} project`} className="block cursor-pointer">
+                  <div className="relative overflow-hidden">
+                    <img src={src} alt={`${p.name} website by Udo Ezekiel`} loading="lazy" width={768} height={960} className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 flex items-center justify-center gap-3 bg-ink/60 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                      <Button variant="ghost" aria-label={`View ${p.name} large`} className="grid h-11 w-11 place-items-center rounded-full bg-paper text-ink hover:bg-brand hover:text-brand-foreground" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setZoom(src); }}><Maximize2 className="h-4 w-4" /></Button>
+                    </div>
                   </div>
-                </div>
-                <h3 className="mt-4 font-display text-lg font-extrabold"><SiteLink href={`/portfolio/${p.slug}/`} className="hover:text-brand">{p.name}</SiteLink></h3>
-                <p className="text-sm text-paper/60">{p.cats}</p>
+                  <h3 className="mt-4 font-display text-lg font-extrabold transition-colors group-hover:text-brand">{p.name}</h3>
+                  <p className="text-sm text-paper/60">{p.cats}</p>
+                </SiteLink>
               </article>
             );
           })}
