@@ -7,7 +7,8 @@
 .reference-page .elementor-widget-container { height: auto; }
 .reference-page .elementor-heading-title { font-family: var(--wd-title-font); }
 .reference-page .elementor-widget-image img { display: inline-block; }
-.reference-page .elementor-image-carousel-wrapper .swiper-wrapper { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); transform: none !important; }
+.reference-page .elementor-image-carousel-wrapper .swiper-wrapper { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; transform: none !important; }
+.reference-page .elementor-image-carousel-wrapper .swiper-slide img { width: 100%; height: auto; object-fit: contain; background: transparent; }
 .reference-page .elementor-image-carousel-wrapper .swiper-slide { width: auto !important; }
 .reference-page .swiper-slide-duplicate { display: none; }
 .reference-page .reference-accordion-trigger { width: 100%; height: auto; justify-content: flex-start; white-space: normal; text-align: left; border-radius: 0; color: var(--paper); }
