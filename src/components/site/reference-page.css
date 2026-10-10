@@ -130,3 +130,7 @@
 .reference-page .elementor-element-666dbd5 > .elementor-widget-container { border: 0 !important; background-color: var(--reference-color-38); padding: 15px 45px !important; }
 .reference-page .elementor-element-666dbd5 button { width: 100%; background-color: var(--brand-logo) !important; border-color: var(--brand-logo) !important; color: var(--paper) !important; }
 .reference-page .elementor-element-666dbd5 button:hover { background-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; border-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; }
+/* eLearning gallery: five columns on a phone leave each picture ~40px wide, so use two */
+@media (max-width: 640px) {
+  .reference-page .elementor-28649 .elementor-image-carousel-wrapper .swiper-wrapper { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
