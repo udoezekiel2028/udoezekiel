@@ -5,6 +5,20 @@ import { supabase } from "@/integrations/supabase/client";
 import { SiteLink } from "./site-link";
 import portrait from "@/assets/kenneth-portrait.jpg.asset.json";
 import logo from "@/assets/udo-ezekiel-logo.png.asset.json";
+import parentPlanTransparent from "@/assets/parent-plan-website-transparent.png";
+import transportTransparent from "@/assets/transport-website-transparent.png";
+import choiceTransparent from "@/assets/choice-website-design-transparent.png";
+import pulseTransparent from "@/assets/pulse-coding-website-transparent.png";
+import notaryTransparent from "@/assets/notary-website-transparent.png";
+
+// Gallery images re-rendered with transparent backgrounds replace their originals by filename.
+const IMAGE_URL_MAP: Record<string, string> = {
+  "parent-plan-website.png": parentPlanTransparent,
+  "transport-website.png": transportTransparent,
+  "choice-website-design.png": choiceTransparent,
+  "pulse-coding-website.png": pulseTransparent,
+  "notary-website.png": notaryTransparent,
+};
 import layouts from "@/data/reference-layouts.json";
 import "./reference-layouts.css";
 import "./reference-page.css";
@@ -93,6 +107,10 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
       if (node.name === "article" && cls.includes("portfolio-entry") && filter !== "*" && !cls.split(" ").includes(filter.slice(1))) return <></>;
       if (node.name === "img" && attrs['data-portrait']) return <img {...attributesToProps(attrs)} src={portrait.url} alt="Udo Ezekiel" />;
       if (node.name === "img" && attrs['src']?.includes("animated_light_logo")) return <span className="reference-brand-mark"><img src={logo.url} alt="Udo Ezekiel" /></span>;
+      if (node.name === "img") {
+        const mapped = Object.entries(IMAGE_URL_MAP).find(([key]) => attrs['src']?.includes(key));
+        if (mapped) return <img {...attributesToProps(attrs)} src={mapped[1]} alt={attrs['alt'] || "Website project"} />;
+      }
       if (node.name === "img" && !attrs['src']) return <></>;
       if (node.name === "a") {
         if (textOf(node).replace(/\s+/g, " ").trim().toUpperCase() === "BOOK A FREE CALL") return <Button className={cls} onClick={() => setBooking(true)}>{children()}</Button>;
