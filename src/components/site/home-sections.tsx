@@ -216,7 +216,7 @@ function Hero() {
   };
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
-      <img src={HERO_PORTRAIT} alt="Udo Ezekiel, website designer" className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[60%] object-cover object-top opacity-90 md:block" />
+      <img src={HERO_PORTRAIT} alt="Udo Ezekiel, website designer" className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[60%] -scale-x-100 object-cover object-top opacity-90 md:block" />
       <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,var(--ink)_40%,transparent)] md:block" />
       <div className="relative mx-auto max-w-[1222px] px-4 pb-20 pt-20 md:pt-32">
         <h1 className="font-display text-[34px] font-black italic leading-[1.2] sm:text-5xl md:text-[58px]">
