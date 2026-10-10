@@ -139,4 +139,5 @@
   .reference-page .elementor-28649 .elementor-image-carousel-wrapper .swiper-slide { max-width: 100% !important; }
 .reference-page .elementor-28649 .elementor-image-carousel-wrapper .swiper-wrapper { gap: 14px; }
 .reference-page .elementor-28649 .elementor-image-carousel-wrapper .swiper-slide-image { object-fit: contain; background: transparent; }
+  .reference-page .elementor-28649 .elementor-image-carousel-wrapper .swiper-slide img { height: 112px; }
 }
