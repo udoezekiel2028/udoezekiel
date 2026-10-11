@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import { Header, Footer } from "@/components/site/home-sections";
+import { ConsentNotice } from "@/components/site/consent-notice";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -120,7 +121,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <div id="top"><Header /><main><Outlet /></main><Footer /></div>
+      <div id="top"><Header /><main><Outlet /></main><Footer /><ConsentNotice /></div>
     </QueryClientProvider>
   );
 }
