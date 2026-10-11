@@ -108,7 +108,7 @@ export function PolicyPage({ doc }: { doc: PolicyDoc }) {
           <p className="mt-3 leading-7 text-paper/70">Email or message me and you will get a personal reply, {policyContact.hours}.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild size="lg" className="h-auto bg-brand px-7 py-4 text-brand-foreground hover:bg-brand/90"><a href={CONTACT_MAILTO}>Email {CONTACT_EMAIL}</a></Button>
-            <Button asChild size="lg" variant="outline" className="h-auto border-paper/30 px-7 py-4 text-paper hover:bg-paper/10"><a href={WHATSAPP_URL} rel="noopener noreferrer" target="_blank">WhatsApp {CONTACT_PHONE}</a></Button>
+            <Button asChild size="lg" className="h-auto bg-paper px-7 py-4 text-ink hover:bg-paper/90"><a href={WHATSAPP_URL} rel="noopener noreferrer" target="_blank">WhatsApp {CONTACT_PHONE}</a></Button>
           </div>
         </div>
       </div>
