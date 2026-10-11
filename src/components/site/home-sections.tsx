@@ -452,7 +452,7 @@ export function ContactFaq() {
             {FAQ.map((f, i) => (
               <div key={f.q}>
                 <h3>
-                  <Button variant="ghost" aria-expanded={open === i} aria-controls={`faq-${i}`} onClick={() => setOpen(open === i ? null : i)} className="flex w-full items-center justify-between gap-4 py-5 text-left font-bold hover:text-brand">
+                  <Button variant="ghost" aria-expanded={open === i} aria-controls={`faq-${i}`} onClick={() => setOpen(open === i ? null : i)} className="flex w-full items-center justify-between gap-4 py-5 text-left font-bold whitespace-normal hover:text-brand">
                     {f.q}
                     <ChevronDown className={`h-4 w-4 shrink-0 transition-transform ${open === i ? "rotate-180 text-brand" : ""}`} />
                   </Button>

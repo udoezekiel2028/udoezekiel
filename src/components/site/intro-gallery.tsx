@@ -23,10 +23,10 @@ export function IntroGallery() {
 
   return (
     <div className="flex min-w-0 items-center px-4 py-10 md:px-6" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocusCapture={() => setPaused(true)} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }}>
-      <Carousel className="w-full min-w-0 pb-14" style={{ transform: "scale(1.02)" }} aria-label="Website design gallery" opts={{ loop: true, align: "start", slidesToScroll: 3 }} setApi={setApi}>
+      <Carousel className="w-full min-w-0 pb-14" style={{ transform: "scale(1.02)" }} aria-label="Website design gallery" opts={{ loop: true, align: "start", slidesToScroll: "auto" }} setApi={setApi}>
         <CarouselContent className="-ml-3">
           {images.map((image) => (
-            <CarouselItem key={image.src} className="basis-1/3 pl-3">
+            <CarouselItem key={image.src} className="basis-1/2 pl-3 sm:basis-1/3">
               <Button variant="ghost" className="block h-auto w-full overflow-hidden rounded-none border border-ink/10 p-0 shadow-md hover:bg-transparent focus-visible:ring-brand" aria-label={`View ${image.name} full size`} onClick={() => setSelected(image)}>
                 <img src={image.src} alt={`${image.name} website design`} loading="lazy" width={1410} height={2250} className="aspect-[1410/2250] w-full object-cover" />
               </Button>
