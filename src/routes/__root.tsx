@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import { Header, Footer } from "@/components/site/home-sections";
+import { ConsentNotice } from "@/components/site/consent-notice";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
