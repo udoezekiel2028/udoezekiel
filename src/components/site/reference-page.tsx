@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import parse, { attributesToProps, domToReact, Element, type DOMNode, type HTMLReactParserOptions } from "html-react-parser";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
+import { submitProjectRequest } from "@/lib/requests.functions";
 import { SiteLink } from "./site-link";
 import portrait from "@/assets/kenneth-portrait.jpg.asset.json";
 import logo from "@/assets/udo-ezekiel-logo.png.asset.json";
@@ -72,9 +73,9 @@ function ReferenceForm({ attrs, pageKey, children }: { attrs: Record<string, str
       fields[key] = prev === undefined ? value : Array.isArray(prev) ? [...prev, value] : [prev, value];
     });
     setStatus("sending");
-    const { error } = await supabase.from("form_submissions").insert({ page: pageKey, fields });
-    setStatus(error ? "error" : "sent");
-    if (!error) event.currentTarget?.reset?.();
+    const result = await submitProjectRequest({ data: { page: pageKey, fields } });
+    setStatus(result.ok ? "sent" : "error");
+    if (result.ok) event.currentTarget?.reset?.();
   }
   return <form {...attributesToProps(rest)} onSubmit={submit}><fieldset disabled={status === "sending"} className="contents">{children}</fieldset>{status !== "idle" && <p className="reference-status" role="status">{status === "sending" ? "Sending…" : status === "sent" ? "Thank you! Your request has been received — I'll get back to you shortly." : "Something went wrong. Please try again."}</p>}</form>;
 }
