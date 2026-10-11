@@ -121,7 +121,7 @@ export function Header() {
     <header className="bg-ink text-paper">
       <div className="mx-auto flex h-[88px] max-w-[1222px] items-center justify-between gap-4 border-b border-paper/10 px-4">
         <SiteLink href="/" aria-label="Udo Ezekiel home" className="shrink-0">
-          <img src={LOGO} alt="Udo Ezekiel – helping businesses succeed online" width={1345} height={380} className="h-12 w-auto" />
+          <img src={LOGO} alt="Udo Ezekiel – helping businesses succeed online" width={1744} height={380} className="h-12 w-auto" />
         </SiteLink>
         <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) =>
@@ -478,7 +478,7 @@ export function Footer() {
     <footer className="border-t border-paper/10 bg-ink text-paper">
       <div className="mx-auto grid max-w-[1222px] gap-10 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <img src={LOGO} alt="Udo Ezekiel" loading="lazy" width={1345} height={380} className="h-10 w-auto" />
+          <img src={LOGO} alt="Udo Ezekiel" loading="lazy" width={1744} height={380} className="h-10 w-auto" />
           <p className="mt-4 text-sm text-paper/60">Freelance website designer in Lagos, Nigeria — helping businesses succeed online.</p>
           <div className="mt-5 flex gap-4">
             {social.map(({ Icon, href, label }) => (<SiteLink key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="hover:text-brand"><Icon className="h-4 w-4" /></SiteLink>))}
