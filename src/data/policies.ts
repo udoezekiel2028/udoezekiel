@@ -6,6 +6,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
   SOCIAL_PROFILES,
+  WHATSAPP_URL,
 } from "@/components/site/contact-details";
 
 export type PolicySection = {
@@ -393,7 +394,7 @@ export const privacyPolicy: PolicyDoc = {
 export const policyContact = {
   email: CONTACT_EMAIL,
   phone: CONTACT_PHONE,
-  whatsapp: "https://wa.me/2347067886756",
+  whatsapp: WHATSAPP_URL,
   socials: SOCIAL_PROFILES,
   hours: "Mondays to Fridays",
 };
