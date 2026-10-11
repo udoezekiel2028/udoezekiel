@@ -118,7 +118,7 @@ export function Header() {
   const pathname = useRouterState({ select: state => state.location.pathname });
   useEffect(() => { setOpen(false); setSvc(false); }, [pathname]);
   return (
-    <header className="bg-ink text-paper">
+    <header className="sticky top-0 z-50 bg-ink text-paper">
       <div className="mx-auto flex h-[88px] max-w-[1222px] items-center justify-between gap-4 border-b border-paper/10 px-4">
         <SiteLink href="/" aria-label="Udo Ezekiel home" className="shrink-0">
           <img src={LOGO} alt="Udo Ezekiel – helping businesses succeed online" width={1744} height={380} className="h-[3.1059rem] w-auto" />
