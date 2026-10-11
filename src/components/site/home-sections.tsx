@@ -478,7 +478,7 @@ export function Footer() {
     <footer className="border-t border-paper/10 bg-ink text-paper">
       <div className="mx-auto grid max-w-[1222px] gap-10 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <img src={LOGO} alt="Udo Ezekiel" loading="lazy" width={1744} height={380} className="h-[2.6659rem] w-auto" />
+          <img src={LOGO} alt="Udo Ezekiel" loading="lazy" width={1744} height={380} className="h-[2.7192rem] w-auto" />
           <p className="mt-4 text-sm text-paper/60">Freelance website designer in Lagos, Nigeria — helping businesses succeed online.</p>
           <div className="mt-5 flex gap-4">
             {social.map(({ Icon, href, label }) => (<SiteLink key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="hover:text-brand"><Icon className="h-4 w-4" /></SiteLink>))}
