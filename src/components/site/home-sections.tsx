@@ -1,6 +1,7 @@
 import blogAffiliate from "@/assets/blog-affiliate.jpg";
 import blogGmb from "@/assets/blog-google-business.jpg";
 import { SiteLink } from "./site-link";
+import { IntroGallery } from "./intro-gallery";
 import { checkDomain, type DomainResult } from "@/lib/domain.functions";
 import { WHATSAPP_URL, SOCIAL_PROFILES } from "./contact-details";
 import { Button } from "@/components/ui/button";
@@ -58,13 +59,6 @@ const SOCIAL_SHARE = [
   { Icon: Linkedin, label: "Share on LinkedIn", href: "https://www.linkedin.com/shareArticle?mini=true&url=https://udoezekiel.lovable.app/" },
   { Icon: Send, label: "Share on Telegram", href: "https://telegram.me/share/url?url=https://udoezekiel.lovable.app/" },
 ];
-
-const COLLAGE = [
-  "Bible-Davids1", "CBD-Oil1", "Mapstat-Global", "ihepsut-skincare1", "Goli-Gummies1", "Bluepictures-Distribution",
-  "ECommHive1", "Bluepictures-Cinema", "MichaelRalph-Consult1", "Joy-Odiete", "Utospices1", "Ethel-Women-Initiative1",
-  "Ekhome-Empire1", "SLI1", "iFluence-Academy1", "Big-Teens-9ja1", "Eagles-Cathedral1", "Shakaaraah-LLC1",
-  "Ngwa-Youth1", "Slloyd1", "Avaz-Kitchen",
-].map((n) => `${U}/2025/01/${n}.jpg`);
 
 const BRANDS = [
   "iFluence-Academy", "SandBros-Nigeria", "AvazTV", "Pianogodess-Academy", "Mapstat-Consult", "Ngwa-Youth", "ForXers",
@@ -270,7 +264,7 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="grid bg-paper lg:grid-cols-[600px_1fr]">
+    <section className="grid bg-paper lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <div className="flex flex-col justify-center bg-brand px-6 py-16 text-brand-foreground md:px-14 lg:py-24">
         <h2 className="font-display text-2xl font-black italic leading-tight md:text-[28px]">We build mobile responsive &amp; SEO optimized websites</h2>
         <p className="mt-6 text-[15px] font-medium leading-relaxed">
@@ -278,13 +272,7 @@ function Intro() {
         </p>
         <SiteLink href={`/consultation/`} className={`${btnInk} mt-8 self-start`}>Book A Free 30mins Call</SiteLink>
       </div>
-      <div className="relative h-[420px] overflow-hidden lg:h-auto">
-        <div className="grid grid-cols-3 gap-6 p-6 sm:grid-cols-4">
-          {COLLAGE.slice(0, 12).map((src) => (
-            <img key={src} src={src} alt="Udo Ezekiel - Freelance website designer in Lagos Nigeria" loading="lazy" width={300} height={420} className="aspect-[3/4] w-full border border-ink/10 object-cover object-top shadow-md" />
-          ))}
-        </div>
-      </div>
+      <IntroGallery />
     </section>
   );
 }
