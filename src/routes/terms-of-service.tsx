@@ -1,4 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { InformationPage, pageHead } from "@/components/site/content-pages";
-export const Route = createFileRoute("/terms-of-service")({ head: () => pageHead("Terms of Service", "Terms of Service \u2014 Udo Ezekiel website services."), component: Page });
-function Page() { return <InformationPage title="Terms of Service" />; }
+import { pageHead, PolicyPage } from "@/components/site/content-pages";
+import { termsPolicy } from "@/data/policies";
+
+export const Route = createFileRoute("/terms-of-service")({
+  head: () => pageHead(
+    "Terms of Service",
+    "How website projects with Udo Ezekiel work: quotes, deposits, refunds, who owns the finished site, and the rules for using udoezekiel.dev.",
+  ),
+  component: Page,
+});
+
+function Page() {
+  return <PolicyPage doc={termsPolicy} />;
+}
