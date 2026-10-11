@@ -74,6 +74,7 @@ export const submitProjectRequest = createServerFn({ method: "POST" })
         await sendTemplateEmail("request-received", visitorEmail, {
           templateData: { siteName: "Udo Ezekiel", siteUrl: SITE_URL, name: visitorName, email: visitorEmail },
           idempotencyKey: `request-received-${submissionId}`,
+          replyTo: OWNER_EMAIL,
         });
       }
       await sendTemplateEmail(
