@@ -4,6 +4,7 @@ import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { fieldLabel } from "@/lib/request-fields";
 
 export const Route = createFileRoute("/requests")({
   head: () => ({
@@ -22,38 +23,6 @@ export const Route = createFileRoute("/requests")({
 
 type Row = { id: string; page: string; fields: unknown; created_at: string };
 
-// Human-readable labels for the questionnaire's internal field names.
-const FIELD_LABELS: Record<string, string> = {
-  field40: "How did you find me?",
-  field17: "What do you want?",
-  field18: "Link to your current website",
-  field20: "Do you have domain & hosting?",
-  field21: "What is your domain name?",
-  field24: "Suggested domain names",
-  field22: "Wants domain & hosting recommendation?",
-  field39: "Type of website wanted",
-  field10: "Business or website name",
-  field1: "Name",
-  field2: "Email address",
-  field11: "Phone number",
-  field13: "Preferred start date",
-  field6: "Main goal of the project",
-  field14: "Expected actions on the site",
-  field15: "Image to portray",
-  field16: "Accepting online payments?",
-  field25: "Special features wanted",
-  field26: "Reference websites",
-  field27: "Menu items / site map",
-  field28: "Is website content ready?",
-  field30: "Can upload content now?",
-  field32: "Is the logo ready?",
-  files: "Uploaded files",
-};
-
-function fieldLabel(key: string) {
-  const clean = key.replace(/\[\]$/, "");
-  return FIELD_LABELS[clean] ?? clean;
-}
 
 function RequestsPage() {
   const [session, setSession] = useState<Session | null>(null);
