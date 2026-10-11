@@ -18,7 +18,7 @@ const EMAIL_TEMPLATES: Record<string, React.ComponentType<any>> = {
 }
 
 // Configuration
-const SITE_NAME = "udo ezekiel"
+const SITE_NAME = "Udo Ezekiel"
 const ROOT_DOMAIN = "udoezekiel.dev"
 
 // Sample data for preview mode ONLY (not used in actual email sending).
@@ -56,6 +56,7 @@ const SAMPLE_DATA: Record<string, object> = {
     confirmationUrl: SAMPLE_PROJECT_URL,
   },
   reauthentication: {
+    siteName: SITE_NAME,
     token: '123456',
   },
 }
