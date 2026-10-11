@@ -83,7 +83,7 @@ const RequestCopyEmail = ({
 
 export const template = {
   component: RequestCopyEmail,
-  subject: (data: Record<string, any>) => `New request — ${data['pageName'] ?? 'your website'}`,
+  subject: (data: Record<string, any>) => `New request: ${data['pageName'] ?? 'your website'}`,
   displayName: 'New request copy (owner)',
   to: 'udoezekiel2028@gmail.com',
   previewData: {

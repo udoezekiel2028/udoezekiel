@@ -43,7 +43,7 @@ const RequestReceivedEmail = ({
         <Container style={container}>
           <Text style={wordmark}>{siteName}</Text>
           <div style={rule} />
-          <Heading style={h1}>Your request is in — thank you</Heading>
+          <Heading style={h1}>Your request is in, thank you</Heading>
           <Text style={text}>
             {greeting}, your project details have been received and saved. Nothing else is needed
             from you right now.

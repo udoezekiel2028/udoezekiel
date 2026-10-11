@@ -33,7 +33,7 @@ export const termsPolicy: PolicyDoc = {
   summary:
     "The ground rules for using udoezekiel.dev and for working with me on a website project.",
   intro: [
-    "These terms apply whenever you use udoezekiel.dev — browsing the pages, filling in the project questionnaire, booking a free call, or asking me about a project.",
+    "These terms apply whenever you use udoezekiel.dev, browsing the pages, filling in the project questionnaire, booking a free call, or asking me about a project.",
     "They are written in plain language on purpose. Where a project goes ahead, the written proposal we agree on governs the work and takes priority over anything here that conflicts with it.",
   ],
   sections: [
@@ -54,7 +54,7 @@ export const termsPolicy: PolicyDoc = {
       bullets: [
         "Use your real details when you get in touch, and only send information you have the right to share.",
         "Do not copy, resell or scrape the site's content, design or portfolio images without asking first.",
-        "Do not try to break, overload or interfere with the site, its forms or its database — including by sending automated or repeated submissions.",
+        "Do not try to break, overload or interfere with the site, its forms or its database, including by sending automated or repeated submissions.",
         "Do not upload files that contain malware, and do not pretend to be someone else in a form or an email.",
         "You must be at least 18 to agree to these terms. If you are younger, ask a parent or guardian to read them and to message me on your behalf.",
       ],
@@ -65,37 +65,37 @@ export const termsPolicy: PolicyDoc = {
       id: "services",
       heading: "The services I offer",
       bullets: [
-        "Corporate websites — a professional presence that builds trust.",
-        "eCommerce websites — online stores with payments, inventory and delivery handled.",
-        "Landing pages — single pages built to convert advertising clicks into enquiries or sales.",
-        "eLearning and membership websites — course platforms, subscription areas and student logins.",
-        "Digital marketing strategy — sponsored ads, email marketing, sales funnels and automations.",
-        "Search engine optimisation — getting your site seen by the people who were already looking for you.",
+        "Corporate websites, a professional presence that builds trust.",
+        "eCommerce websites, online stores with payments, inventory and delivery handled.",
+        "Landing pages, single pages built to convert advertising clicks into enquiries or sales.",
+        "eLearning and membership websites, course platforms, subscription areas and student logins.",
+        "Digital marketing strategy, sponsored ads, email marketing, sales funnels and automations.",
+        "Search engine optimisation, getting your site seen by the people who were already looking for you.",
       ],
       after:
-        "Every project is scoped individually: what is included, what it costs and when it lands is set out in a written proposal. I can decline a project, and I can step away from one that is not a good fit — if I do, anything you have paid that I have not yet worked on comes back to you.",
+        "Every project is scoped individually: what is included, what it costs and when it lands is set out in a written proposal. I can decline a project, and I can step away from one that is not a good fit, if I do, anything you have paid that I have not yet worked on comes back to you.",
     },
     {
       id: "enquiries",
       heading: "Enquiries, quotes and written agreements",
       paras: [
-        "Send me the questionnaire or a message and you will get a confirmation email straight away, plus a reply from me — usually within one or two working days, Mondays to Fridays.",
+        "Send me the questionnaire or a message and you will get a confirmation email straight away, plus a reply from me, usually within one or two working days, Mondays to Fridays.",
         "A quote is a proposal: an email or document that sets out the scope, the price, the payment schedule and the timeline. It stays open for 30 days from the date on it. After that I will re-confirm it before anything starts.",
         "Nothing becomes a contract until we both agree the proposal in writing, usually by email. A verbal yes on a call does not start the clock.",
-        "A free consultation call is a conversation, not a contract. Booking one does not reserve a place in my diary — your project dates are only held once a proposal is agreed and the deposit is paid.",
+        "A free consultation call is a conversation, not a contract. Booking one does not reserve a place in my diary, your project dates are only held once a proposal is agreed and the deposit is paid.",
       ],
     },
     {
       id: "prices",
       heading: "Prices, deposits and refunds",
       paras: [
-        "The prices on the Pricing page are starting points for standard packages, and they are quoted in US dollars. Domain names and hosting are not included in them — I can work with the host you already use or recommend one for you.",
+        "The prices on the Pricing page are starting points for standard packages, and they are quoted in US dollars. Domain names and hosting are not included in them, I can work with the host you already use or recommend one for you.",
         "Payment is by the method stated in your proposal, usually a deposit before work begins and the balance before the site goes live. I do not take card payments on this website.",
       ],
       bullets: [
         "If you change your mind before I start work, anything you have paid is refunded in full.",
         "Once work has begun, the part of the fee that covers work already done is kept and the rest is refunded.",
-        "Costs I have already paid out for you on a third-party service — a domain, a hosting plan, a premium plugin or theme — are not refundable, because that money has already gone to someone else.",
+        "Costs I have already paid out for you on a third-party service, a domain, a hosting plan, a premium plugin or theme, are not refundable, because that money has already gone to someone else.",
         "If I cannot finish a project for any reason, you pay only for the work completed and the remainder comes back to you.",
       ],
       after:
@@ -105,7 +105,7 @@ export const termsPolicy: PolicyDoc = {
       id: "you",
       heading: "What I need from you",
       bullets: [
-        "Content, logos, images, product lists and any login details when you say they are ready — or a clear note on who is supplying them.",
+        "Content, logos, images, product lists and any login details when you say they are ready, or a clear note on who is supplying them.",
         "Feedback and approvals within the times we agree. Every project has review rounds built in; a long gap pushes the launch date back by roughly the same length of time.",
         "Honest answers in the questionnaire, especially about budget, timing and what the site actually has to do. Those answers change what I recommend.",
         "Domain and hosting accounts in your own name, with your own email address on them. You should always be able to log in and move your site away from me.",
@@ -117,7 +117,7 @@ export const termsPolicy: PolicyDoc = {
       id: "ownership",
       heading: "Who owns what, and portfolio use",
       bullets: [
-        "You own the finished website and everything you supplied — text, logos, photographs, product data.",
+        "You own the finished website and everything you supplied, text, logos, photographs, product data.",
         "I keep ownership of my own tools: templates, code snippets, layouts and processes, which I reuse on other projects.",
         "Third-party pieces (fonts, icons, plugins, themes, stock images) stay under their own licences, and I will tell you when one needs a paid licence in your name.",
         "I like to show the work. Unless you tell me otherwise in writing, I may feature your site in my portfolio with its name, logo and screenshots, and link to the live address.",
@@ -130,7 +130,7 @@ export const termsPolicy: PolicyDoc = {
       id: "hostinger",
       heading: "Hostinger links and affiliate disclosure",
       paras: [
-        "Some links on this site — in the domain search results, on the coupon-code page and in parts of the blog — point to Hostinger with my referral code attached. If you buy through one of those links, I may earn a commission. It costs you nothing extra: the price you pay is the same price with or without the code.",
+        "Some links on this site, in the domain search results, on the coupon-code page and in parts of the blog, point to Hostinger with my referral code attached. If you buy through one of those links, I may earn a commission. It costs you nothing extra: the price you pay is the same price with or without the code.",
         "I recommend Hostinger because I use it and it suits most of my projects, not because of the commission. If another host fits you better, I will say so.",
         "Buying a domain or hosting is a contract between you and Hostinger. Their terms, pricing, renewal rates and refund policy apply to that purchase. I am not their agent and I cannot change their decisions.",
       ],
@@ -147,7 +147,7 @@ export const termsPolicy: PolicyDoc = {
       id: "results",
       heading: "No promises about results",
       paras: [
-        "My portfolio shows real websites built for real businesses. What those sites achieve for their owners depends on their market, their offer, their pricing, their budget and their consistency — none of which I control.",
+        "My portfolio shows real websites built for real businesses. What those sites achieve for their owners depends on their market, their offer, their pricing, their budget and their consistency, none of which I control.",
         "I commit to delivering the work described in your proposal, on time and to the standard I show here. I do not promise sales, rankings, traffic or a specific return. Anyone who guarantees those is selling something else.",
       ],
     },
@@ -155,7 +155,7 @@ export const termsPolicy: PolicyDoc = {
       id: "domain-tool",
       heading: "The domain search tool",
       paras: [
-        "When you search for a domain on this site, the name you type is sent to Hostinger's availability service and the answer is shown back to you here. Availability changes by the second — a name shown as available is not yours until it is actually registered.",
+        "When you search for a domain on this site, the name you type is sent to Hostinger's availability service and the answer is shown back to you here. Availability changes by the second, a name shown as available is not yours until it is actually registered.",
         "The tool checks availability only. It does not check trademarks. It is your responsibility to make sure a name you register does not step on somebody else's rights.",
       ],
     },
@@ -163,7 +163,7 @@ export const termsPolicy: PolicyDoc = {
       id: "as-is",
       heading: "The site is provided as is",
       paras: [
-        "I keep this site running as carefully as I keep my clients' sites, but I cannot promise it will be uninterrupted, error-free or always available. Features may change or be removed — the domain tool, the portfolio, the blog — without notice.",
+        "I keep this site running as carefully as I keep my clients' sites, but I cannot promise it will be uninterrupted, error-free or always available. Features may change or be removed, the domain tool, the portfolio, the blog, without notice.",
         "If something on the site breaks while you are trying to reach me, use the email address or the WhatsApp number below. Either works just as well.",
       ],
     },
@@ -178,7 +178,7 @@ export const termsPolicy: PolicyDoc = {
       id: "liability",
       heading: "Liability",
       paras: [
-        "Where the law allows, I am not liable for indirect losses — lost profits, lost sales, lost data or damaged reputation — arising from your use of this site.",
+        "Where the law allows, I am not liable for indirect losses, lost profits, lost sales, lost data or damaged reputation, arising from your use of this site.",
         "For anything connected with a project, my total liability is limited to the fees you actually paid me for the part of the work in question. This does not limit liability that the law says cannot be limited, such as fraud.",
         "You agree to cover any loss I suffer because your submission, your content or your use of the site broke these terms or the law.",
       ],
@@ -216,7 +216,7 @@ export const privacyPolicy: PolicyDoc = {
       id: "responsible",
       heading: "Who is responsible",
       paras: [
-        "Udo Ezekiel — web designer and digital-marketing consultant based in Nigeria — runs this site and decides what information it collects and why. I work Mondays to Fridays and with clients worldwide.",
+        "Udo Ezekiel, web designer and digital-marketing consultant based in Nigeria, runs this site and decides what information it collects and why. I work Mondays to Fridays and with clients worldwide.",
         "The quickest way to reach me about your information is the email address or WhatsApp number at the bottom of this page. Send your request from the email address you used on the site so I can match it to the right records.",
       ],
     },
@@ -224,11 +224,11 @@ export const privacyPolicy: PolicyDoc = {
       id: "collect",
       heading: "What I collect, in one list",
       bullets: [
-        "What you type into the questionnaire or a message — your name, email address, phone number and the details of your project.",
-        "What you enter when booking a call — your name, email address and the time you pick.",
+        "What you type into the questionnaire or a message, your name, email address, phone number and the details of your project.",
+        "What you enter when booking a call, your name, email address and the time you pick.",
         "Your email address and a scrambled (hashed) password, if you choose to create an account here.",
-        "Technical records — your IP address, browser type, the pages you visited and when.",
-        "Basic visit statistics — how many people viewed a page, which site they came from, and roughly which country they were in.",
+        "Technical records, your IP address, browser type, the pages you visited and when.",
+        "Basic visit statistics, how many people viewed a page, which site they came from, and roughly which country they were in.",
       ],
       after:
         "I do not ask for, and do not want, payment card details, passwords to your other accounts, or anything sensitive such as health information. Please keep those out of the forms.",
@@ -240,12 +240,12 @@ export const privacyPolicy: PolicyDoc = {
         "The questionnaire is deliberately thorough, because the answers change what I recommend and what I quote. It asks about:",
       ],
       bullets: [
-        "You — your name, email address, phone number, and how you found me.",
-        "Your business — the business or website name, the link to your current website, and the image you want to portray.",
-        "The project — what you want built, the type of website, the main goal, the actions visitors should take, special features, reference sites you like, and your menu or site map.",
-        "Your domain and hosting — whether you already have them, your domain name, other names you would consider, and whether you would like a recommendation.",
-        "Readiness — whether your content and logo are ready, whether you can send content now, your preferred start date, and whether the site should take online payments.",
-        "Files you attach, if any — logos, briefs, screenshots.",
+        "You, your name, email address, phone number, and how you found me.",
+        "Your business, the business or website name, the link to your current website, and the image you want to portray.",
+        "The project, what you want built, the type of website, the main goal, the actions visitors should take, special features, reference sites you like, and your menu or site map.",
+        "Your domain and hosting, whether you already have them, your domain name, other names you would consider, and whether you would like a recommendation.",
+        "Readiness, whether your content and logo are ready, whether you can send content now, your preferred start date, and whether the site should take online payments.",
+        "Files you attach, if any, logos, briefs, screenshots.",
       ],
       after:
         "Everything except a way to reach you is optional. If you would rather not answer something, leave it blank and tell me on the call.",
@@ -254,7 +254,7 @@ export const privacyPolicy: PolicyDoc = {
       id: "calls",
       heading: "Booking a call",
       paras: [
-        "The consultation page opens Calendly's booking calendar inside this site. When you book, Calendly collects your name, email address and the time you chose, and Calendly's own privacy policy applies to what they do with that — including any cookies their calendar sets while it is open.",
+        "The consultation page opens Calendly's booking calendar inside this site. When you book, Calendly collects your name, email address and the time you chose, and Calendly's own privacy policy applies to what they do with that, including any cookies their calendar sets while it is open.",
         "Your booking is kept in my Calendly account so I can prepare for the conversation, and it appears on my calendar.",
       ],
     },
@@ -271,7 +271,7 @@ export const privacyPolicy: PolicyDoc = {
       heading: "What is recorded automatically",
       paras: [
         "Like most websites, the server keeps a log of each visit: the IP address, the pages requested, the referring site, the browser and the time. That is used to keep the site working, to spot abuse and to understand roughly what people are reading.",
-        "I also see basic, privacy-friendly visit totals — page views, referring sources and country-level location. There are no advertising cookies and no cross-site trackers behind those numbers.",
+        "I also see basic, privacy-friendly visit totals, page views, referring sources and country-level location. There are no advertising cookies and no cross-site trackers behind those numbers.",
       ],
     },
     {
@@ -282,7 +282,7 @@ export const privacyPolicy: PolicyDoc = {
         "To prepare, quote, build and support your website.",
         "To send the confirmation email that arrives after you submit a form, and to keep a record of the conversation.",
         "To keep the site secure and to spot spam or abuse.",
-        "To improve the site — which pages help people, which ones confuse them.",
+        "To improve the site, which pages help people, which ones confuse them.",
       ],
       after:
         "I do not sell or rent your information, I do not build advertising profiles about you, and I do not hand your details to data brokers.",
@@ -291,10 +291,10 @@ export const privacyPolicy: PolicyDoc = {
       id: "basis",
       heading: "My grounds for using it",
       bullets: [
-        "Your consent — you chose to send me a form, book a call or create an account. You can withdraw it at any time.",
-        "Our agreement — using what you told me to deliver the project you hired me for.",
-        "Legitimate interest — replying to enquiries, protecting the site from abuse, keeping ordinary business records.",
-        "Legal obligation — where I must keep or produce something, such as a tax record.",
+        "Your consent, you chose to send me a form, book a call or create an account. You can withdraw it at any time.",
+        "Our agreement, using what you told me to deliver the project you hired me for.",
+        "Legitimate interest, replying to enquiries, protecting the site from abuse, keeping ordinary business records.",
+        "Legal obligation, where I must keep or produce something, such as a tax record.",
       ],
     },
     {
@@ -315,7 +315,7 @@ export const privacyPolicy: PolicyDoc = {
       bullets: [
         "The platform that hosts this site and its database, which stores submissions and accounts for me.",
         "An email delivery service, so confirmation and sign-in emails actually arrive.",
-        "Calendly, for scheduling; and Hostinger when you use the domain search — only the domain name you typed goes across, nothing else about you.",
+        "Calendly, for scheduling; and Hostinger when you use the domain search, only the domain name you typed goes across, nothing else about you.",
         "Your own hosting provider, domain registrar or payment gateway if your project needs one, and usually only the credentials or content needed to set it up, with your say-so.",
       ],
       after:
@@ -350,7 +350,7 @@ export const privacyPolicy: PolicyDoc = {
         "No card details are ever taken through this site.",
       ],
       after:
-        "No system is perfect. If you are worried about sending something sensitive, tell me and we will find another way — and never send a password to this site.",
+        "No system is perfect. If you are worried about sending something sensitive, tell me and we will find another way, and never send a password to this site.",
     },
     {
       id: "rights",
@@ -378,7 +378,7 @@ export const privacyPolicy: PolicyDoc = {
       id: "abroad",
       heading: "If you are outside Nigeria",
       paras: [
-        "My hosting, database and email tools sit outside your country, so information you send is processed abroad. I keep only what is needed, share it as little as possible, and treat your rights the same wherever you are — I do not apply a lower standard because of a border.",
+        "My hosting, database and email tools sit outside your country, so information you send is processed abroad. I keep only what is needed, share it as little as possible, and treat your rights the same wherever you are, I do not apply a lower standard because of a border.",
       ],
     },
     {
