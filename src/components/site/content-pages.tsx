@@ -4,10 +4,11 @@ import type React from "react";
 import { ArrowRight, Check, ChevronDown, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteLink } from "./site-link";
-import { CONTACT_PHONE, CONTACT_TEL } from "./contact-details";
+import { CONTACT_EMAIL, CONTACT_MAILTO, CONTACT_PHONE, CONTACT_TEL, WHATSAPP_URL } from "./contact-details";
 import { Portfolio, Blog, ContactFaq } from "./home-sections";
 import data from "@/data/reference-pages.json";
 import portrait from "@/assets/kenneth-portrait.jpg.asset.json";
+import { policyContact, type PolicyDoc } from "@/data/policies";
 
 type PageData = { title: string; blocks: { tag: string; text: string }[]; images: string[] };
 const pages: Record<string, PageData> = data.pages;
@@ -79,6 +80,41 @@ export function AccountPage({ reset = false }: { reset?: boolean }) {
 }
 
 export function InformationPage({ title }: { title: string }) { return <><PageHeading title={title} /><section className="bg-paper py-20 text-ink"><div className={`${wrap} max-w-3xl`}><p className="leading-8 text-ink/70">{title === "Refer A Friend" ? "Know someone who needs a website? Let's talk about their project." : "This page is awaiting the final business policy."}</p><Button asChild className="mt-7"><SiteLink href="/contact">Contact Udo Ezekiel</SiteLink></Button></div></section></>; }
+
+export function PolicyPage({ doc }: { doc: PolicyDoc }) {
+  const { title, updated, summary, intro, sections } = doc;
+  return <>
+    <PageHeading title={title} subtitle={summary} />
+    <section className="bg-paper py-14 text-ink md:py-20">
+      <div className={`${wrap} max-w-3xl`}>
+        <p className="text-sm font-bold uppercase tracking-wide text-brand">Last updated: {updated}</p>
+        <div className="mt-5 border-l-4 border-brand bg-ink/5 p-6">
+          {intro.map((t, i) => <p key={i} className="leading-8 text-ink/80 [&+p]:mt-4">{t}</p>)}
+        </div>
+        <nav aria-label="Sections" className="mt-10 border border-ink/15 p-6">
+          <h2 className="font-display text-lg font-black">In this {title.toLowerCase()}</h2>
+          <ol className="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2">
+            {sections.map((s, i) => <li key={s.id}><a href={`#${s.id}`} className="text-sm leading-6 text-ink/70 hover:text-brand">{i + 1}. {s.heading}</a></li>)}
+          </ol>
+        </nav>
+        {sections.map((s, i) => <article key={s.id} id={s.id} className="mt-12 scroll-mt-32 border-t border-ink/15 pt-8">
+          <h2 className="font-display text-2xl font-black leading-snug md:text-[1.75rem]"><span className="mr-2 text-brand">{String(i + 1).padStart(2, "0")}</span>{s.heading}</h2>
+          {s.paras?.map((p, j) => <p key={j} className="mt-5 leading-8 text-ink/75">{p}</p>)}
+          {s.bullets && <ul className="mt-5 space-y-3">{s.bullets.map((b, j) => <li key={j} className="flex items-start gap-3 leading-7 text-ink/75"><span aria-hidden="true" className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />{b}</li>)}</ul>}
+          {s.after && <p className="mt-5 leading-8 text-ink/75">{s.after}</p>}
+        </article>)}
+        <div className="mt-14 border border-ink/15 bg-ink p-8 text-paper">
+          <h2 className="font-display text-2xl font-black">Questions? Talk to me</h2>
+          <p className="mt-3 leading-7 text-paper/70">Email or message me and you will get a personal reply, {policyContact.hours}.</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button asChild size="lg" className="h-auto bg-brand px-7 py-4 text-brand-foreground hover:bg-brand/90"><a href={CONTACT_MAILTO}>Email {CONTACT_EMAIL}</a></Button>
+            <Button asChild size="lg" className="h-auto bg-paper px-7 py-4 text-ink hover:bg-paper/90"><a href={WHATSAPP_URL} rel="noopener noreferrer" target="_blank">WhatsApp {CONTACT_PHONE}</a></Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </>;
+}
 export function AboutPage() { return <><PageHeading title="Meet Udo Ezekiel" subtitle="Helping businesses succeed online." /><section className="bg-paper py-16 text-ink"><div className={`${wrap} grid items-center gap-12 md:grid-cols-2`}><img src={portrait.url} alt="Udo Ezekiel" className="max-h-[620px] w-full object-cover object-top" /><div><h2 className="font-display text-3xl font-black">Solutions with greater efficiency of work.</h2><p className="mt-6 leading-8 text-ink/70">We build noteworthy websites, set up digital marketing strategies, and help business owners maximize and scale their businesses.</p><Button asChild className="mt-8"><SiteLink href="/consultation">Let's talk</SiteLink></Button></div></div></section><CallToAction /></>; }
 export function FaqPage() { return <><PageHeading title="Frequently Asked Questions" /><ContactFaq /></>; }
 const HOSTINGER_REFERRAL = "NMHUDOEZECWS";
