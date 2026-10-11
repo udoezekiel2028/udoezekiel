@@ -23,7 +23,7 @@ export function IntroGallery() {
 
   return (
     <div className="flex min-w-0 items-center px-4 py-10 md:px-6" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocusCapture={() => setPaused(true)} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }}>
-      <Carousel className="w-full min-w-0 pb-14" aria-label="Website design gallery" opts={{ loop: true, align: "start", slidesToScroll: 3 }} setApi={setApi}>
+      <Carousel className="w-full min-w-0 pb-14" style={{ transform: "scale(1.02)" }} aria-label="Website design gallery" opts={{ loop: true, align: "start", slidesToScroll: 3 }} setApi={setApi}>
         <CarouselContent className="-ml-3">
           {images.map((image) => (
             <CarouselItem key={image.src} className="basis-1/3 pl-3">
