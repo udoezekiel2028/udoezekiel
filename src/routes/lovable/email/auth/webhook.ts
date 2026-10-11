@@ -9,7 +9,7 @@ import { EmailChangeEmail } from '@/lib/email-templates/email-change'
 import { ReauthenticationEmail } from '@/lib/email-templates/reauthentication'
 
 // Configuration
-const SITE_NAME = "udo ezekiel"
+const SITE_NAME = "Udo Ezekiel"
 const SENDER_DOMAIN = "notify.udoezekiel.dev"
 const ROOT_DOMAIN = "udoezekiel.dev"
 const FROM_DOMAIN = "udoezekiel.dev"
@@ -76,7 +76,10 @@ export const Route = createFileRoute("/lovable/email/auth/webhook")({
             reauthentication: {
               subject: 'Your verification code',
               render: (data) =>
-                React.createElement(ReauthenticationEmail, { token: data.token ?? '' }),
+                React.createElement(ReauthenticationEmail, {
+                  siteName: SITE_NAME,
+                  token: data.token ?? '',
+                }),
             },
           },
         })
