@@ -28,7 +28,7 @@ export function IntroGallery() {
           {images.map((image) => (
             <CarouselItem key={image.src} className="basis-1/3 pl-3">
               <Button variant="ghost" className="block h-auto w-full overflow-hidden rounded-none border border-ink/10 p-0 shadow-md hover:bg-transparent focus-visible:ring-brand" aria-label={`View ${image.name} full size`} onClick={() => setSelected(image)}>
-                <img src={image.src} alt={`${image.name} website design`} loading="lazy" width={300} height={420} className="aspect-[3/4] w-full object-contain" />
+                <img src={image.src} alt={`${image.name} website design`} loading="lazy" width={1410} height={2250} className="aspect-[1410/2250] w-full object-cover" />
               </Button>
             </CarouselItem>
           ))}
