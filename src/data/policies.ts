@@ -208,7 +208,7 @@ export const privacyPolicy: PolicyDoc = {
   summary:
     "What udoezekiel.dev collects about you, why I collect it, and what you can ask me to do about it.",
   intro: [
-    "In short: I collect only what I need to answer you and build your website. I do not sell your information, I do not run advertising trackers on this site, and you can ask me to delete what I hold at any time.",
+    "I collect only what I need to answer you and build your website. I do not sell your information, I do not run advertising trackers on this site, and you can ask me to delete what I hold at any time.",
     "The rest of this page explains that properly, without the legal fog.",
   ],
   sections: [
