@@ -34,7 +34,7 @@
 .reference-page .elementor-widget-html input, .reference-page .elementor-widget-html select, .reference-page .elementor-widget-html textarea { max-width: 100%; }
 .reference-page [data-portrait] { object-fit: cover; object-position: top; }
 .reference-page .reference-brand-mark { display: inline-flex; align-items: center; justify-content: center; background: var(--ink); padding: 12px 18px; }
-.reference-page .reference-brand-mark img { width: 220px; height: auto; }
+.reference-page .reference-brand-mark img { width: 223.3px; height: auto; }
 .reference-page button.submit-button { background-color: var(--brand-logo) !important; border-color: var(--brand-logo) !important; color: var(--paper) !important; }
 .reference-page button.submit-button:hover { background-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; border-color: color-mix(in oklab, var(--brand-logo) 88%, black) !important; }
 .reference-page button.submit-button .text { color: var(--paper) !important; }
