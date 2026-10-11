@@ -62,7 +62,7 @@ function ReferenceForm({ attrs, pageKey, children }: { attrs: Record<string, str
       setStatus("sent");
       window.location.assign("/requests");
     };
-    return <form {...attributesToProps(rest)} onSubmit={login}><fieldset disabled={status === "sending"} className="contents">{children}</fieldset>{status !== "idle" && <p className="reference-status" role="status">{status === "sending" ? "Signing in…" : status === "sent" ? "Signed in — redirecting…" : "Incorrect email or password. Please try again."}</p>}</form>;
+    return <form {...attributesToProps(rest)} onSubmit={login}><fieldset disabled={status === "sending"} className="contents">{children}</fieldset>{status !== "idle" && <p className="reference-status" role="status">{status === "sending" ? "Signing in…" : status === "sent" ? "Signed in, redirecting…" : "Incorrect email or password. Please try again."}</p>}</form>;
   }
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -77,7 +77,7 @@ function ReferenceForm({ attrs, pageKey, children }: { attrs: Record<string, str
     setStatus(result.ok ? "sent" : "error");
     if (result.ok) event.currentTarget?.reset?.();
   }
-  return <form {...attributesToProps(rest)} onSubmit={submit}><fieldset disabled={status === "sending"} className="contents">{children}</fieldset>{status !== "idle" && <p className="reference-status" role="status">{status === "sending" ? "Sending…" : status === "sent" ? "Thank you! Your request has been received — I'll get back to you shortly." : "Something went wrong. Please try again."}</p>}</form>;
+  return <form {...attributesToProps(rest)} onSubmit={submit}><fieldset disabled={status === "sending"} className="contents">{children}</fieldset>{status !== "idle" && <p className="reference-status" role="status">{status === "sending" ? "Sending…" : status === "sent" ? "Thank you! Your request has been received, I'll get back to you shortly." : "Something went wrong. Please try again."}</p>}</form>;
 }
 
 export function ReferencePage({ pageKey }: { pageKey: string }) {
