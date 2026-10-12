@@ -9,7 +9,9 @@ import { buildRows, firstOf, pageLabel } from "./request-fields";
 // Server-only: writes the submission, then sends the visitor's confirmation and
 // a copy to the owner. Never import the email helper from browser code.
 
-const OWNER_EMAIL = "hello@udoezekiel.dev";
+// Every request copy goes to each of these; each send is independent so one
+// mailbox being unavailable cannot stop the other from receiving the request.
+const OWNER_EMAILS = ["hello@udoezekiel.dev", "udoezekiel2028@gmail.com"];
 const SITE_URL = "https://udoezekiel.dev";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -74,27 +76,32 @@ export const submitProjectRequest = createServerFn({ method: "POST" })
         await sendTemplateEmail("request-received", visitorEmail, {
           templateData: { siteName: "Udo Ezekiel", siteUrl: SITE_URL, name: visitorName, email: visitorEmail },
           idempotencyKey: `request-received-${submissionId}`,
-          replyTo: OWNER_EMAIL,
+          replyTo: OWNER_EMAILS[0],
         });
       }
-      await sendTemplateEmail(
-        "request-copy",
-        OWNER_EMAIL,
-        {
-          templateData: {
-            siteName: "Udo Ezekiel",
-            pageName: from,
-            submittedAt,
-            visitorEmail: emailValid ? visitorEmail : "",
-            rows: buildRows(data.fields),
-          },
-          idempotencyKey: `request-copy-${submissionId}`,
-          ...(emailValid ? { replyTo: visitorEmail } : {}),
-        }
-      );
     } catch (sendError) {
       // The request is already saved; a failed email must not lose or repeat it.
-      console.error("[requests] email notification failed", sendError);
+      console.error("[requests] visitor confirmation failed", sendError);
+    }
+
+    const copyTemplateData = {
+      siteName: "Udo Ezekiel",
+      pageName: from,
+      submittedAt,
+      visitorEmail: emailValid ? visitorEmail : "",
+      rows: buildRows(data.fields),
+    };
+
+    for (const ownerEmail of OWNER_EMAILS) {
+      try {
+        await sendTemplateEmail("request-copy", ownerEmail, {
+          templateData: copyTemplateData,
+          idempotencyKey: `request-copy-${submissionId}-${ownerEmail}`,
+          ...(emailValid ? { replyTo: visitorEmail } : {}),
+        });
+      } catch (sendError) {
+        console.error("[requests] owner copy failed", sendError);
+      }
     }
 
     return { ok: true };
