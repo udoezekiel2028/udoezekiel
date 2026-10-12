@@ -9,7 +9,7 @@ import { buildRows, firstOf, pageLabel } from "./request-fields";
 // Server-only: writes the submission, then sends the visitor's confirmation and
 // a copy to the owner. Never import the email helper from browser code.
 
-const OWNER_EMAIL = "udoezekiel2028@gmail.com";
+const OWNER_EMAIL = "hello@udoezekiel.dev";
 const SITE_URL = "https://udoezekiel.dev";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
