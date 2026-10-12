@@ -11,7 +11,8 @@ import { buildRows, firstOf, pageLabel } from "./request-fields";
 
 // Every request copy goes to each of these; each send is independent so one
 // mailbox being unavailable cannot stop the other from receiving the request.
-const OWNER_EMAILS = ["hello@udoezekiel.dev", "udoezekiel2028@gmail.com"];
+// The first entry is also the address visitors' replies reach.
+const OWNER_EMAILS: [string, ...string[]] = ["hello@udoezekiel.dev", "udoezekiel2028@gmail.com"];
 const SITE_URL = "https://udoezekiel.dev";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
