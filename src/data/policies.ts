@@ -89,7 +89,7 @@ export const termsPolicy: PolicyDoc = {
       id: "prices",
       heading: "Prices, deposits and refunds",
       paras: [
-        "The prices on the Pricing page are starting points for standard packages, and they are quoted in US dollars. Domain names and hosting are not included in them, I can work with the host you already use or recommend one for you.",
+        "Project fees and any domain or hosting costs are stated in your personalized proposal. I can work with the host you already use or recommend one for you.",
         "Payment is by the method stated in your proposal, usually a deposit before work begins and the balance before the site goes live. I do not take card payments on this website.",
       ],
       bullets: [

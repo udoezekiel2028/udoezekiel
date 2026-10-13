@@ -1,7 +1,7 @@
 import { checkDomain, type DomainResult } from "@/lib/domain.functions";
 import { useState } from "react";
 import type React from "react";
-import { ArrowRight, Check, ChevronDown, Clock, Phone } from "lucide-react";
+import { ArrowRight, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteLink } from "./site-link";
 import { CONTACT_EMAIL, CONTACT_MAILTO, CONTACT_PHONE, CONTACT_TEL, WHATSAPP_URL } from "./contact-details";
@@ -44,12 +44,6 @@ export function ServicePage({ pageKey, title }: { pageKey: string; title: string
   const blocks = p?.blocks.filter(b => !b.text.includes("Related") && !b.text.includes("View Large") && !b.text.includes("Share with") && !b.text.includes("Pianogoddess") && !b.text.includes("Frequently Asked") && !b.text.includes("Kenneth")) || [];
   const intro = blocks.find(b => b.tag === "p" || b.text.length > 120)?.text;
   return <><PageHeading title={title} subtitle={intro} /><nav className="border-b border-ink/10 bg-paper"><div className={`${wrap} flex flex-wrap gap-6 py-5 text-sm font-bold`}><SiteLink href="/services">All Services</SiteLink><SiteLink href="/portfolio">Portfolio</SiteLink><SiteLink href="/faq">FAQs</SiteLink><SiteLink href="/consultation">Consultation</SiteLink></div></nav>{p?.images[0] && <section className="bg-paper py-12"><img src={p.images[0]} alt={title} className="mx-auto max-h-[500px] w-full max-w-5xl object-contain px-5" /></section>}<section className="bg-paper py-12 text-ink"><div className={`${wrap} max-w-4xl`}>{blocks.slice(0, 32).map((b, i) => b.tag.startsWith("h") ? <h2 key={i} className="mb-5 mt-12 font-display text-2xl font-black leading-snug md:text-3xl">{b.text}</h2> : <p key={i} className="mb-5 leading-8 text-ink/75">{b.text}</p>)}{!p && <p className="leading-8">Improve your online efficiency with digital strategies including sponsored ads, email marketing, sales funnels, and automations tailored to your business.</p>}</div></section><Portfolio /><ContactFaq /><CallToAction /></>;
-}
-
-export function PricingPage() {
-  const [category, setCategory] = useState("Website");
-  const plans = category === "Website" ? data.plans.slice(0, 3) : category === "eCommerce" ? data.plans.slice(3) : [];
-  return <><PageHeading title="Pricing Plan" subtitle="Find the right website package for your business." /><section className="bg-paper py-16 text-ink"><div className={wrap}><div className="mb-12 flex flex-wrap gap-2" role="tablist" aria-label="Service pricing">{["Website", "eCommerce", "Landing Page", "eLearning", "SEO"].map(t => <Button key={t} role="tab" aria-selected={category === t} variant={category === t ? "default" : "outline"} onClick={() => setCategory(t)}>{t} Pricing</Button>)}</div><h2 className="mb-8 font-display text-3xl font-black">{category} Design Pricing</h2><div className="grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">{plans.map(p => <article key={p.name} className="overflow-hidden rounded border border-ink/15 bg-background"><div className="bg-ink p-7 text-paper"><h3 className="font-display text-2xl font-black">{p.name}</h3><p className="mt-3 text-sm text-paper/65">{p.description}</p></div><div className="p-7"><p className="font-display text-4xl font-black text-brand">{p.price}</p><ul className="my-7 space-y-3">{p.features.map(f => <li key={f} className="flex items-start gap-3 text-sm"><Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />{f}</li>)}</ul><Button asChild className="w-full"><SiteLink href="/questionnaire">Get Started</SiteLink></Button><p className="mt-5 text-xs leading-5 text-ink/60">Domain and hosting are not included. I can work with your hosting provider or recommend one.</p></div></article>)}</div>{!plans.length && <div className="border-t border-ink/15 py-10"><h3 className="font-display text-2xl font-black">A package tailored to your requirements</h3><Button asChild className="mt-6"><SiteLink href="/questionnaire">Request a personalized quote</SiteLink></Button></div>}</div></section><CallToAction /></>;
 }
 
 export function PortfolioPage() { return <><PageHeading title="Portfolio" subtitle="A selection of websites crafted with purpose, strategy, and conversion in mind." /><Portfolio /><CallToAction /></>; }
