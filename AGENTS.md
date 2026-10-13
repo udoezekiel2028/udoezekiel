@@ -14,3 +14,5 @@
 - Page recreation is presentation-only: do not send forms or account credentials to the reference owner or imply unconnected services work.
 - Shared contact and social destinations are defined in a browser-safe contact-details module; copied page data must agree with it to keep every contact action consistent.
 - The homepage introduction gallery uses the shared Embla carousel and Radix dialog in a separate browser-safe component, so three-picture navigation and accessible full-size viewing stay isolated from other homepage sections.
+- Reference HTML is memoized by page and filter; service sections use measured intrinsic heights for off-screen rendering and images decode asynchronously to reduce scrolling work without estimated-height jumps.
+- The reference root must have visible overflow; copied document-level overflow rules otherwise create an inner scroll area that traps wheel and touch gestures.
