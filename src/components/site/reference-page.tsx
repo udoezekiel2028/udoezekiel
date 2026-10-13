@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import parse, { attributesToProps, domToReact, Element, type DOMNode, type HTMLReactParserOptions } from "html-react-parser";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
@@ -94,7 +94,23 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
   }, [booking]);
 
   const page = pages[pageKey];
+  useEffect(() => {
+    if (!pageKey.startsWith("services")) return;
+    // Measure real section heights, not estimates, so skipped rendering does not jump.
+    const sections = document.querySelectorAll<HTMLElement>(".reference-page .elementor > .e-parent, .reference-page .elementor > .elementor-top-section");
+    const heights = Array.from(sections, section => section.getBoundingClientRect().height);
+    sections.forEach((section, index) => {
+      section.style.containIntrinsicSize = `auto ${heights[index] ?? 0}px`;
+      section.dataset['scrollOptimized'] = "true";
+    });
+    return () => sections.forEach(section => {
+      section.style.removeProperty("contain-intrinsic-size");
+      delete section.dataset['scrollOptimized'];
+    });
+  }, [pageKey]);
+  const parsedContent = useMemo(() => {
   if (!page) return null;
+  let imageIndex = 0;
   const options: HTMLReactParserOptions = {
     replace(node) {
       if (!(node instanceof Element)) return;
@@ -109,8 +125,10 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
       if (node.name === "img" && attrs['data-portrait']) return <img {...attributesToProps(attrs)} src={portrait.url} alt="Udo Ezekiel" />;
       if (node.name === "img" && attrs['src']?.includes("animated_light_logo")) return <span className="reference-brand-mark"><img src={logo.url} alt="Udo Ezekiel" /></span>;
       if (node.name === "img") {
+        if (!attrs['src']) return <></>;
         const mapped = Object.entries(IMAGE_URL_MAP).find(([key]) => attrs['src']?.includes(key));
-        if (mapped) return <img {...attributesToProps(attrs)} src={mapped[1]} alt={attrs['alt'] || "Website project"} />;
+        const isFirst = imageIndex++ === 0;
+        return <img {...attributesToProps(attrs)} src={mapped?.[1] ?? attrs['src']} alt={attrs['alt'] || "Website project"} decoding="async" loading={isFirst ? "eager" : "lazy"} />;
       }
       if (node.name === "img" && !attrs['src']) return <></>;
       if (node.name === "a") {
@@ -127,5 +145,8 @@ export function ReferencePage({ pageKey }: { pageKey: string }) {
       return undefined;
     },
   };
-  return <div className="reference-page"><div className="reference-root elementor-kit-11">{parse(page.html, options)}</div>{zoom && <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-5" role="dialog" aria-modal="true" aria-label="Project image"><Button variant="outline" className="absolute right-5 top-5" onClick={() => setZoom(null)}>Close</Button><img src={zoom} alt="Website project" className="max-h-[90vh] max-w-full object-contain" /></div>}{booking && <div className="fixed inset-0 z-50 flex flex-col bg-ink/95 p-4 md:p-8" role="dialog" aria-modal="true" aria-label="Book a free discovery call"><div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 pb-3"><p className="font-display text-lg font-black text-paper">Book a free discovery call</p><Button variant="outline" size="sm" onClick={() => setBooking(false)}>Close</Button></div><iframe title="Calendly booking calendar" src={CALENDLY_URL} className="mx-auto w-full max-w-5xl flex-1 rounded-lg border-0 bg-paper" loading="lazy" /></div>}</div>;
+  return parse(page.html, options);
+  }, [page, pageKey, filter]);
+  if (!page) return null;
+  return <div className="reference-page"><div className="reference-root elementor-kit-11">{parsedContent}</div>{zoom && <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-5" role="dialog" aria-modal="true" aria-label="Project image"><Button variant="outline" className="absolute right-5 top-5" onClick={() => setZoom(null)}>Close</Button><img src={zoom} alt="Website project" className="max-h-[90vh] max-w-full object-contain" /></div>}{booking && <div className="fixed inset-0 z-50 flex flex-col bg-ink/95 p-4 md:p-8" role="dialog" aria-modal="true" aria-label="Book a free discovery call"><div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 pb-3"><p className="font-display text-lg font-black text-paper">Book a free discovery call</p><Button variant="outline" size="sm" onClick={() => setBooking(false)}>Close</Button></div><iframe title="Calendly booking calendar" src={CALENDLY_URL} className="mx-auto w-full max-w-5xl flex-1 rounded-lg border-0 bg-paper" loading="lazy" /></div>}</div>;
 }
