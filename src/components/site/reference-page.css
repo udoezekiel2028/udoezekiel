@@ -1,4 +1,5 @@
 .reference-page { background: var(--background); color: var(--ink); overflow: clip; }
+.reference-page .reference-root { overflow: visible; }
 .reference-page .reference-root { --wd-container-w: 1222px; --wd-link-color: var(--ink); --wd-link-color-hover: var(--brand); --wd-primary-color: var(--brand); --wd-main-bgcolor: var(--background); --wd-text-font: "Nunito Sans", sans-serif; --wd-title-font: "Raleway", sans-serif; --wd-entities-title-font: "Raleway", sans-serif; font-family: var(--wd-text-font); line-height: 1.6; }
 .reference-page .reference-root > div > main { display: flex; width: 100%; max-width: 1222px; margin: 0 auto; padding: 0 15px; }
 .reference-page .wd-content-area { width: 100%; min-width: 0; }
