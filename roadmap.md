@@ -1,4 +1,6 @@
 # Roadmap
+- [ ] Remove pricing packages and stale package references throughout the website.
+- [ ] Improve and verify scrolling across service pages.
 
 - [x] Homepage hero section: replace the person image with the uploaded portrait
 - [x] Replace the site logo everywhere (header, footer, favicon) with the UDO EZEKIEL logo
