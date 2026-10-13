@@ -1,6 +1,6 @@
 # Roadmap
-- [ ] Remove pricing packages and stale package references throughout the website.
-- [ ] Improve and verify scrolling across service pages.
+- [x] Remove pricing packages and stale package references throughout the website.
+- [x] Improve and verify scrolling across service pages.
 
 - [x] Homepage hero section: replace the person image with the uploaded portrait
 - [x] Replace the site logo everywhere (header, footer, favicon) with the UDO EZEKIEL logo
@@ -14,4 +14,4 @@
 - [x] Verify removed pages and updated contact links.
 
 - [x] Swap the "Shakaaraah LLC" portfolio picture for the uploaded mockup, on the homepage card and everywhere else the old preview showed.
-- [ ] Waiting on final policy text: reference Terms, Privacy, and Referral pages are unavailable.
+- [ ] Awaiting the owner's final approval of policy defaults and wording for Refer a Friend.
