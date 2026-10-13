@@ -49,7 +49,6 @@ import { Route as ServicesDigitalMarketingRouteImport } from './routes/services.
 import { Route as ServicesEcommerceWebsiteDesignerRouteImport } from './routes/services.ecommerce-website-designer'
 import { Route as ServicesLandingPageDesignerInLagosNigeriaRouteImport } from './routes/services.landing-page-designer-in-lagos-nigeria'
 import { Route as ServicesLmsRouteImport } from './routes/services.lms'
-import { Route as ServicesPricingRouteImport } from './routes/services.pricing'
 import { Route as ServicesSeoRouteImport } from './routes/services.seo'
 import { Route as ServicesWebsiteDesignRouteImport } from './routes/services.website-design'
 import { Route as LovableEmailAuthPreviewRouteImport } from './routes/lovable/email/auth/preview'
@@ -266,11 +265,6 @@ const ServicesLmsRoute = ServicesLmsRouteImport.update({
   path: '/lms',
   getParentRoute: () => ServicesRoute,
 } as any)
-const ServicesPricingRoute = ServicesPricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
-  getParentRoute: () => ServicesRoute,
-} as any)
 const ServicesSeoRoute = ServicesSeoRouteImport.update({
   id: '/seo',
   path: '/seo',
@@ -336,7 +330,6 @@ export interface FileRoutesByFullPath {
   '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
   '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
   '/services/lms': typeof ServicesLmsRoute
-  '/services/pricing': typeof ServicesPricingRoute
   '/services/seo': typeof ServicesSeoRoute
   '/services/website-design': typeof ServicesWebsiteDesignRoute
   '/my-account/': typeof MyAccountIndexRoute
@@ -381,7 +374,6 @@ export interface FileRoutesByTo {
   '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
   '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
   '/services/lms': typeof ServicesLmsRoute
-  '/services/pricing': typeof ServicesPricingRoute
   '/services/seo': typeof ServicesSeoRoute
   '/services/website-design': typeof ServicesWebsiteDesignRoute
   '/my-account': typeof MyAccountIndexRoute
@@ -430,7 +422,6 @@ export interface FileRoutesById {
   '/services/ecommerce-website-designer': typeof ServicesEcommerceWebsiteDesignerRoute
   '/services/landing-page-designer-in-lagos-nigeria': typeof ServicesLandingPageDesignerInLagosNigeriaRoute
   '/services/lms': typeof ServicesLmsRoute
-  '/services/pricing': typeof ServicesPricingRoute
   '/services/seo': typeof ServicesSeoRoute
   '/services/website-design': typeof ServicesWebsiteDesignRoute
   '/my-account/': typeof MyAccountIndexRoute
@@ -480,7 +471,6 @@ export interface FileRouteTypes {
     | '/services/ecommerce-website-designer'
     | '/services/landing-page-designer-in-lagos-nigeria'
     | '/services/lms'
-    | '/services/pricing'
     | '/services/seo'
     | '/services/website-design'
     | '/my-account/'
@@ -525,7 +515,6 @@ export interface FileRouteTypes {
     | '/services/ecommerce-website-designer'
     | '/services/landing-page-designer-in-lagos-nigeria'
     | '/services/lms'
-    | '/services/pricing'
     | '/services/seo'
     | '/services/website-design'
     | '/my-account'
@@ -573,7 +562,6 @@ export interface FileRouteTypes {
     | '/services/ecommerce-website-designer'
     | '/services/landing-page-designer-in-lagos-nigeria'
     | '/services/lms'
-    | '/services/pricing'
     | '/services/seo'
     | '/services/website-design'
     | '/my-account/'
@@ -898,13 +886,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesLmsRouteImport
       parentRoute: typeof ServicesRoute
     }
-    '/services/pricing': {
-      id: '/services/pricing'
-      path: '/pricing'
-      fullPath: '/services/pricing'
-      preLoaderRoute: typeof ServicesPricingRouteImport
-      parentRoute: typeof ServicesRoute
-    }
     '/services/seo': {
       id: '/services/seo'
       path: '/seo'
@@ -986,7 +967,6 @@ interface ServicesRouteChildren {
   ServicesEcommerceWebsiteDesignerRoute: typeof ServicesEcommerceWebsiteDesignerRoute
   ServicesLandingPageDesignerInLagosNigeriaRoute: typeof ServicesLandingPageDesignerInLagosNigeriaRoute
   ServicesLmsRoute: typeof ServicesLmsRoute
-  ServicesPricingRoute: typeof ServicesPricingRoute
   ServicesSeoRoute: typeof ServicesSeoRoute
   ServicesWebsiteDesignRoute: typeof ServicesWebsiteDesignRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
@@ -998,7 +978,6 @@ const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesLandingPageDesignerInLagosNigeriaRoute:
     ServicesLandingPageDesignerInLagosNigeriaRoute,
   ServicesLmsRoute: ServicesLmsRoute,
-  ServicesPricingRoute: ServicesPricingRoute,
   ServicesSeoRoute: ServicesSeoRoute,
   ServicesWebsiteDesignRoute: ServicesWebsiteDesignRoute,
   ServicesIndexRoute: ServicesIndexRoute,
