@@ -17,6 +17,18 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Udo Ezekiel",
+          url: "https://www.udoezekiel.dev/",
+          logo: "https://www.udoezekiel.dev/__l5e/assets-v1/d73154b0-2f04-4609-8a7c-2aab89d8b049/udo-ezekiel-logo.png",
+        }),
+      },
+    ],
   }),
   component: Index,
 });
