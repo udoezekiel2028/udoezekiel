@@ -47,7 +47,6 @@ const SERVICES_MENU = [
 const NAV = [
   { label: "Home", href: "/" },
   { label: "My Services", href: `/services/`, menu: true },
-  { label: "Pricing", href: `/contact/` },
   { label: "My Portfolio", href: `/portfolio/` },
   { label: "Blog", href: `/blog/` },
   { label: "Contact", href: `/contact/` },
