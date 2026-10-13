@@ -47,7 +47,7 @@ const SERVICES_MENU = [
 const NAV = [
   { label: "Home", href: "/" },
   { label: "My Services", href: `/services/`, menu: true },
-  { label: "Pricing", href: `/services/pricing/` },
+  { label: "Pricing", href: `/contact/` },
   { label: "My Portfolio", href: `/portfolio/` },
   { label: "Blog", href: `/blog/` },
   { label: "Contact", href: `/contact/` },
@@ -86,7 +86,7 @@ const SERVICES = [
 
 const STEPS = [
   { n: "01.", t: "Complete our web design questionnaire", d: "We'll take it from here and get back to you within 48 hours!", href: `/consultation/` },
-  { n: "02.", t: "You will get a very detailed proposal", d: "We'll create a tailored proposal highlighting features & pricing", href: `/services/pricing/` },
+  { n: "02.", t: "You will get a very detailed proposal", d: "We'll create a tailored proposal highlighting features & pricing", href: `/contact/` },
   { n: "03.", t: "You get a new website that works in 2026", d: "A beautiful and functional website is good for business", href: `/portfolio/` },
 ];
 
