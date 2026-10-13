@@ -220,7 +220,7 @@ function Hero() {
         </h1>
         <form onSubmit={search} className="mt-10 flex max-w-[435px] rounded-sm bg-paper p-1.5">
           <label htmlFor="domain" className="sr-only">Domain name</label>
-          <input id="domain" name="domain" value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="Get a new domain name :)" className="min-w-0 flex-1 bg-transparent px-3 text-ink outline-none placeholder:text-ink/50" />
+          <input id="domain" name="domain" value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="Get 20% Off Your New Domain Name" className="min-w-0 flex-1 bg-transparent px-3 text-ink outline-none placeholder:text-ink/50" />
           <Button type="submit" variant="ghost" disabled={loading} className={`${btnBrand} gap-2 px-5 uppercase`}><Search className="h-4 w-4 sm:hidden" /><span className="hidden sm:inline">{loading ? "Checking..." : "Search"}</span></Button>
         </form>
         {loading && (
