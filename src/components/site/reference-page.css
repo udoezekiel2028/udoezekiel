@@ -3,7 +3,7 @@
 .reference-page .reference-root > div > main { display: flex; width: 100%; max-width: 1222px; margin: 0 auto; padding: 0 15px; }
 .reference-page .wd-content-area { width: 100%; min-width: 0; }
 .reference-page .elementor-element.elementor-invisible { visibility: visible; }
-.reference-page .e-con.e-parent { content-visibility: visible !important; }
+.reference-page [data-scroll-optimized="true"] { content-visibility: auto; }
 .reference-page .elementor-widget-container { height: auto; }
 .reference-page .elementor-heading-title { font-family: var(--wd-title-font); }
 .reference-page .elementor-widget-image img { display: inline-block; }
