@@ -2,6 +2,7 @@ import blogAffiliate from "@/assets/blog-affiliate.jpg";
 import blogGmb from "@/assets/blog-google-business.jpg";
 import { SiteLink } from "./site-link";
 import { IntroGallery } from "./intro-gallery";
+import { Testimonials } from "./testimonials";
 import { checkDomain, type DomainResult } from "@/lib/domain.functions";
 import { WHATSAPP_URL, SOCIAL_PROFILES } from "./contact-details";
 import { Button } from "@/components/ui/button";
@@ -517,4 +518,4 @@ export function Footer() {
 }
 
 
-export function HomeContent() { return <><Hero /><Intro /><Trusted /><About /><Portfolio /><Services /><Steps /><Blog /><ContactFaq /></>; }
+export function HomeContent() { return <><Hero /><Intro /><Trusted /><About /><Portfolio /><Services /><Steps /><Testimonials /><Blog /><ContactFaq /></>; }
