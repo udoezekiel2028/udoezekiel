@@ -1,4 +1,5 @@
 # Roadmap
+- [x] Add and verify the homepage carousel with video and screenshot testimonial placeholders.
 - [x] Remove pricing packages and stale package references throughout the website.
 - [x] Improve and verify scrolling across service pages.
 
