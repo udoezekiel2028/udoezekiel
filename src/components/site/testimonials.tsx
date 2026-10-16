@@ -32,10 +32,10 @@ export function Testimonials() {
           <CarouselContent className="-ml-6">
             {testimonials.map((item) => (
               <CarouselItem key={item.id} className="basis-full pl-6 md:basis-1/2" aria-label={item.title}>
-                <article className="overflow-hidden rounded-sm border border-paper/15 bg-ink-soft">
-                  <Button variant="ghost" className="group relative block aspect-video h-auto w-full whitespace-normal rounded-none p-0 text-paper hover:bg-paper/5 hover:text-paper focus-visible:ring-brand" aria-label={`Open ${item.title}`} onClick={() => setSelected(item)}>
+                <article className="mx-auto w-full max-w-[380px] overflow-hidden rounded-sm border border-paper/15 bg-ink-soft">
+                  <Button variant="ghost" className="group relative block aspect-[9/16] h-auto w-full whitespace-normal rounded-none p-0 text-paper hover:bg-paper/5 hover:text-paper focus-visible:ring-brand" aria-label={`Open ${item.title}`} onClick={() => setSelected(item)}>
                     {item.youtubeId ? (
-                      <><img src={`https://i.ytimg.com/vi/${item.youtubeId}/hqdefault.jpg`} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-cover" /><span className="absolute inset-0 flex items-center justify-center"><span className="flex size-16 items-center justify-center rounded-full bg-brand text-brand-foreground"><Play className="size-7" /></span></span></>
+                      <><img src={`https://i.ytimg.com/vi/${item.youtubeId}/oardefault.jpg`} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-cover" /><span className="absolute inset-0 flex items-center justify-center"><span className="flex size-16 items-center justify-center rounded-full bg-brand text-brand-foreground"><Play className="size-7" /></span></span></>
                     ) : item.src ? (
                       item.format === "video" ? <><video src={item.src} poster={item.poster} preload="metadata" className="h-full w-full object-contain" muted playsInline /><span className="absolute inset-0 flex items-center justify-center"><span className="flex size-16 items-center justify-center rounded-full bg-brand text-brand-foreground"><Play className="size-7" /></span></span></> : <img src={item.src} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-contain" />
                     ) : <Placeholder item={item} />}
@@ -54,10 +54,12 @@ export function Testimonials() {
         </Carousel>
       </div>
       <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}>
-        <DialogContent className="max-h-[92dvh] w-[94vw] max-w-[1000px] overflow-y-auto border-paper/20 bg-ink p-4 pt-12 text-paper" aria-describedby={undefined}>
+        <DialogContent className={`max-h-[92dvh] w-[94vw] overflow-y-auto border-paper/20 bg-ink p-4 pt-12 text-paper ${selected?.youtubeId ? "max-w-[520px]" : "max-w-[1000px]"}`} aria-describedby={undefined}>
           <DialogTitle className="font-display">{selected?.title}</DialogTitle>
           {selected && (selected.youtubeId ? (
-            <iframe key={selected.id} src={`https://www.youtube.com/embed/${selected.youtubeId}?autoplay=1&rel=0`} title={selected.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="aspect-video w-full rounded-sm" />
+            <div className="mx-auto aspect-[9/16]" style={{ height: "min(70dvh, 760px)" }}>
+              <iframe key={selected.id} src={`https://www.youtube.com/embed/${selected.youtubeId}?autoplay=1&rel=0`} title={selected.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="h-full w-full rounded-sm" />
+            </div>
           ) : selected.src ? (
             selected.format === "video" ? <video key={selected.id} src={selected.src} poster={selected.poster} controls autoPlay playsInline className="max-h-[70dvh] w-full" /> : <img src={selected.src} alt={selected.title} className="h-auto w-full object-contain" />
           ) : <div className="aspect-video bg-ink-soft"><Placeholder item={selected} /></div>)}
