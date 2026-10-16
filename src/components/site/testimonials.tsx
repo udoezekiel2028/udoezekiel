@@ -43,7 +43,7 @@ export function Testimonials() {
                   </Button>
                   <div className="flex items-center justify-between gap-3 border-t border-paper/10 px-5 py-4">
                     <span className="flex items-center gap-2 text-sm font-bold">{item.format === "video" ? <Play className="size-4 text-brand" /> : <Image className="size-4 text-brand" />}{item.format === "video" ? "Video testimonial" : "Client screenshot"}</span>
-                    {!item.src && <span className="text-xs text-paper/55">Placeholder</span>}
+                    {!item.src && !item.youtubeId && <span className="text-xs text-paper/55">Placeholder</span>}
                   </div>
                 </article>
               </CarouselItem>
@@ -56,7 +56,9 @@ export function Testimonials() {
       <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}>
         <DialogContent className="max-h-[92dvh] w-[94vw] max-w-[1000px] overflow-y-auto border-paper/20 bg-ink p-4 pt-12 text-paper" aria-describedby={undefined}>
           <DialogTitle className="font-display">{selected?.title}</DialogTitle>
-          {selected && (selected.src ? (
+          {selected && (selected.youtubeId ? (
+            <iframe key={selected.id} src={`https://www.youtube.com/embed/${selected.youtubeId}?autoplay=1&rel=0`} title={selected.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="aspect-video w-full rounded-sm" />
+          ) : selected.src ? (
             selected.format === "video" ? <video key={selected.id} src={selected.src} poster={selected.poster} controls autoPlay playsInline className="max-h-[70dvh] w-full" /> : <img src={selected.src} alt={selected.title} className="h-auto w-full object-contain" />
           ) : <div className="aspect-video bg-ink-soft"><Placeholder item={selected} /></div>)}
         </DialogContent>
