@@ -54,10 +54,12 @@ export function Testimonials() {
         </Carousel>
       </div>
       <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}>
-        <DialogContent className="max-h-[92dvh] w-[94vw] max-w-[1000px] overflow-y-auto border-paper/20 bg-ink p-4 pt-12 text-paper" aria-describedby={undefined}>
+        <DialogContent className={`max-h-[92dvh] w-[94vw] overflow-y-auto border-paper/20 bg-ink p-4 pt-12 text-paper ${selected?.youtubeId ? "max-w-[520px]" : "max-w-[1000px]"}`} aria-describedby={undefined}>
           <DialogTitle className="font-display">{selected?.title}</DialogTitle>
           {selected && (selected.youtubeId ? (
-            <iframe key={selected.id} src={`https://www.youtube.com/embed/${selected.youtubeId}?autoplay=1&rel=0`} title={selected.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="aspect-video w-full rounded-sm" />
+            <div className="mx-auto aspect-[9/16]" style={{ height: "min(70dvh, 760px)" }}>
+              <iframe key={selected.id} src={`https://www.youtube.com/embed/${selected.youtubeId}?autoplay=1&rel=0`} title={selected.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="h-full w-full rounded-sm" />
+            </div>
           ) : selected.src ? (
             selected.format === "video" ? <video key={selected.id} src={selected.src} poster={selected.poster} controls autoPlay playsInline className="max-h-[70dvh] w-full" /> : <img src={selected.src} alt={selected.title} className="h-auto w-full object-contain" />
           ) : <div className="aspect-video bg-ink-soft"><Placeholder item={selected} /></div>)}
