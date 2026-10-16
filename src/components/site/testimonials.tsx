@@ -33,7 +33,7 @@ export function Testimonials() {
             {testimonials.map((item) => (
               <CarouselItem key={item.id} className="basis-full pl-6 md:basis-1/2" aria-label={item.title}>
                 <article className="mx-auto w-full max-w-[380px] overflow-hidden rounded-sm border border-paper/15 bg-ink-soft">
-                  <Button variant="ghost" className="group relative block aspect-[9/16] h-auto w-full whitespace-normal rounded-none p-0 text-paper hover:bg-paper/5 hover:text-paper focus-visible:ring-brand" aria-label={`Open ${item.title}`} onClick={() => setSelected(item)}>
+                  <Button variant="ghost" className="group relative block aspect-square h-auto w-full whitespace-normal rounded-none p-0 text-paper hover:bg-paper/5 hover:text-paper focus-visible:ring-brand" aria-label={`Open ${item.title}`} onClick={() => setSelected(item)}>
                     {item.youtubeId ? (
                       <><img src={`https://i.ytimg.com/vi/${item.youtubeId}/oardefault.jpg`} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-cover" /><span className="absolute inset-0 flex items-center justify-center"><span className="flex size-16 items-center justify-center rounded-full bg-brand text-brand-foreground"><Play className="size-7" /></span></span></>
                     ) : item.src ? (
