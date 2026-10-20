@@ -35,6 +35,63 @@ export type Database = {
         }
         Relationships: []
       }
+      payments: {
+        Row: {
+          amount_cents: number | null
+          created_at: string
+          currency: string | null
+          customer_email: string | null
+          customer_id: string | null
+          environment: string
+          event_key: string
+          id: string
+          kind: string
+          period_end: string | null
+          price_id: string | null
+          product_id: string | null
+          status: string
+          subscription_id: string | null
+          transaction_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          amount_cents?: number | null
+          created_at?: string
+          currency?: string | null
+          customer_email?: string | null
+          customer_id?: string | null
+          environment: string
+          event_key: string
+          id?: string
+          kind: string
+          period_end?: string | null
+          price_id?: string | null
+          product_id?: string | null
+          status: string
+          subscription_id?: string | null
+          transaction_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          amount_cents?: number | null
+          created_at?: string
+          currency?: string | null
+          customer_email?: string | null
+          customer_id?: string | null
+          environment?: string
+          event_key?: string
+          id?: string
+          kind?: string
+          period_end?: string | null
+          price_id?: string | null
+          product_id?: string | null
+          status?: string
+          subscription_id?: string | null
+          transaction_id?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
