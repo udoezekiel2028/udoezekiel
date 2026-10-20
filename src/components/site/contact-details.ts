@@ -8,4 +8,4 @@ export const SOCIAL_PROFILES = {
   x: "https://x.com/udoezekiel",
   instagram: "https://www.instagram.com/udoezekiel",
   linkedin: "https://www.linkedin.com/in/udoezekiel",
-};
+};export const OWNER_EMAILS: [string, ...string[]] = ["hello@udoezekiel.dev", "udoezekiel2028@gmail.com"];
