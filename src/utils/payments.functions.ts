@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { gatewayFetch, type PaddleEnv } from "@/lib/paddle.server";
 
-const ALLOWED_PRICES = new Set(["website_project_100"]);
+const ALLOWED_PRICES = new Set(["website_project_100", "website_care_monthly"]);
 
 export const resolvePaddlePrice = createServerFn({ method: "GET" })
   .inputValidator((data: { priceId: string; environment: PaddleEnv }) => {

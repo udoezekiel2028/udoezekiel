@@ -23,7 +23,6 @@ import { Route as FlutterwaveStoreReviewRouteImport } from './routes/flutterwave
 import { Route as GoogleMyBusinessNigeriaRouteImport } from './routes/google-my-business-nigeria'
 import { Route as HostingerCouponCodeRouteImport } from './routes/hostinger-coupon-code'
 import { Route as HowToFixWoocommerceStatusNotShowingOnDashboardRouteImport } from './routes/how-to-fix-woocommerce-status-not-showing-on-dashboard'
-import { Route as MyAccountRouteImport } from './routes/my-account'
 import { Route as PayRouteImport } from './routes/pay'
 import { Route as PaymentSuccessRouteImport } from './routes/payment-success'
 import { Route as PiggyvestReview2022RouteImport } from './routes/piggyvest-review-2022'
@@ -37,8 +36,6 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 import { Route as WebDesignGettingStartedRouteImport } from './routes/web-design-getting-started'
 import { Route as WhyYouShouldPlanYourOnlineBusinessStrategyRouteImport } from './routes/why-you-should-plan-your-online-business-strategy'
-import { Route as MyAccountIndexRouteImport } from './routes/my-account.index'
-import { Route as MyAccountLostPasswordRouteImport } from './routes/my-account.lost-password'
 import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
 import { Route as PortfolioEaGlobalStoresRouteImport } from './routes/portfolio.ea-global-stores'
 import { Route as PortfolioEasyjapaRouteImport } from './routes/portfolio.easyjapa'
@@ -131,11 +128,6 @@ const HowToFixWoocommerceStatusNotShowingOnDashboardRoute =
     path: '/how-to-fix-woocommerce-status-not-showing-on-dashboard',
     getParentRoute: () => rootRouteImport,
   } as any)
-const MyAccountRoute = MyAccountRouteImport.update({
-  id: '/my-account',
-  path: '/my-account',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PayRoute = PayRouteImport.update({
   id: '/pay',
   path: '/pay',
@@ -203,16 +195,6 @@ const WhyYouShouldPlanYourOnlineBusinessStrategyRoute =
     path: '/why-you-should-plan-your-online-business-strategy',
     getParentRoute: () => rootRouteImport,
   } as any)
-const MyAccountIndexRoute = MyAccountIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => MyAccountRoute,
-} as any)
-const MyAccountLostPasswordRoute = MyAccountLostPasswordRouteImport.update({
-  id: '/lost-password',
-  path: '/lost-password',
-  getParentRoute: () => MyAccountRoute,
-} as any)
 const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -326,7 +308,6 @@ export interface FileRoutesByFullPath {
   '/google-my-business-nigeria': typeof GoogleMyBusinessNigeriaRoute
   '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
   '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
-  '/my-account': typeof MyAccountRouteWithChildren
   '/pay': typeof PayRoute
   '/payment-success': typeof PaymentSuccessRoute
   '/piggyvest-review-2022': typeof PiggyvestReview2022Route
@@ -340,7 +321,6 @@ export interface FileRoutesByFullPath {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
   '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
-  '/my-account/lost-password': typeof MyAccountLostPasswordRoute
   '/portfolio/ea-global-stores': typeof PortfolioEaGlobalStoresRoute
   '/portfolio/easyjapa': typeof PortfolioEasyjapaRoute
   '/portfolio/forxers-academy': typeof PortfolioForxersAcademyRoute
@@ -353,7 +333,6 @@ export interface FileRoutesByFullPath {
   '/services/lms': typeof ServicesLmsRoute
   '/services/seo': typeof ServicesSeoRoute
   '/services/website-design': typeof ServicesWebsiteDesignRoute
-  '/my-account/': typeof MyAccountIndexRoute
   '/portfolio/': typeof PortfolioIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
@@ -387,7 +366,6 @@ export interface FileRoutesByTo {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
   '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
-  '/my-account/lost-password': typeof MyAccountLostPasswordRoute
   '/portfolio/ea-global-stores': typeof PortfolioEaGlobalStoresRoute
   '/portfolio/easyjapa': typeof PortfolioEasyjapaRoute
   '/portfolio/forxers-academy': typeof PortfolioForxersAcademyRoute
@@ -400,7 +378,6 @@ export interface FileRoutesByTo {
   '/services/lms': typeof ServicesLmsRoute
   '/services/seo': typeof ServicesSeoRoute
   '/services/website-design': typeof ServicesWebsiteDesignRoute
-  '/my-account': typeof MyAccountIndexRoute
   '/portfolio': typeof PortfolioIndexRoute
   '/services': typeof ServicesIndexRoute
   '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
@@ -424,7 +401,6 @@ export interface FileRoutesById {
   '/google-my-business-nigeria': typeof GoogleMyBusinessNigeriaRoute
   '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
   '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
-  '/my-account': typeof MyAccountRouteWithChildren
   '/pay': typeof PayRoute
   '/payment-success': typeof PaymentSuccessRoute
   '/piggyvest-review-2022': typeof PiggyvestReview2022Route
@@ -438,7 +414,6 @@ export interface FileRoutesById {
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
   '/why-you-should-plan-your-online-business-strategy': typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
-  '/my-account/lost-password': typeof MyAccountLostPasswordRoute
   '/portfolio/ea-global-stores': typeof PortfolioEaGlobalStoresRoute
   '/portfolio/easyjapa': typeof PortfolioEasyjapaRoute
   '/portfolio/forxers-academy': typeof PortfolioForxersAcademyRoute
@@ -451,7 +426,6 @@ export interface FileRoutesById {
   '/services/lms': typeof ServicesLmsRoute
   '/services/seo': typeof ServicesSeoRoute
   '/services/website-design': typeof ServicesWebsiteDesignRoute
-  '/my-account/': typeof MyAccountIndexRoute
   '/portfolio/': typeof PortfolioIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
@@ -476,7 +450,6 @@ export interface FileRouteTypes {
     | '/google-my-business-nigeria'
     | '/hostinger-coupon-code'
     | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
-    | '/my-account'
     | '/pay'
     | '/payment-success'
     | '/piggyvest-review-2022'
@@ -490,7 +463,6 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/web-design-getting-started'
     | '/why-you-should-plan-your-online-business-strategy'
-    | '/my-account/lost-password'
     | '/portfolio/ea-global-stores'
     | '/portfolio/easyjapa'
     | '/portfolio/forxers-academy'
@@ -503,7 +475,6 @@ export interface FileRouteTypes {
     | '/services/lms'
     | '/services/seo'
     | '/services/website-design'
-    | '/my-account/'
     | '/portfolio/'
     | '/services/'
     | '/api/public/payments/webhook'
@@ -537,7 +508,6 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/web-design-getting-started'
     | '/why-you-should-plan-your-online-business-strategy'
-    | '/my-account/lost-password'
     | '/portfolio/ea-global-stores'
     | '/portfolio/easyjapa'
     | '/portfolio/forxers-academy'
@@ -550,7 +520,6 @@ export interface FileRouteTypes {
     | '/services/lms'
     | '/services/seo'
     | '/services/website-design'
-    | '/my-account'
     | '/portfolio'
     | '/services'
     | '/api/public/payments/webhook'
@@ -573,7 +542,6 @@ export interface FileRouteTypes {
     | '/google-my-business-nigeria'
     | '/hostinger-coupon-code'
     | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
-    | '/my-account'
     | '/pay'
     | '/payment-success'
     | '/piggyvest-review-2022'
@@ -587,7 +555,6 @@ export interface FileRouteTypes {
     | '/terms-of-service'
     | '/web-design-getting-started'
     | '/why-you-should-plan-your-online-business-strategy'
-    | '/my-account/lost-password'
     | '/portfolio/ea-global-stores'
     | '/portfolio/easyjapa'
     | '/portfolio/forxers-academy'
@@ -600,7 +567,6 @@ export interface FileRouteTypes {
     | '/services/lms'
     | '/services/seo'
     | '/services/website-design'
-    | '/my-account/'
     | '/portfolio/'
     | '/services/'
     | '/api/public/payments/webhook'
@@ -624,7 +590,6 @@ export interface RootRouteChildren {
   GoogleMyBusinessNigeriaRoute: typeof GoogleMyBusinessNigeriaRoute
   HostingerCouponCodeRoute: typeof HostingerCouponCodeRoute
   HowToFixWoocommerceStatusNotShowingOnDashboardRoute: typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
-  MyAccountRoute: typeof MyAccountRouteWithChildren
   PayRoute: typeof PayRoute
   PaymentSuccessRoute: typeof PaymentSuccessRoute
   PiggyvestReview2022Route: typeof PiggyvestReview2022Route
@@ -744,13 +709,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HowToFixWoocommerceStatusNotShowingOnDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/my-account': {
-      id: '/my-account'
-      path: '/my-account'
-      fullPath: '/my-account'
-      preLoaderRoute: typeof MyAccountRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/pay': {
       id: '/pay'
       path: '/pay'
@@ -841,20 +799,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/why-you-should-plan-your-online-business-strategy'
       preLoaderRoute: typeof WhyYouShouldPlanYourOnlineBusinessStrategyRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/my-account/': {
-      id: '/my-account/'
-      path: '/'
-      fullPath: '/my-account/'
-      preLoaderRoute: typeof MyAccountIndexRouteImport
-      parentRoute: typeof MyAccountRoute
-    }
-    '/my-account/lost-password': {
-      id: '/my-account/lost-password'
-      path: '/lost-password'
-      fullPath: '/my-account/lost-password'
-      preLoaderRoute: typeof MyAccountLostPasswordRouteImport
-      parentRoute: typeof MyAccountRoute
     }
     '/portfolio/': {
       id: '/portfolio/'
@@ -985,20 +929,6 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface MyAccountRouteChildren {
-  MyAccountLostPasswordRoute: typeof MyAccountLostPasswordRoute
-  MyAccountIndexRoute: typeof MyAccountIndexRoute
-}
-
-const MyAccountRouteChildren: MyAccountRouteChildren = {
-  MyAccountLostPasswordRoute: MyAccountLostPasswordRoute,
-  MyAccountIndexRoute: MyAccountIndexRoute,
-}
-
-const MyAccountRouteWithChildren = MyAccountRoute._addFileChildren(
-  MyAccountRouteChildren,
-)
-
 interface PortfolioRouteChildren {
   PortfolioEaGlobalStoresRoute: typeof PortfolioEaGlobalStoresRoute
   PortfolioEasyjapaRoute: typeof PortfolioEasyjapaRoute
@@ -1066,7 +996,6 @@ const rootRouteChildren: RootRouteChildren = {
   HostingerCouponCodeRoute: HostingerCouponCodeRoute,
   HowToFixWoocommerceStatusNotShowingOnDashboardRoute:
     HowToFixWoocommerceStatusNotShowingOnDashboardRoute,
-  MyAccountRoute: MyAccountRouteWithChildren,
   PayRoute: PayRoute,
   PaymentSuccessRoute: PaymentSuccessRoute,
   PiggyvestReview2022Route: PiggyvestReview2022Route,
