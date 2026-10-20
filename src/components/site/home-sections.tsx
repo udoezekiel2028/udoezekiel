@@ -17,7 +17,6 @@ import {
   Menu,
   Search,
   Send,
-  User,
   X,
   Maximize2,
   MessageCircle,
