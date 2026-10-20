@@ -24,6 +24,8 @@ import { Route as GoogleMyBusinessNigeriaRouteImport } from './routes/google-my-
 import { Route as HostingerCouponCodeRouteImport } from './routes/hostinger-coupon-code'
 import { Route as HowToFixWoocommerceStatusNotShowingOnDashboardRouteImport } from './routes/how-to-fix-woocommerce-status-not-showing-on-dashboard'
 import { Route as MyAccountRouteImport } from './routes/my-account'
+import { Route as PayRouteImport } from './routes/pay'
+import { Route as PaymentSuccessRouteImport } from './routes/payment-success'
 import { Route as PiggyvestReview2022RouteImport } from './routes/piggyvest-review-2022'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
@@ -51,6 +53,7 @@ import { Route as ServicesLandingPageDesignerInLagosNigeriaRouteImport } from '.
 import { Route as ServicesLmsRouteImport } from './routes/services.lms'
 import { Route as ServicesSeoRouteImport } from './routes/services.seo'
 import { Route as ServicesWebsiteDesignRouteImport } from './routes/services.website-design'
+import { Route as ApiPublicPaymentsWebhookRouteImport } from './routes/api/public/payments/webhook'
 import { Route as LovableEmailAuthPreviewRouteImport } from './routes/lovable/email/auth/preview'
 import { Route as LovableEmailAuthWebhookRouteImport } from './routes/lovable/email/auth/webhook'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
@@ -131,6 +134,16 @@ const HowToFixWoocommerceStatusNotShowingOnDashboardRoute =
 const MyAccountRoute = MyAccountRouteImport.update({
   id: '/my-account',
   path: '/my-account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayRoute = PayRouteImport.update({
+  id: '/pay',
+  path: '/pay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaymentSuccessRoute = PaymentSuccessRouteImport.update({
+  id: '/payment-success',
+  path: '/payment-success',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PiggyvestReview2022Route = PiggyvestReview2022RouteImport.update({
@@ -275,6 +288,12 @@ const ServicesWebsiteDesignRoute = ServicesWebsiteDesignRouteImport.update({
   path: '/website-design',
   getParentRoute: () => ServicesRoute,
 } as any)
+const ApiPublicPaymentsWebhookRoute =
+  ApiPublicPaymentsWebhookRouteImport.update({
+    id: '/api/public/payments/webhook',
+    path: '/api/public/payments/webhook',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LovableEmailAuthPreviewRoute = LovableEmailAuthPreviewRouteImport.update({
   id: '/lovable/email/auth/preview',
   path: '/lovable/email/auth/preview',
@@ -308,6 +327,8 @@ export interface FileRoutesByFullPath {
   '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
   '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
   '/my-account': typeof MyAccountRouteWithChildren
+  '/pay': typeof PayRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/piggyvest-review-2022': typeof PiggyvestReview2022Route
   '/portfolio': typeof PortfolioRouteWithChildren
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -335,6 +356,7 @@ export interface FileRoutesByFullPath {
   '/my-account/': typeof MyAccountIndexRoute
   '/portfolio/': typeof PortfolioIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
   '/lovable/email/auth/preview': typeof LovableEmailAuthPreviewRoute
   '/lovable/email/auth/webhook': typeof LovableEmailAuthWebhookRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -354,6 +376,8 @@ export interface FileRoutesByTo {
   '/google-my-business-nigeria': typeof GoogleMyBusinessNigeriaRoute
   '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
   '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
+  '/pay': typeof PayRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/piggyvest-review-2022': typeof PiggyvestReview2022Route
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
@@ -379,6 +403,7 @@ export interface FileRoutesByTo {
   '/my-account': typeof MyAccountIndexRoute
   '/portfolio': typeof PortfolioIndexRoute
   '/services': typeof ServicesIndexRoute
+  '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
   '/lovable/email/auth/preview': typeof LovableEmailAuthPreviewRoute
   '/lovable/email/auth/webhook': typeof LovableEmailAuthWebhookRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -400,6 +425,8 @@ export interface FileRoutesById {
   '/hostinger-coupon-code': typeof HostingerCouponCodeRoute
   '/how-to-fix-woocommerce-status-not-showing-on-dashboard': typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
   '/my-account': typeof MyAccountRouteWithChildren
+  '/pay': typeof PayRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/piggyvest-review-2022': typeof PiggyvestReview2022Route
   '/portfolio': typeof PortfolioRouteWithChildren
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -427,6 +454,7 @@ export interface FileRoutesById {
   '/my-account/': typeof MyAccountIndexRoute
   '/portfolio/': typeof PortfolioIndexRoute
   '/services/': typeof ServicesIndexRoute
+  '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
   '/lovable/email/auth/preview': typeof LovableEmailAuthPreviewRoute
   '/lovable/email/auth/webhook': typeof LovableEmailAuthWebhookRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -449,6 +477,8 @@ export interface FileRouteTypes {
     | '/hostinger-coupon-code'
     | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
     | '/my-account'
+    | '/pay'
+    | '/payment-success'
     | '/piggyvest-review-2022'
     | '/portfolio'
     | '/privacy-policy'
@@ -476,6 +506,7 @@ export interface FileRouteTypes {
     | '/my-account/'
     | '/portfolio/'
     | '/services/'
+    | '/api/public/payments/webhook'
     | '/lovable/email/auth/preview'
     | '/lovable/email/auth/webhook'
     | '/lovable/email/transactional/preview'
@@ -495,6 +526,8 @@ export interface FileRouteTypes {
     | '/google-my-business-nigeria'
     | '/hostinger-coupon-code'
     | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
+    | '/pay'
+    | '/payment-success'
     | '/piggyvest-review-2022'
     | '/privacy-policy'
     | '/promote-your-business-online'
@@ -520,6 +553,7 @@ export interface FileRouteTypes {
     | '/my-account'
     | '/portfolio'
     | '/services'
+    | '/api/public/payments/webhook'
     | '/lovable/email/auth/preview'
     | '/lovable/email/auth/webhook'
     | '/lovable/email/transactional/preview'
@@ -540,6 +574,8 @@ export interface FileRouteTypes {
     | '/hostinger-coupon-code'
     | '/how-to-fix-woocommerce-status-not-showing-on-dashboard'
     | '/my-account'
+    | '/pay'
+    | '/payment-success'
     | '/piggyvest-review-2022'
     | '/portfolio'
     | '/privacy-policy'
@@ -567,6 +603,7 @@ export interface FileRouteTypes {
     | '/my-account/'
     | '/portfolio/'
     | '/services/'
+    | '/api/public/payments/webhook'
     | '/lovable/email/auth/preview'
     | '/lovable/email/auth/webhook'
     | '/lovable/email/transactional/preview'
@@ -588,6 +625,8 @@ export interface RootRouteChildren {
   HostingerCouponCodeRoute: typeof HostingerCouponCodeRoute
   HowToFixWoocommerceStatusNotShowingOnDashboardRoute: typeof HowToFixWoocommerceStatusNotShowingOnDashboardRoute
   MyAccountRoute: typeof MyAccountRouteWithChildren
+  PayRoute: typeof PayRoute
+  PaymentSuccessRoute: typeof PaymentSuccessRoute
   PiggyvestReview2022Route: typeof PiggyvestReview2022Route
   PortfolioRoute: typeof PortfolioRouteWithChildren
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -599,6 +638,7 @@ export interface RootRouteChildren {
   TermsOfServiceRoute: typeof TermsOfServiceRoute
   WebDesignGettingStartedRoute: typeof WebDesignGettingStartedRoute
   WhyYouShouldPlanYourOnlineBusinessStrategyRoute: typeof WhyYouShouldPlanYourOnlineBusinessStrategyRoute
+  ApiPublicPaymentsWebhookRoute: typeof ApiPublicPaymentsWebhookRoute
   LovableEmailAuthPreviewRoute: typeof LovableEmailAuthPreviewRoute
   LovableEmailAuthWebhookRoute: typeof LovableEmailAuthWebhookRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
@@ -709,6 +749,20 @@ declare module '@tanstack/react-router' {
       path: '/my-account'
       fullPath: '/my-account'
       preLoaderRoute: typeof MyAccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pay': {
+      id: '/pay'
+      path: '/pay'
+      fullPath: '/pay'
+      preLoaderRoute: typeof PayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment-success': {
+      id: '/payment-success'
+      path: '/payment-success'
+      fullPath: '/payment-success'
+      preLoaderRoute: typeof PaymentSuccessRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/piggyvest-review-2022': {
@@ -900,6 +954,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesWebsiteDesignRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/api/public/payments/webhook': {
+      id: '/api/public/payments/webhook'
+      path: '/api/public/payments/webhook'
+      fullPath: '/api/public/payments/webhook'
+      preLoaderRoute: typeof ApiPublicPaymentsWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/lovable/email/auth/preview': {
       id: '/lovable/email/auth/preview'
       path: '/lovable/email/auth/preview'
@@ -1006,6 +1067,8 @@ const rootRouteChildren: RootRouteChildren = {
   HowToFixWoocommerceStatusNotShowingOnDashboardRoute:
     HowToFixWoocommerceStatusNotShowingOnDashboardRoute,
   MyAccountRoute: MyAccountRouteWithChildren,
+  PayRoute: PayRoute,
+  PaymentSuccessRoute: PaymentSuccessRoute,
   PiggyvestReview2022Route: PiggyvestReview2022Route,
   PortfolioRoute: PortfolioRouteWithChildren,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
@@ -1018,6 +1081,7 @@ const rootRouteChildren: RootRouteChildren = {
   WebDesignGettingStartedRoute: WebDesignGettingStartedRoute,
   WhyYouShouldPlanYourOnlineBusinessStrategyRoute:
     WhyYouShouldPlanYourOnlineBusinessStrategyRoute,
+  ApiPublicPaymentsWebhookRoute: ApiPublicPaymentsWebhookRoute,
   LovableEmailAuthPreviewRoute: LovableEmailAuthPreviewRoute,
   LovableEmailAuthWebhookRoute: LovableEmailAuthWebhookRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
