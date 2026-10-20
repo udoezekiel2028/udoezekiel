@@ -12,7 +12,7 @@ import { buildRows, firstOf, pageLabel } from "./request-fields";
 // Every request copy goes to each of these; each send is independent so one
 // mailbox being unavailable cannot stop the other from receiving the request.
 // The first entry is also the address visitors' replies reach.
-const OWNER_EMAILS: [string, ...string[]] = ["hello@udoezekiel.dev", "udoezekiel2028@gmail.com"];
+import { OWNER_EMAILS } from "@/components/site/contact-details";
 const SITE_URL = "https://udoezekiel.dev";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

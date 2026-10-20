@@ -2,6 +2,7 @@ import type { ComponentType } from 'react'
 
 import { template as requestReceivedTemplate } from './request-received'
 import { template as requestCopyTemplate } from './request-copy'
+import { template as paymentAlertTemplate } from './payment-alert'
 
 export interface TemplateEntry {
   component: ComponentType<any>
@@ -23,4 +24,5 @@ export interface TemplateEntry {
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'request-received': requestReceivedTemplate,
   'request-copy': requestCopyTemplate,
+  'payment-alert': paymentAlertTemplate,
 }

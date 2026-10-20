@@ -17,7 +17,6 @@ import {
   Menu,
   Search,
   Send,
-  User,
   X,
   Maximize2,
   MessageCircle,
@@ -151,11 +150,6 @@ export function Header() {
               <SiteLink key={n.label} href={n.href} className={`text-[15px] font-bold hover:text-brand ${n.label === "Home" ? "text-paper/70" : ""}`}>{n.label}</SiteLink>
             ),
           )}
-          <span className="h-5 w-px bg-paper/30" />
-          <SiteLink href={`/my-account/`} aria-label="My account" className="grid h-10 w-10 place-items-center rounded-full border-2 border-brand bg-paper text-ink">
-            <User className="h-5 w-5" />
-          </SiteLink>
-          <SiteLink href={`/my-account/`} className={`${btnBrand} px-5 py-2.5`}>My Dashboard</SiteLink>
         </nav>
         <Button variant="ghost" className="lg:hidden" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
           {open ? <X /> : <Menu />}
@@ -181,7 +175,6 @@ export function Header() {
               )}
             </div>
           ))}
-          <SiteLink href={`/my-account/`} className={`${btnBrand} mt-5 w-full`}>My Dashboard</SiteLink>
         </nav>
       )}
     </header>
@@ -506,6 +499,7 @@ export function Footer() {
         <div className="mx-auto flex max-w-[1222px] flex-col gap-3 px-4 py-6 text-xs text-paper/60 md:flex-row md:justify-between">
           <p>© {new Date().getFullYear()} Udo Ezekiel. All rights reserved.</p>
           <ul className="flex flex-wrap gap-5">
+            <li><SiteLink href="/pay" className="font-bold text-brand hover:underline">Pay Now</SiteLink></li>
             <li><SiteLink href={`/terms-of-service/`} className="hover:text-brand">Terms Of Service</SiteLink></li>
             <li><SiteLink href={`/privacy-policy/`} className="hover:text-brand">Privacy Policy</SiteLink></li>
             <li><SiteLink href={`/refer-a-friend/`} className="hover:text-brand">Refer A Friend</SiteLink></li>
