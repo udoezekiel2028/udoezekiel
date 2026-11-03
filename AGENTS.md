@@ -16,4 +16,4 @@
 - The homepage introduction gallery uses the shared Embla carousel and Radix dialog in a separate browser-safe component, so three-picture navigation and accessible full-size viewing stay isolated from other homepage sections.
 - Reference HTML is memoized by page and filter; service sections use measured intrinsic heights for off-screen rendering and images decode asynchronously to reduce scrolling work without estimated-height jumps.
 - The reference root must have visible overflow; copied document-level overflow rules otherwise create an inner scroll area that traps wheel and touch gestures.
-- Homepage testimonials use browser-safe media data and the shared carousel/dialog components; keep unavailable media clearly labelled as placeholders instead of inventing client endorsements.
+- Homepage testimonials use browser-safe media data and the shared carousel/dialog components; render only populated review media and omit unavailable items rather than showing empty cards.
