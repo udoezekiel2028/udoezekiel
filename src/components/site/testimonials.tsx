@@ -23,37 +23,48 @@ export function Testimonials() {
                 <article className="flex h-full w-full flex-col overflow-hidden rounded-sm border border-paper/15 bg-ink-soft">
                   <button
                     type="button"
-                    className="group relative block aspect-video w-full overflow-hidden bg-ink p-0 text-paper transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand cursor-pointer"
+                    className="group relative block aspect-[1.92] w-full overflow-hidden bg-ink-soft p-0 text-paper transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand cursor-pointer"
                     aria-label={`Open ${item.title}`}
                     onClick={() => setSelected(item)}
                   >
                     {item.youtubeId ? (
-                      <div className="relative h-full w-full overflow-hidden">
+                      <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-black/80">
+                        {/* Ambient backdrop */}
+                        <img
+                          src={`https://i.ytimg.com/vi/${item.youtubeId}/oardefault.jpg`}
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          decoding="async"
+                          className="absolute inset-0 h-full w-full scale-110 object-cover opacity-30 blur-lg"
+                        />
+                        {/* Centered video thumbnail in full height */}
                         <img
                           src={`https://i.ytimg.com/vi/${item.youtubeId}/oardefault.jpg`}
                           alt={item.title}
                           loading="lazy"
                           decoding="async"
-                          className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                          className="relative z-10 h-full w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-300 group-hover:scale-[1.02]"
                         />
-                        <span className="absolute inset-0 flex items-center justify-center bg-black/25 transition-colors group-hover:bg-black/35">
+                        {/* Centered play button */}
+                        <span className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
                           <span className="flex size-14 items-center justify-center rounded-full bg-brand text-brand-foreground shadow-2xl transition-transform duration-300 group-hover:scale-110">
                             <Play className="ml-1 size-6 fill-current" />
                           </span>
                         </span>
                       </div>
                     ) : (
-                      <div className="relative h-full w-full overflow-hidden">
+                      <div className="flex h-full w-full items-center justify-center bg-ink-soft">
                         <img
                           src={item.src}
                           alt={item.title}
                           loading="lazy"
                           decoding="async"
-                          className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                          className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.01]"
                         />
                       </div>
                     )}
-                    <Maximize2 className="absolute right-3 top-3 z-20 size-4 text-paper/80 drop-shadow transition-colors group-hover:text-brand" aria-hidden="true" />
+                    <Maximize2 className="absolute right-3 top-3 z-30 size-4 text-paper/70 transition-colors group-hover:text-brand" aria-hidden="true" />
                   </button>
                   <div className="mt-auto flex h-12 shrink-0 items-center gap-2 border-t border-paper/10 px-4 text-sm font-bold">
                     {item.youtubeId ? <Play className="size-4 text-brand" /> : <Image className="size-4 text-brand" />}
