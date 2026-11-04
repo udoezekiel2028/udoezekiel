@@ -31,9 +31,6 @@ import forxersAsset from "@/assets/forxers-academy-portfolio.jpg.asset.json";
 import easyjapaAsset from "@/assets/easyjapa-portfolio.jpg.asset.json";
 import theScoopAsset from "@/assets/the-scoop-nigeria-portfolio.jpg.asset.json";
 
-const SITE = "https://kennethben.com";
-const U = `${SITE}/wp-content/uploads`;
-const HERO_IMG = `${U}/2025/08/ken-services-page.jpg`;
 const HERO_PORTRAIT = portraitAsset.url;
 const LOGO = logoAsset.url;
 
@@ -90,8 +87,8 @@ const STEPS = [
 ];
 
 const POSTS = [
-  { cat: "Domain and Hosting", t: "Hostinger Coupon Code 2026: Get 20% Off Hosting & Domain | How to Buy Hostinger", date: "September 14, 2026", ex: "If you are planning to build a website for your business, personal brand, online store, blog, portfolio, professional service, or digit...", slug: "hostinger-coupon-code", img: `${U}/2023/03/Badge_brand_dark_640×240.webp` },
-  { cat: "eCommerce, How To", t: "How to Fix WooCommerce Status Not Showing", date: "September 28, 2026", ex: "WooCommerce status not showing on dashboard when you are done with the required setup and checklist can be really annoying. And if you ...", slug: "how-to-fix-woocommerce-status-not-showing-on-dashboard", img: `${U}/2025/01/ECommHive1.jpg` },
+  { cat: "Domain and Hosting", t: "Hostinger Coupon Code 2026: Get 20% Off Hosting & Domain | How to Buy Hostinger", date: "September 14, 2026", ex: "If you are planning to build a website for your business, personal brand, online store, blog, portfolio, professional service, or digit...", slug: "hostinger-coupon-code", img: "/images/hostinger-badge.webp" },
+  { cat: "eCommerce, How To", t: "How to Fix WooCommerce Status Not Showing", date: "September 28, 2026", ex: "WooCommerce status not showing on dashboard when you are done with the required setup and checklist can be really annoying. And if you ...", slug: "how-to-fix-woocommerce-status-not-showing-on-dashboard", img: "/images/ecomm-hive.jpg" },
   { cat: "Affiliate Marketing", t: "Expertnaire Review: Affiliate Marketing in Nigeria", date: "September 28, 2026", ex: "What Is Expertnaire? How To Start Affiliate Marketing in Nigeria? Those 2 questions above are frequently asked by curious and scared in...", slug: "expertnaire-review-affiliate-marketing-in-nigeria", img: blogAffiliate },
   { cat: "Digital Marketing", t: "Google My Business in Nigeria – How to Register", date: "September 28, 2026", ex: "In this post, we are going to be discussing about Google My Business Nigeria. If you are running a small or medium business in Africa ...", slug: "google-my-business-nigeria", img: blogGmb },
 ];
@@ -278,7 +275,7 @@ function Trusted() {
         <div className="mt-12 overflow-hidden" role="region" aria-label="Brand logos carousel">
           <div className="brand-marquee flex items-center gap-x-14">
             {[...BRANDS, ...BRANDS].map((b, i) => (
-              <img key={`${b}-${i}`} src={`${U}/2025/07/${b}.png`} alt={i < BRANDS.length ? b.replace(/-1$/, "").replace(/-/g, " ") : ""} loading="lazy" aria-hidden={i >= BRANDS.length} className="h-9 w-auto shrink-0 opacity-80 brightness-0 invert transition-opacity hover:opacity-100" />
+              <img key={`${b}-${i}`} src={`/brands/${b}.png`} alt={i < BRANDS.length ? b.replace(/-1$/, "").replace(/-/g, " ") : ""} loading="lazy" aria-hidden={i >= BRANDS.length} className="h-9 w-auto shrink-0 opacity-80 brightness-0 invert transition-opacity hover:opacity-100" />
             ))}
           </div>
         </div>
@@ -291,7 +288,7 @@ function About() {
   return (
     <section className="bg-paper py-24 text-ink">
       <div className="mx-auto grid max-w-[1222px] items-center gap-12 px-4 md:grid-cols-2">
-        <img src={`${U}/2025/01/admin-interface.webp`} alt="Website Designer in Lagos Nigeria" loading="lazy" className="w-full" />
+        <img src="/images/admin-interface.webp" alt="Website Designer in Lagos Nigeria" loading="lazy" className="w-full" />
         <div>
           <h2 className={h2}>Solutions with greater efficiency of work.</h2>
           <p className="mt-6 text-base leading-relaxed text-ink/75">
@@ -318,7 +315,7 @@ export function Portfolio() {
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PORTFOLIO.map((p) => {
-            const src = p.src ?? `${U}/2025/07/${p.img}-768x960.jpg`;
+            const src = p.src ?? "";
             return (
               <article key={p.slug} className="group">
                 <SiteLink href={`/portfolio/${p.slug}/`} aria-label={`View ${p.name} project`} className="block cursor-pointer">
