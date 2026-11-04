@@ -18,9 +18,9 @@ export function Testimonials() {
           </div>
         </div>
         <Carousel opts={{ align: "start", loop: true }} aria-label="Client testimonials" className="pb-16">
-          <CarouselContent className="-ml-3">
+          <CarouselContent className="-ml-2">
             {testimonials.map((item) => (
-              <CarouselItem key={item.id} className="basis-full pl-3 md:basis-1/2" aria-label={item.title}>
+              <CarouselItem key={item.id} className="basis-full pl-2 md:basis-1/2" aria-label={item.title}>
                 <article className="mx-auto w-full overflow-hidden rounded-sm border border-paper/15 bg-ink-soft">
                   <Button variant="ghost" className="group relative block aspect-[1.92] h-auto w-full whitespace-normal rounded-none bg-ink-soft p-0 text-paper hover:bg-ink-soft hover:text-paper focus-visible:ring-brand" aria-label={`Open ${item.title}`} onClick={() => setSelected(item)}>
                     {item.youtubeId ? (
