@@ -6,7 +6,7 @@ export type Testimonial = {
   id: string;
   format: "video" | "screenshot";
   title: string;
-  src: string;
+  src?: string;
   source: string;
   youtubeId?: string;
 };
@@ -16,7 +16,6 @@ export const testimonials: Testimonial[] = [
     id: "ai-automation-testimonial",
     format: "video",
     title: "Client review for website development and AI automation",
-    src: "",
     source: "Video testimonial",
     youtubeId: "l__IoQVaYIQ",
   },
