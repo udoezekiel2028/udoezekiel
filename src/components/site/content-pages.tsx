@@ -7,7 +7,7 @@ import { SiteLink } from "./site-link";
 import { CONTACT_EMAIL, CONTACT_MAILTO, CONTACT_PHONE, CONTACT_TEL, WHATSAPP_URL } from "./contact-details";
 import { Portfolio, Blog, ContactFaq } from "./home-sections";
 import data from "@/data/reference-pages.json";
-import portrait from "@/assets/kenneth-portrait.jpg.asset.json";
+import portrait from "@/assets/udo-ezekiel-portrait.jpg.asset.json";
 import { policyContact, type PolicyDoc } from "@/data/policies";
 
 type PageData = { title: string; blocks: { tag: string; text: string }[]; images: string[] };
