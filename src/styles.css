@@ -181,3 +181,24 @@
 .brand-marquee:hover{animation-play-state:paused}
 @keyframes brand-marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.brand-marquee{animation:none}}
+
+/* Hide Lovable badge across all views and DOM injections */
+#lovable-badge,
+#lovable-badge *,
+[id*="lovable-badge"],
+[class*="lovable-badge"],
+aside[id="lovable-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(100%) !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  left: -99999px !important;
+  z-index: -9999 !important;
+}

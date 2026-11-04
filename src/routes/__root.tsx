@@ -109,6 +109,48 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              #lovable-badge,
+              #lovable-badge *,
+              [id*="lovable-badge"],
+              [class*="lovable-badge"],
+              aside[id="lovable-badge"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+                height: 0 !important;
+                width: 0 !important;
+                position: absolute !important;
+                left: -99999px !important;
+                z-index: -9999 !important;
+              }
+            `,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function removeLovableBadge() {
+                  var badges = document.querySelectorAll('#lovable-badge, [id*="lovable-badge"], aside[id="lovable-badge"]');
+                  badges.forEach(function(el) { el.remove(); });
+                }
+                removeLovableBadge();
+                if (typeof MutationObserver !== 'undefined') {
+                  new MutationObserver(removeLovableBadge).observe(document.documentElement, {
+                    childList: true,
+                    subtree: true
+                  });
+                }
+                window.addEventListener('DOMContentLoaded', removeLovableBadge);
+                window.addEventListener('load', removeLovableBadge);
+              })();
+            `,
+          }}
+        />
       </head>
       <body>
         {children}
@@ -120,6 +162,16 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    const removeLovableBadge = () => {
+      document.querySelectorAll('#lovable-badge, [id*="lovable-badge"], aside[id="lovable-badge"]').forEach((el) => el.remove());
+    };
+    removeLovableBadge();
+    const observer = new MutationObserver(removeLovableBadge);
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
