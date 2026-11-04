@@ -18,10 +18,10 @@ export function Testimonials() {
           </div>
         </div>
         <Carousel opts={{ align: "start", loop: true }} aria-label="Client testimonials" className="pb-16">
-          <CarouselContent className="-ml-3">
+          <CarouselContent className="-ml-2">
             {testimonials.map((item) => (
-              <CarouselItem key={item.id} className="basis-full pl-3 md:basis-1/2" aria-label={item.title}>
-                <article className="mx-auto w-full max-w-[580px] overflow-hidden rounded-sm border border-paper/15 bg-ink-soft">
+              <CarouselItem key={item.id} className="basis-full pl-2 md:basis-1/2" aria-label={item.title}>
+                <article className="mx-auto w-full overflow-hidden rounded-sm border border-paper/15 bg-ink-soft">
                   <Button variant="ghost" className="group relative block aspect-[1.92] h-auto w-full whitespace-normal rounded-none bg-ink-soft p-0 text-paper hover:bg-ink-soft hover:text-paper focus-visible:ring-brand" aria-label={`Open ${item.title}`} onClick={() => setSelected(item)}>
                     {item.youtubeId ? (
                       <><img src={`https://i.ytimg.com/vi/${item.youtubeId}/oardefault.jpg`} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-cover" /><span className="absolute inset-0 flex items-center justify-center"><span className="flex size-14 items-center justify-center rounded-full bg-brand text-brand-foreground"><Play className="size-6" /></span></span></>
@@ -49,9 +49,9 @@ export function Testimonials() {
             <div className="mx-auto aspect-[9/16]" style={{ height: "min(70dvh, 760px)" }}>
               <iframe key={selected.id} src={`https://www.youtube.com/embed/${selected.youtubeId}?autoplay=1&rel=0`} title={selected.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="h-full w-full rounded-sm" />
             </div>
-          ) : (
+          ) : selected.src ? (
             <img src={selected.src} alt={selected.title} className="h-auto max-h-[70dvh] w-full object-contain" />
-          ))}
+          ) : null)}
         </DialogContent>
       </Dialog>
     </section>

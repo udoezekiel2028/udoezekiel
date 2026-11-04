@@ -1,7 +1,6 @@
 # Roadmap
-- [x] Add and verify the homepage carousel with video and screenshot testimonial placeholders.
-- [ ] Add the supplied client review cards, tighten carousel spacing, and remove empty cards.
-- [ ] Replace old-owner names in image asset filenames and references with descriptive Udo Ezekiel names.
+- [x] Add and verify the homepage carousel with the supplied client review cards, tighter spacing, and no empty cards.
+- [x] Replace old-owner names in image asset filenames and references with descriptive Udo Ezekiel names.
 - [x] Remove pricing packages and stale package references throughout the website.
 - [x] Improve and verify scrolling across service pages.
 

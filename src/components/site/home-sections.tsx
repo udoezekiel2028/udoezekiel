@@ -22,7 +22,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-import portraitAsset from "@/assets/kenneth-portrait.jpg.asset.json";
+import portraitAsset from "@/assets/udo-ezekiel-portrait.jpg.asset.json";
 import logoAsset from "@/assets/udo-ezekiel-logo.png.asset.json";
 import eaGlobalAsset from "@/assets/ea-global-stores-portfolio.jpg.asset.json";
 import shakaaraahAsset from "@/assets/shakaaraah-portfolio.jpg.asset.json";

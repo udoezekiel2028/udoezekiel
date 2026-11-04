@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { submitProjectRequest } from "@/lib/requests.functions";
 import { SiteLink } from "./site-link";
-import portrait from "@/assets/kenneth-portrait.jpg.asset.json";
+import portrait from "@/assets/udo-ezekiel-portrait.jpg.asset.json";
 import logo from "@/assets/udo-ezekiel-logo.png.asset.json";
 import parentPlanTransparent from "@/assets/parent-plan-website-transparent.png";
 import transportTransparent from "@/assets/transport-website-transparent.png";
