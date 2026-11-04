@@ -53,10 +53,10 @@ const NAV = [
 ];
 
 const SOCIAL_SHARE = [
-  { Icon: Facebook, label: "Share on Facebook", href: "https://www.facebook.com/sharer/sharer.php?u=https://udoezekiel.lovable.app/" },
-  { Icon: X, label: "Share on X", href: "https://x.com/share?url=https://udoezekiel.lovable.app/" },
-  { Icon: Linkedin, label: "Share on LinkedIn", href: "https://www.linkedin.com/shareArticle?mini=true&url=https://udoezekiel.lovable.app/" },
-  { Icon: Send, label: "Share on Telegram", href: "https://telegram.me/share/url?url=https://udoezekiel.lovable.app/" },
+  { Icon: Facebook, label: "Share on Facebook", href: "https://www.facebook.com/sharer/sharer.php?u=https://udoezekiel.dev/" },
+  { Icon: X, label: "Share on X", href: "https://x.com/share?url=https://udoezekiel.dev/" },
+  { Icon: Linkedin, label: "Share on LinkedIn", href: "https://www.linkedin.com/shareArticle?mini=true&url=https://udoezekiel.dev/" },
+  { Icon: Send, label: "Share on Telegram", href: "https://telegram.me/share/url?url=https://udoezekiel.dev/" },
 ];
 
 const BRANDS = [
