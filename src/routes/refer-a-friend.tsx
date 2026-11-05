@@ -25,7 +25,7 @@ export const Route = createFileRoute("/refer-a-friend")({
   head: () =>
     pageHead(
       "Refer a Friend & Earn 10% | Udo Ezekiel",
-      "Earn a 10% commission on every website project you refer to Udo Ezekiel. Direct bank payouts for every successful client referral.",
+      "Earn a 10% commission in USD on every website project you refer to Udo Ezekiel. Direct payouts for every successful client referral.",
     ),
   component: ReferAFriendPage,
 });
@@ -33,11 +33,11 @@ export const Route = createFileRoute("/refer-a-friend")({
 const FAQS = [
   {
     q: "How much commission do I earn per referral?",
-    a: "You earn a flat 10% cash reward on the total project development fee. For example, if your friend hires me for a ₦500,000 eCommerce website, you earn ₦50,000. For a ₦1,000,000+ corporate build or custom platform, you earn ₦100,000+. There is no cap on your earnings.",
+    a: "You earn a flat 10% cash reward on the total project development fee. For example, if your friend hires me for a $1,000 eCommerce website, you earn $100. For a $2,500+ corporate build or custom platform, you earn $250+. There is no cap on your earnings.",
   },
   {
     q: "When and how do I receive my payout?",
-    a: "Your reward is disbursed directly to your Nigerian bank account (or via PayPal/crypto for international referrers) within 24 to 48 hours after your referred friend officially approves their project proposal and makes their initial deposit.",
+    a: "Your reward is disbursed directly in USD (via PayPal, Bank Transfer, Zelle, Wire, or Crypto) within 24 to 48 hours after your referred friend officially approves their project proposal and makes their initial deposit.",
   },
   {
     q: "Does the person I refer get any special benefit?",
@@ -195,7 +195,7 @@ function ReferAFriendPage() {
               </div>
               <div>
                 <p className="text-xs font-bold uppercase text-paper/60">Direct Payout</p>
-                <p className="font-display text-lg font-black text-paper">Bank / Transfer</p>
+                <p className="font-display text-lg font-black text-paper">USD / PayPal / Bank</p>
               </div>
             </div>
 
@@ -465,14 +465,14 @@ function ReferAFriendPage() {
 
                     <div className="mt-5">
                       <label className="block text-xs font-bold uppercase text-ink/70 mb-1.5">
-                        Your Bank / Payout Details <span className="text-xs font-normal text-ink/50">(Optional)</span>
+                        Your Preferred Payout Method <span className="text-xs font-normal text-ink/50">(Optional)</span>
                       </label>
                       <input
                         type="text"
                         name="payout_details"
                         value={formData.payout_details}
                         onChange={handleInputChange}
-                        placeholder="e.g. GTBank - 0123456789 - Tunde Adebayo (or leave blank and provide later)"
+                        placeholder="e.g. PayPal (email@example.com), Bank Account, Zelle, Wire, or Crypto (or provide later)"
                         className="w-full rounded-sm border border-ink/20 px-3.5 py-2.5 text-sm focus:border-brand focus:outline-none"
                       />
                     </div>
