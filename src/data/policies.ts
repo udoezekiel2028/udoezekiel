@@ -25,7 +25,7 @@ export type PolicyDoc = {
   sections: PolicySection[];
 };
 
-export const POLICY_UPDATED = "October 11, 2026";
+export const POLICY_UPDATED = "November 4, 2026";
 
 export const termsPolicy: PolicyDoc = {
   title: "Terms of Service",
