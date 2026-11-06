@@ -8,6 +8,7 @@ import {
   SOCIAL_PROFILES,
   WHATSAPP_URL,
 } from "@/components/site/contact-details";
+import { PROJECT_STARTING_AT_USD, WEBSITE_CARE_MONTHLY_USD } from "@/data/public-pricing";
 
 export type PolicySection = {
   id: string;
@@ -25,7 +26,7 @@ export type PolicyDoc = {
   sections: PolicySection[];
 };
 
-export const POLICY_UPDATED = "November 4, 2026";
+export const POLICY_UPDATED = "November 5, 2026";
 
 export const termsPolicy: PolicyDoc = {
   title: "Terms of Service",
@@ -41,8 +42,8 @@ export const termsPolicy: PolicyDoc = {
       id: "who",
       heading: "Who I am and what this site is",
       paras: [
-        `This website belongs to Udo Ezekiel, a web designer and digital-marketing consultant based in Nigeria, working with clients worldwide. I design and build corporate websites, online stores, landing pages and eLearning or membership platforms, and I help businesses plan the marketing around them.`,
-        "The site is a shop window and a way to start a conversation. Nothing on it is a binding offer, and no purchase is completed here: I do not run a shopping cart and I do not take card payments on this website.",
+        "Udo Ezekiel is the seller and website operator, a web designer and digital-marketing consultant based in Nigeria, working with clients worldwide. I design and build corporate websites, online stores, landing pages and eLearning or membership platforms, and I help businesses plan the marketing around them. When you agree to a project, you contract with Udo Ezekiel.",
+        "The site is a shop window and a way to start a conversation. A project only goes ahead after we agree a written proposal. Online checkout is provided by Paddle, which collects payment details directly and processes the transaction.",
       ],
     },
     {
@@ -54,12 +55,13 @@ export const termsPolicy: PolicyDoc = {
       bullets: [
         "Use your real details when you get in touch, and only send information you have the right to share.",
         "Do not copy, resell or scrape the site's content, design or portfolio images without asking first.",
+        "Do not use the site unlawfully, commit fraud or spam, infringe intellectual property, or interfere with its security or operation.",
         "Do not try to break, overload or interfere with the site, its forms or its database, including by sending automated or repeated submissions.",
         "Do not upload files that contain malware, and do not pretend to be someone else in a form or an email.",
         "You must be at least 18 to agree to these terms. If you are younger, ask a parent or guardian to read them and to message me on your behalf.",
       ],
       after:
-        "If I ask you to stop doing something on the site and it continues, I can block your access.",
+        "I may suspend or end access to the site or a service for a material breach, non-payment, a security or fraud risk, or repeated or serious policy violations.",
     },
     {
       id: "services",
@@ -89,17 +91,16 @@ export const termsPolicy: PolicyDoc = {
       id: "prices",
       heading: "Prices, deposits and refunds",
       paras: [
-        "Project fees and any domain or hosting costs are stated in your personalized proposal. I can work with the host you already use or recommend one for you.",
-        "Payment is by the method stated in your proposal, usually a deposit before work begins and the balance before the site goes live. I do not take card payments on this website.",
+        `Website design projects start at $${PROJECT_STARTING_AT_USD} USD. The Website Care Plan is $${WEBSITE_CARE_MONTHLY_USD} USD per month. A written proposal confirms each project's scope, total fee and payment schedule, including any domain or hosting costs. I can work with the host you already use or recommend one for you.`,
+        "Online project payments and Website Care Plan subscriptions are processed through Paddle checkout. Other payment arrangements, if agreed in writing, are set out in the proposal.",
       ],
       bullets: [
-        "If you change your mind before I start work, anything you have paid is refunded in full.",
-        "Once work has begun, the part of the fee that covers work already done is kept and the rest is refunded.",
-        "Costs I have already paid out for you on a third-party service, a domain, a hosting plan, a premium plugin or theme, are not refundable, because that money has already gone to someone else.",
-        "If I cannot finish a project for any reason, you pay only for the work completed and the remainder comes back to you.",
+        "You may request a change-of-mind refund within 30 days of the order date. For a Paddle checkout, submit the request at paddle.net so Paddle can handle it.",
+        "If a project has started or is stopped before completion, I will review the request against the written proposal, work delivered and applicable law. You can still submit a refund request through Paddle for a Paddle transaction.",
+        "For recurring Website Care Plan payments, use Paddle's available cancellation or support options to stop future renewals and request help with a recent charge.",
       ],
       after:
-        "Refunds go back by the same route they came from, normally within 14 days of the project being closed.",
+        "Paddle's Buyer Terms govern payment, billing, taxes, subscription renewals, cancellations and refunds for Paddle orders. Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns.",
     },
     {
       id: "you",
@@ -117,6 +118,7 @@ export const termsPolicy: PolicyDoc = {
       id: "ownership",
       heading: "Who owns what, and portfolio use",
       bullets: [
+        "Udo Ezekiel retains ownership of this website, its software, documentation, branding and original materials, except for content identified as belonging to a client or another rights holder.",
         "You own the finished website and everything you supplied, text, logos, photographs, product data.",
         "I keep ownership of my own tools: templates, code snippets, layouts and processes, which I reuse on other projects.",
         "Third-party pieces (fonts, icons, plugins, themes, stock images) stay under their own licences, and I will tell you when one needs a paid licence in your name.",
@@ -216,7 +218,7 @@ export const privacyPolicy: PolicyDoc = {
       id: "responsible",
       heading: "Who is responsible",
       paras: [
-        "Udo Ezekiel, web designer and digital-marketing consultant based in Nigeria, runs this site and decides what information it collects and why. I work Mondays to Fridays and with clients worldwide.",
+        "Udo Ezekiel is the seller, website operator and data controller for this site. I am a web designer and digital-marketing consultant based in Nigeria, working Mondays to Fridays with clients worldwide. I decide what information this site collects and why.",
         "The quickest way to reach me about your information is the email address or WhatsApp number at the bottom of this page. Send your request from the email address you used on the site so I can match it to the right records.",
       ],
     },
@@ -226,7 +228,8 @@ export const privacyPolicy: PolicyDoc = {
       bullets: [
         "What you type into the questionnaire or a message, your name, email address, phone number and the details of your project.",
         "What you enter when booking a call, your name, email address and the time you pick.",
-        "Your email address and a scrambled (hashed) password, if you choose to create an account here.",
+        "If you sign in to the private administration area, your email address and authentication or session records.",
+        "If you pay through checkout, your name, email address, order, transaction, subscription and billing records. Paddle collects card details directly during checkout.",
         "Technical records, your IP address, browser type, the pages you visited and when.",
         "Basic visit statistics, how many people viewed a page, which site they came from, and roughly which country they were in.",
       ],
@@ -260,10 +263,9 @@ export const privacyPolicy: PolicyDoc = {
     },
     {
       id: "account",
-      heading: "If you create an account",
+      heading: "Private administrator sign-in",
       paras: [
-        "You can create an account with your email address and a password. Your password is stored as a scrambled hash, never in plain text, and your sign-in session is kept in your browser's local storage so you stay signed in between visits.",
-        "Signing out, or clearing your browser's site data, ends that session. Ask me to delete your account and I will remove it along with the sign-in records that go with it.",
+        "There are no public client accounts. The private requests area is restricted to the site owner. If you are authorized to sign in there, the authentication provider processes your email address and session information to protect that area.",
       ],
     },
     {
@@ -301,13 +303,12 @@ export const privacyPolicy: PolicyDoc = {
       id: "cookies",
       heading: "Cookies, local storage and Google Fonts",
       bullets: [
-        "This site does not plant advertising or cross-site tracking cookies of its own.",
-        "Sign-in sessions are held in your browser's local storage so you stay logged in. Clearing site data signs you out.",
+        "This site does not use its own advertising or cross-site tracking cookies.",
+        "A consent notice lets you accept or reject optional technologies. Your choice is stored in this browser's local storage; essential site functions and security may still use necessary storage.",
+        "Sign-in sessions for the private administration area are held in browser storage. Clearing site data signs the administrator out.",
         "The fonts are loaded from Google's servers, so Google sees your IP address when a page renders. The same is true of any embedded video or map.",
-        "The Calendly calendar on the consultation page can set its own cookies while it is open, and social platforms set theirs once you click through to them.",
+        "Paddle checkout, the Calendly calendar and embedded media may use their own cookies or similar technologies when opened. Social platforms set their own technologies after you click through to them.",
       ],
-      after:
-        "There is no consent banner because there is nothing beyond the above to consent to. If that ever changes, a banner appears here first.",
     },
     {
       id: "sharing",
@@ -316,7 +317,8 @@ export const privacyPolicy: PolicyDoc = {
         "The platform that hosts this site and its database, which stores submissions and accounts for me.",
         "An email delivery service, so confirmation and sign-in emails actually arrive.",
         "Calendly, for scheduling; and Hostinger when you use the domain search, only the domain name you typed goes across, nothing else about you.",
-        "Your own hosting provider, domain registrar or payment gateway if your project needs one, and usually only the credentials or content needed to set it up, with your say-so.",
+        "Paddle.com, our online reseller and Merchant of Record, receives checkout contact, order, transaction and subscription information to process payments, billing, tax compliance, invoices, renewals, cancellations, refunds and buyer support. Paddle collects card details directly; I do not receive or store card numbers or security codes.",
+        "Your own hosting provider or domain registrar if your project needs one, and only the credentials or content needed to set it up, with your say-so.",
       ],
       after:
         "No one else. Not advertisers, not brokers, not partners. If a law-enforcement body ever asks for your data, I will tell you unless I am legally forbidden to.",
@@ -337,6 +339,7 @@ export const privacyPolicy: PolicyDoc = {
         "Project files and correspondence for a live client: for as long as we are working together, then deleted or archived on request.",
         "Account details: until you ask me to close the account.",
         "Server logs and visit statistics: a rolling few months, in aggregate form.",
+        "Paddle payment and subscription records: retained by Paddle under its own retention practices, and by me only as needed for accounting, project records or legal obligations.",
       ],
       after:
         "Nothing here is kept forever. If you would like a shorter window on your own request, say so and I will set it.",
@@ -347,7 +350,7 @@ export const privacyPolicy: PolicyDoc = {
       bullets: [
         "The site runs over HTTPS, so information travels encrypted.",
         "Submissions are visible only to me. Access to the requests area is restricted to my own account, and other visitors cannot see them.",
-        "No card details are ever taken through this site.",
+        "Payment card details are entered into Paddle checkout and are not received or stored by me.",
       ],
       after:
         "No system is perfect. If you are worried about sending something sensitive, tell me and we will find another way, and never send a password to this site.",
