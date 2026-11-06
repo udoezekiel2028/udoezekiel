@@ -34,7 +34,7 @@ export const termsPolicy: PolicyDoc = {
   summary:
     "The ground rules for using udoezekiel.dev and for working with me on a website project.",
   intro: [
-    "These terms apply whenever you use udoezekiel.dev, browsing the pages, filling in the project questionnaire, booking a free call, or asking me about a project.",
+    "These terms apply whenever you use udoezekiel.dev, browsing the pages, filling in the project questionnaire, booking a free call, or asking me about a project. By continuing to use this site, you agree to these terms.",
     "They are written in plain language on purpose. Where a project goes ahead, the written proposal we agree on governs the work and takes priority over anything here that conflicts with it.",
   ],
   sections: [
@@ -100,7 +100,7 @@ export const termsPolicy: PolicyDoc = {
         "For recurring Website Care Plan payments, use Paddle's available cancellation or support options to stop future renewals and request help with a recent charge.",
       ],
       after:
-        "Paddle's Buyer Terms govern payment, billing, taxes, subscription renewals, cancellations and refunds for Paddle orders. Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns.",
+        "Paddle's Buyer Terms (https://www.paddle.com/legal/checkout-buyer-terms) govern payment, billing, taxes, subscription renewals, cancellations and refunds for Paddle orders. Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns.",
     },
     {
       id: "you",
@@ -283,6 +283,7 @@ export const privacyPolicy: PolicyDoc = {
         "To reply to you, answer your questions and send a proposal.",
         "To prepare, quote, build and support your website.",
         "To send the confirmation email that arrives after you submit a form, and to keep a record of the conversation.",
+        "Paddle uses checkout and transaction information to process your order, recurring payments, billing, tax compliance, invoices, cancellations, refunds and buyer support.",
         "To keep the site secure and to spot spam or abuse.",
         "To improve the site, which pages help people, which ones confuse them.",
       ],
@@ -319,6 +320,7 @@ export const privacyPolicy: PolicyDoc = {
         "Calendly, for scheduling; and Hostinger when you use the domain search, only the domain name you typed goes across, nothing else about you.",
         "Paddle.com, our online reseller and Merchant of Record, receives checkout contact, order, transaction and subscription information to process payments, billing, tax compliance, invoices, renewals, cancellations, refunds and buyer support. Paddle collects card details directly; I do not receive or store card numbers or security codes.",
         "Your own hosting provider or domain registrar if your project needs one, and only the credentials or content needed to set it up, with your say-so.",
+        "Professional advisers, such as legal or accounting advisers, where necessary to run the business; and public authorities when the law requires it.",
       ],
       after:
         "No one else. Not advertisers, not brokers, not partners. If a law-enforcement body ever asks for your data, I will tell you unless I am legally forbidden to.",
@@ -348,7 +350,7 @@ export const privacyPolicy: PolicyDoc = {
       id: "security",
       heading: "How I protect it",
       bullets: [
-        "The site runs over HTTPS, so information travels encrypted.",
+        "The site uses HTTPS to encrypt information in transit, and access controls restrict who can view stored submissions.",
         "Submissions are visible only to me. Access to the requests area is restricted to my own account, and other visitors cannot see them.",
         "Payment card details are entered into Paddle checkout and are not received or stored by me.",
       ],
@@ -389,6 +391,48 @@ export const privacyPolicy: PolicyDoc = {
       heading: "Changes to this policy",
       paras: [
         "I will update this page as the site changes and revise the last-updated date at the top. If a change materially affects how I use your information, I will email you before it takes effect rather than hoping you notice.",
+      ],
+    },
+  ],
+};
+
+export const refundPolicy: PolicyDoc = {
+  title: "Refund Policy",
+  updated: POLICY_UPDATED,
+  summary: "How to request a refund for a website project payment or Website Care Plan subscription.",
+  intro: [
+    "Udo Ezekiel offers a 30-day change-of-mind refund request period from the order date for purchases made through Paddle checkout. Paddle.com is the online reseller and Merchant of Record for those orders.",
+    "This policy does not limit any rights that apply to you under local consumer law.",
+  ],
+  sections: [
+    {
+      id: "request-window",
+      heading: "30-day refund request window",
+      paras: [
+        "You may request a refund within 30 days of the order date. For a Paddle checkout, submit your request at paddle.net. Paddle handles the request and refund processing under its Buyer Terms and Refund Policy.",
+        "Include the email address used at checkout and the order details so the purchase can be identified. You may also contact Udo Ezekiel using the details below for help locating an order.",
+      ],
+    },
+    {
+      id: "project-work",
+      heading: "Website project payments",
+      paras: [
+        "If work has started or a project is paused, explain the situation in your request. Udo Ezekiel will review it against the written proposal, work delivered and applicable law. This review does not prevent you from submitting a refund request to Paddle.",
+        "If you paid by a method other than Paddle checkout, contact Udo Ezekiel directly using the details below to discuss the request.",
+      ],
+    },
+    {
+      id: "subscriptions",
+      heading: "Monthly subscriptions",
+      paras: [
+        "For Website Care Plan subscriptions, use Paddle's available account or support options to request cancellation and stop future renewals. A cancellation request does not remove your ability to request a refund for a recent payment within the 30-day period.",
+      ],
+    },
+    {
+      id: "processing",
+      heading: "Refund processing",
+      paras: [
+        "Paddle processes refunds for Paddle checkout orders and can answer questions about those transactions. Timing and the way funds return to your account depend on Paddle and your payment provider.",
       ],
     },
   ],
