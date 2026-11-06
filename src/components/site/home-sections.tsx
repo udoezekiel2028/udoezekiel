@@ -499,6 +499,7 @@ export function Footer() {
             <li><SiteLink href="/pay" className="font-bold text-brand hover:underline">Pay Now</SiteLink></li>
             <li><SiteLink href={`/terms-of-service/`} className="hover:text-brand">Terms Of Service</SiteLink></li>
             <li><SiteLink href={`/privacy-policy/`} className="hover:text-brand">Privacy Policy</SiteLink></li>
+            <li><SiteLink href="/refund-policy" className="hover:text-brand">Refund Policy</SiteLink></li>
             <li><SiteLink href={`/refer-a-friend/`} className="hover:text-brand">Refer A Friend</SiteLink></li>
           </ul>
         </div>
