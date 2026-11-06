@@ -1,0 +1,2 @@
+export const PROJECT_STARTING_AT_USD = 200;
+export const WEBSITE_CARE_MONTHLY_USD = 100;
