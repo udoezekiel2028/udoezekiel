@@ -31,6 +31,7 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PromoteYourBusinessOnlineRouteImport } from './routes/promote-your-business-online'
 import { Route as QuestionnaireRouteImport } from './routes/questionnaire'
 import { Route as ReferAFriendRouteImport } from './routes/refer-a-friend'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
 import { Route as RequestsRouteImport } from './routes/requests'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
@@ -167,6 +168,11 @@ const QuestionnaireRoute = QuestionnaireRouteImport.update({
 const ReferAFriendRoute = ReferAFriendRouteImport.update({
   id: '/refer-a-friend',
   path: '/refer-a-friend',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RequestsRoute = RequestsRouteImport.update({
@@ -316,6 +322,7 @@ export interface FileRoutesByFullPath {
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
+  '/refund-policy': typeof RefundPolicyRoute
   '/requests': typeof RequestsRoute
   '/services': typeof ServicesRouteWithChildren
   '/terms-of-service': typeof TermsOfServiceRoute
@@ -362,6 +369,7 @@ export interface FileRoutesByTo {
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
+  '/refund-policy': typeof RefundPolicyRoute
   '/requests': typeof RequestsRoute
   '/terms-of-service': typeof TermsOfServiceRoute
   '/web-design-getting-started': typeof WebDesignGettingStartedRoute
@@ -409,6 +417,7 @@ export interface FileRoutesById {
   '/promote-your-business-online': typeof PromoteYourBusinessOnlineRoute
   '/questionnaire': typeof QuestionnaireRoute
   '/refer-a-friend': typeof ReferAFriendRoute
+  '/refund-policy': typeof RefundPolicyRoute
   '/requests': typeof RequestsRoute
   '/services': typeof ServicesRouteWithChildren
   '/terms-of-service': typeof TermsOfServiceRoute
@@ -458,6 +467,7 @@ export interface FileRouteTypes {
     | '/promote-your-business-online'
     | '/questionnaire'
     | '/refer-a-friend'
+    | '/refund-policy'
     | '/requests'
     | '/services'
     | '/terms-of-service'
@@ -504,6 +514,7 @@ export interface FileRouteTypes {
     | '/promote-your-business-online'
     | '/questionnaire'
     | '/refer-a-friend'
+    | '/refund-policy'
     | '/requests'
     | '/terms-of-service'
     | '/web-design-getting-started'
@@ -550,6 +561,7 @@ export interface FileRouteTypes {
     | '/promote-your-business-online'
     | '/questionnaire'
     | '/refer-a-friend'
+    | '/refund-policy'
     | '/requests'
     | '/services'
     | '/terms-of-service'
@@ -598,6 +610,7 @@ export interface RootRouteChildren {
   PromoteYourBusinessOnlineRoute: typeof PromoteYourBusinessOnlineRoute
   QuestionnaireRoute: typeof QuestionnaireRoute
   ReferAFriendRoute: typeof ReferAFriendRoute
+  RefundPolicyRoute: typeof RefundPolicyRoute
   RequestsRoute: typeof RequestsRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   TermsOfServiceRoute: typeof TermsOfServiceRoute
@@ -763,6 +776,13 @@ declare module '@tanstack/react-router' {
       path: '/refer-a-friend'
       fullPath: '/refer-a-friend'
       preLoaderRoute: typeof ReferAFriendRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/requests': {
@@ -1004,6 +1024,7 @@ const rootRouteChildren: RootRouteChildren = {
   PromoteYourBusinessOnlineRoute: PromoteYourBusinessOnlineRoute,
   QuestionnaireRoute: QuestionnaireRoute,
   ReferAFriendRoute: ReferAFriendRoute,
+  RefundPolicyRoute: RefundPolicyRoute,
   RequestsRoute: RequestsRoute,
   ServicesRoute: ServicesRouteWithChildren,
   TermsOfServiceRoute: TermsOfServiceRoute,
