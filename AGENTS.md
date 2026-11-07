@@ -18,3 +18,4 @@
 - The reference root must have visible overflow; copied document-level overflow rules otherwise create an inner scroll area that traps wheel and touch gestures.
 - Homepage testimonials use browser-safe media data and the shared carousel/dialog components; render only populated review media and omit unavailable items rather than showing empty cards.
 - Public legal pages use shared browser-safe policy data, with each policy URL owning its metadata and footer navigation.
+- Public prices are kept in shared browser-safe pricing data so service pages and policy copy stay consistent.

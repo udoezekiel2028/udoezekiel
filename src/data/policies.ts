@@ -26,7 +26,7 @@ export type PolicyDoc = {
   sections: PolicySection[];
 };
 
-export const POLICY_UPDATED = "November 5, 2026";
+export const POLICY_UPDATED = "November 7, 2026";
 
 export const termsPolicy: PolicyDoc = {
   title: "Terms of Service",
@@ -298,6 +298,7 @@ export const privacyPolicy: PolicyDoc = {
         "Our agreement, using what you told me to deliver the project you hired me for.",
         "Legitimate interest, replying to enquiries, protecting the site from abuse, keeping ordinary business records.",
         "Legal obligation, where I must keep or produce something, such as a tax record.",
+        "Payment processing is necessary to carry out the purchase or subscription you request; accounting records may also be kept to meet legal obligations.",
       ],
     },
     {
@@ -339,9 +340,9 @@ export const privacyPolicy: PolicyDoc = {
       bullets: [
         "Project requests and enquiries: up to 24 months, so a conversation you started last year can be picked up without you repeating yourself. Ask me sooner and I will delete it sooner.",
         "Project files and correspondence for a live client: for as long as we are working together, then deleted or archived on request.",
-        "Account details: until you ask me to close the account.",
+        "Private administrator sign-in details: while the administration account is active, then removed when it is closed, subject to security and legal requirements.",
         "Server logs and visit statistics: a rolling few months, in aggregate form.",
-        "Paddle payment and subscription records: retained by Paddle under its own retention practices, and by me only as needed for accounting, project records or legal obligations.",
+        "Paddle payment and subscription records: Paddle keeps these under its own retention practices; I keep transaction references and related records only as needed for accounting, project records or legal obligations.",
       ],
       after:
         "Nothing here is kept forever. If you would like a shorter window on your own request, say so and I will set it.",
@@ -370,7 +371,7 @@ export const privacyPolicy: PolicyDoc = {
         "Object to, or put a limit on, how I use your information.",
       ],
       after:
-        "If you are in Nigeria, the Nigeria Data Protection Act 2023 sets out your rights. If you are in the EU, the UK or California, your local law gives you similar ones and I will honour whichever applies to you. If you are unhappy with my answer, you can complain to your local data-protection authority.",
+        "If you are in the EU or UK, this can include the right to access, correct, erase, restrict or port your data, object to processing, withdraw consent and complain to a supervisory authority. I aim to respond to rights requests within one month where that law applies. If you are in Nigeria, the Nigeria Data Protection Act 2023 sets out your rights. If you are unhappy with my answer, you can complain to your local data-protection authority.",
     },
     {
       id: "children",
@@ -383,7 +384,7 @@ export const privacyPolicy: PolicyDoc = {
       id: "abroad",
       heading: "If you are outside Nigeria",
       paras: [
-        "My hosting, database and email tools sit outside your country, so information you send is processed abroad. I keep only what is needed, share it as little as possible, and treat your rights the same wherever you are, I do not apply a lower standard because of a border.",
+        "My hosting, database, email and payment service providers may process information outside your country, including outside the UK or EEA. Where applicable law requires a transfer safeguard, I will use an appropriate safeguard such as contractual protections or an adequacy decision. I keep only what is needed, share it as little as possible, and treat your rights the same wherever you are.",
       ],
     },
     {
