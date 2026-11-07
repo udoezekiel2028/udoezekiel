@@ -1,5 +1,5 @@
 # Roadmap
-- [ ] Clear the payments readiness findings with Paddle-aligned Terms, Privacy, and Refund Policy pages, visible refund-policy link, and public starting-price information without adding pricing packages.
+- [x] Clear the payments readiness findings with Paddle-aligned Terms, Privacy, and Refund Policy pages, visible refund-policy link, and public starting-price information without adding pricing packages.
 - [x] Add and verify the homepage carousel with the supplied client review cards, tighter spacing, and no empty cards.
 - [x] Replace old-owner names in image asset filenames and references with descriptive Udo Ezekiel names.
 - [x] Remove pricing packages and stale package references throughout the website.
