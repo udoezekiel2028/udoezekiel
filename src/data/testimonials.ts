@@ -20,6 +20,13 @@ export const testimonials: Testimonial[] = [
     youtubeId: "l__IoQVaYIQ",
   },
   {
+    id: "fiverr-pitbullmedia-review",
+    format: "screenshot",
+    title: "Make.com automation client review - pitbullmedia",
+    src: "/images/reviews/fiverr-pitbullmedia-automation-review.png",
+    source: "Fiverr automation review",
+  },
+  {
     id: "half-saint-review",
     format: "screenshot",
     title: "Half Saint client review",
@@ -27,10 +34,31 @@ export const testimonials: Testimonial[] = [
     source: "Twine client review",
   },
   {
+    id: "fiverr-peacehouse-review",
+    format: "screenshot",
+    title: "Website troubleshooting & support review - peacehouse",
+    src: "/images/reviews/fiverr-peacehouse-review.png",
+    source: "Fiverr review",
+  },
+  {
+    id: "fiverr-fxpipsguru-review",
+    format: "screenshot",
+    title: "Make.com automation project review - fxpipsguru",
+    src: "/images/reviews/fiverr-fxpipsguru-automation-review.jpg",
+    source: "Fiverr automation review",
+  },
+  {
     id: "fiverr-client-review",
     format: "screenshot",
     title: "Fiverr client review",
     src: fiverrReview.url,
+    source: "Fiverr review",
+  },
+  {
+    id: "fiverr-lonnie22-review",
+    format: "screenshot",
+    title: "Repeat client website collaboration review - lonnie22",
+    src: "/images/reviews/fiverr-lonnie22-review.png",
     source: "Fiverr review",
   },
   {
