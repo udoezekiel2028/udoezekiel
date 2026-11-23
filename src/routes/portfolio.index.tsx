@@ -1,5 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/components/site/content-pages";
-import { ReferencePage } from "@/components/site/reference-page";
-export const Route = createFileRoute("/portfolio/")({ head: () => pageHead("Portfolio", "Portfolio \u2014 website design and digital business services by Udo Ezekiel."), component: Page });
-function Page() { return <ReferencePage pageKey="portfolio" />; }
+import { PortfolioContent } from "@/components/site/portfolio-content";
+
+export const Route = createFileRoute("/portfolio/")({
+  head: () =>
+    pageHead(
+      "Portfolio & Case Studies | Udo Ezekiel",
+      "Explore authentic digital platforms, eCommerce stores, eLearning academies, and corporate websites engineered for business growth by Udo Ezekiel.",
+    ),
+  component: Page,
+});
+
+function Page() {
+  return <PortfolioContent />;
+}

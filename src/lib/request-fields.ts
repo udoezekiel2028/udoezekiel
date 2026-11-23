@@ -2,8 +2,35 @@
 // Used by the private requests page, the email templates and the submit handler
 // so every surface names the same questions the same way.
 
-// Human-readable labels for the questionnaire's internal field names.
+// Human-readable labels for questionnaire and enquiry internal field names.
 export const FIELD_LABELS: Record<string, string> = {
+  // Structured enquiry form fields
+  full_name: "Full Name",
+  name: "Full Name",
+  email: "Email Address",
+  phone: "Phone / WhatsApp",
+  company_name: "Company / Business Name",
+  company: "Company / Business Name",
+  current_website: "Current Website URL",
+  service_needed: "Service Required",
+  budget_range: "Project Budget",
+  timeline: "Project Timeline",
+  project_description: "Project Description & Objectives",
+  message: "Message / Description",
+
+  // Referral fields
+  referrer_name: "Referrer Name",
+  referrer_email: "Referrer Email",
+  referrer_phone: "Referrer Phone",
+  payout_details: "Payout Account Details",
+  friend_name: "Referred Friend Name",
+  friend_email: "Referred Friend Email",
+  friend_phone: "Referred Friend Phone",
+  friend_business: "Friend's Business",
+  notes: "Additional Notes",
+  referral_code: "Referral Tag",
+
+  // Legacy field names
   field40: "How did you find me?",
   field17: "What do you want?",
   field18: "Link to your current website",
@@ -40,6 +67,7 @@ export const PAGE_LABELS: Record<string, string> = {
   questionnaire: "project questionnaire",
   contact: "contact message",
   consultation: "consultation booking",
+  "refer-a-friend": "referral submission",
 };
 
 export function pageLabel(page: string) {

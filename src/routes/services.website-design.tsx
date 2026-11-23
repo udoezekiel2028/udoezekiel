@@ -1,5 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/components/site/content-pages";
-import { ReferencePage } from "@/components/site/reference-page";
-export const Route = createFileRoute("/services/website-design")({ head: () => pageHead("A Beautiful Website Is Good for Business", "A Beautiful Website Is Good for Business. Discover tailored website and marketing services from Udo Ezekiel."), component: Page });
-function Page() { return <ReferencePage pageKey="services_website-design" />; }
+import { ServiceDetailPage } from "@/components/site/service-detail";
+import { SERVICES_DATA } from "@/data/services-data";
+
+const data = SERVICES_DATA["website-design"];
+
+export const Route = createFileRoute("/services/website-design")({
+  head: () =>
+    pageHead(
+      `${data.title} | Udo Ezekiel`,
+      `${data.title}: ${data.subtitle}`,
+    ),
+  component: Page,
+});
+
+function Page() {
+  return <ServiceDetailPage data={data} />;
+}
