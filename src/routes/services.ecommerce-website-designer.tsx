@@ -1,19 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/components/site/content-pages";
-import { ServiceDetailPage } from "@/components/site/service-detail";
-import { SERVICES_DATA } from "@/data/services-data";
-
-const data = SERVICES_DATA["ecommerce-website-designer"];
-
-export const Route = createFileRoute("/services/ecommerce-website-designer")({
-  head: () =>
-    pageHead(
-      `${data.title} | Udo Ezekiel`,
-      `${data.title}: ${data.subtitle}`,
-    ),
-  component: Page,
-});
-
-function Page() {
-  return <ServiceDetailPage data={data} />;
-}
+import { ReferencePage } from "@/components/site/reference-page";
+export const Route = createFileRoute("/services/ecommerce-website-designer")({ head: () => pageHead("Reach More Buyers With An Online Store", "Reach More Buyers With An Online Store. Discover tailored website and marketing services from Udo Ezekiel."), component: Page });
+function Page() { return <ReferencePage pageKey="services_ecommerce-website-designer" />; }

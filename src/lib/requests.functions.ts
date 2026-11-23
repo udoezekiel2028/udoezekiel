@@ -62,9 +62,9 @@ export const submitProjectRequest = createServerFn({ method: "POST" })
       return { ok: false, error: "Something went wrong. Please try again." };
     }
 
-    const visitorEmail = firstOf(data.fields['referrer_email'] || data.fields['email'] || data.fields['field2']).trim();
+    const visitorEmail = firstOf(data.fields['referrer_email'] || data.fields['field2'] || data.fields['email']).trim();
     const emailValid = EMAIL_RE.test(visitorEmail);
-    const visitorName = firstOf(data.fields['referrer_name'] || data.fields['full_name'] || data.fields['name'] || data.fields['field1']).trim();
+    const visitorName = firstOf(data.fields['referrer_name'] || data.fields['field1'] || data.fields['name']).trim();
     const from = pageLabel(data.page);
     const submittedAt = new Date().toLocaleString("en-GB", {
       dateStyle: "full",

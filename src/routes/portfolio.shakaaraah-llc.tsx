@@ -1,19 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/components/site/content-pages";
-import { CaseStudyPage } from "@/components/site/case-study";
-import { CASE_STUDIES } from "@/data/case-studies";
-
-const study = CASE_STUDIES["shakaaraah-llc"];
-
-export const Route = createFileRoute("/portfolio/shakaaraah-llc")({
-  head: () =>
-    pageHead(
-      `${study.title} Case Study | Udo Ezekiel`,
-      `${study.title} case study: ${study.subtitle}. Built by digital solutions partner Udo Ezekiel.`,
-    ),
-  component: Page,
-});
-
-function Page() {
-  return <CaseStudyPage data={study} />;
-}
+import { ReferencePage } from "@/components/site/reference-page";
+export const Route = createFileRoute("/portfolio/shakaaraah-llc")({ head: () => pageHead("Shakaaraah LLC", "Explore the Shakaaraah LLC website project in the Udo Ezekiel portfolio."), component: Page });
+function Page() { return <ReferencePage pageKey="portfolio_shakaaraah-llc" />; }
